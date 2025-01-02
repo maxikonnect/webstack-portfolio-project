@@ -181,7 +181,7 @@ template {
 /*footer */
 :root {
   /* Colors */
-  --color-primary: #D73953;
+  --color-primary: #023448;
   --color-black: #090909;
   --color-white: #ffffff;
   --color-grey: #a0a0a0;
@@ -189,7 +189,8 @@ template {
   --color-dark-grey: #353535;
   --color-purple: purple;
   --color-green: #08805b;
-  --color-blue: #5ca1e1;
+  --color-blue: #0074a7;
+  --color-yellow:rgb(245, 245, 82);
   /* Text */
   --text-color: var(--color-black);
   --valid-color: var(--color-green);
@@ -204,6 +205,8 @@ template {
   --font-size-x-large: 2.7rem;
   --font-size-xx-large: 3rem;
   --font-size-xxxx-large: 4.3rem;
+  --font-size-small: 60%;
+  --font-size-smaller: 55%;
   /* Font Weights */
   --font-weight-regular: 400;
   --font-weight-semi-bold: 500;
@@ -224,7 +227,7 @@ template {
   --section-tagline-color: var(--color-primary);
   --section-header-align: center;
   /* Header */
-  --header-padding: 3rem 0 0;
+  --header-padding: 1.2rem 1.5rem;
   /* Footer */
   --footer-padding: 5rem 0 2rem;
   --footer-margin-top: var($footer-margin-top);
@@ -234,11 +237,13 @@ template {
   --nav-item-font-size: var(--font-size-medium);
   --nav-item-margin: 0 0 0 2rem;
   --nav-item-margin-small: 0 0 0 2rem;
+  --nav-item-padding-small:0 1.8rem 0 0;
+  --nav-item-padding-large:0 2.5rem 0 0;
   /* Buttons */
   --button-display: inline-block;
   --button-padding: 1.5rem 3rem;
   --button-padding-small: 0.7rem 2rem;
-  --button-border: #5ca1e1 solid 0.2rem;
+  --button-border: #0074a7 solid 0.2rem;
   --button-color: var(--color-black);
   --button-hover-color: var(--color-white);
   --button-hover-background: var(--color-blue);
@@ -270,22 +275,18 @@ template {
   text-transform: capitalize;
   color: var(--color-black);
 }
-
 *::selection {
   background-color: var(--color-black);
   color: var(--color-yellow);
 }
-
 *::-webkit-scrollbar {
   height: 0.5rem;
   width: 1rem;
   background-color: transparent;
 }
-
 *::-webkit-scrollbar-thumb {
   background-color: var(--color-yellow);
 }
-
 
 html {
   font-size: 62.5%;
@@ -295,6 +296,156 @@ html {
 body {
   overflow: hidden;
   transition: 0.2s linear !important;
+}
+
+/* html Media Query */
+@media (max-width: 767px) {
+  html {
+    font-size: var(--font-size-small);
+  }
+}
+@media (max-width: 480px) {
+  html {
+    font-size: var(--font-size-smaller);
+  }
+}
+/* NAVIGATION BAR */
+header .container {
+  display: flex;
+  flex-direction: column;
+}
+header .container .social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: var(--color-primary);
+  padding: var(--header-padding);
+}
+header .container .social-icons p {
+  cursor: pointer;
+  color: var(--color-yellow);
+  padding: var(--nav-item-padding-large);
+  font-size: 1.1rem;
+  font-weight: var(--font-weight-bold);
+}
+header .container .social-icons a {
+  cursor: pointer;
+  color: var(--color-white);
+  padding: var(--nav-item-padding-small);
+  font-size: var(--font-size-large);
+  transition: transform 0.2s linear !important;
+}
+header .container .social-icons a:hover {
+  transform: scale(1.2);
+}
+header .container .subcontainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--color-white);
+  padding: 3rem 0;
+  border-bottom: 2px solid var(--color-blue);
+}
+header .container .subcontainer .logo-container {
+  transition: 0.4s linear !important;
+}
+header .container .subcontainer .logo-container .logo {
+  cursor: pointer;
+  font-size: var(--font-size-x-large);
+  font-weight: var(--font-weight-regular);
+}
+header .container .subcontainer .logo-container:hover {
+  transform: scale(1.05);
+}
+header .container .subcontainer .menu {
+  display: flex;
+  cursor: pointer;
+  gap: 4rem;
+  transition: 0.3s linear !important;
+}
+header .container .subcontainer .menu .sub-menu a {
+  font-size: var(--font-size-medium);
+  position: relative;
+}
+header .container .subcontainer .menu .sub-menu a::before {
+  content: "";
+  height: 0.3rem;
+  width: 0;
+  left: 0;
+  bottom: -2px;
+  position: absolute;
+  transition: width 0.3s ease;
+  background-color: var(--color-blue);
+}
+header .container .subcontainer .menu .sub-menu a:hover::before {
+  width: 100%;
+}
+header .container .subcontainer .menu .main-menu {
+  position: relative;
+  font-size: var(--font-size-medium);
+  display: inline-block;
+  transition: 0.2s linear !important;
+}
+header .container .subcontainer .menu .main-menu .start-test {
+  position: relative;
+}
+header .container .subcontainer .menu .main-menu .start-test a {
+  padding: 0 0.3rem;
+}
+header .container .subcontainer .menu .main-menu .start-test i {
+  position: absolute;
+  top: 3px;
+}
+header .container .subcontainer .menu .main-menu .dropdown {
+  position: absolute;
+  top: 100%;
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+  background-color: var(--color-blue);
+  z-index: 1000;
+  display: none;
+}
+header .container .subcontainer .menu .main-menu .dropdown a {
+  padding: 1.4rem 0.5rem;
+  display: block;
+  color: rgb(230, 230, 230);
+}
+header .container .subcontainer .menu .main-menu .dropdown a:hover {
+  color: var(--color-white);
+}
+header .container .subcontainer .menu .main-menu:hover i {
+  transform: rotate(180deg);
+}
+header .container .subcontainer .menu .main-menu:hover .dropdown {
+  display: block;
+}
+header .container .signupLogin a {
+  padding: 0 0.8rem;
+  font-size: var(--font-size-large);
+  cursor: pointer;
+}
+header .container .signupLogin .login {
+  margin: 0 1.5rem;
+}
+header .container .signupLogin .login:hover {
+  color: var(--color-blue);
+}
+header .container .signupLogin .btn {
+  outline: 1px solid var(--color-blue);
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  padding: 1rem 1rem;
+  border-radius: 10px;
+  transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
+}
+header .container .signupLogin .btn:hover {
+  color: var(--color-blue);
+  background-color: var(--color-white);
+}
+header .container .signupLogin .btn:active {
+  background-color: var(--color-blue);
+  color: var(--color-white);
 }
 
 /*# sourceMappingURL=style.css.map */
