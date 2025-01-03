@@ -29,6 +29,13 @@ html {
     overflow: visible; // 2
   }
   
+  p{
+    margin: 0;
+    padding: 0;
+  }
+  a{
+    text-decoration: none;
+  }
   pre {
     font-family: monospace, monospace; // 1
     font-size: 1em; // 2
