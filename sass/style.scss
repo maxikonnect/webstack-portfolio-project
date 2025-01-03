@@ -16,6 +16,7 @@ $color-red: #e42323;
 $font-family-base: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-family-title: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
+$font-size-smaller: 1.3rem;
 $font-size-small: 1.4rem;
 $font-size-medium: 1.6rem;
 $font-size-large: 1.8rem;
@@ -66,7 +67,7 @@ $footer-margin-top: 10px 0 0 0;
   --color-blue: #{$color-blue};
   --color-yellow:#{$color-yellow};
   --color-red: #{$color-red};
-
+  
   /* Text */
   --text-color: var(--color-black);
   --valid-color: var(--color-green);
@@ -77,6 +78,7 @@ $footer-margin-top: 10px 0 0 0;
   --font-family-title: #{$font-family-title};
 
   /* Font Sizes */
+  --font-size-smaller: #{$font-size-smaller};
   --font-size-small: #{$font-size-small};
   --font-size-medium: #{$font-size-medium};
   --font-size-large: #{$font-size-large};
@@ -223,8 +225,11 @@ header {
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        background-color: var(--color-primary);
+        background-color: var(--color-blue);
         padding: var(--header-padding);
+        z-index: 1001;
+        position: relative;
+        margin-bottom: 5rem;
   
         p {
           cursor: pointer;
@@ -252,9 +257,11 @@ header {
         align-items: center;
         justify-content: space-around;
         background-color: var(--color-white);
-        padding: 3rem 0;
+        padding: 5rem 0 2rem 0;
         border-bottom: 2px solid var(--color-blue);
-        
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
         .logo-container {
           transition: .4s linear !important;
           .logo {
@@ -435,7 +442,7 @@ section{
                     color: var(--color-white);
                 }
                 p, span{
-                    font-size:var(--font-size-medium);
+                  font-size: var(--font-size-small);
                     color: var(--color-white);
                 }
                 span{
@@ -459,8 +466,10 @@ section{
     
     .container{
         margin-top: 5rem;
+       
         .row{
             .header-text{
+              margin-bottom: -2rem;
                 h3{
                     span{
                         font-size: var(--font-size-large);
@@ -500,48 +509,85 @@ section{
     }
 }
 
-/*section.about{
-    background-color: var(--color-primary);
-    color: var(--color-white);
-    padding: 3rem 5rem;
-    .about-container{
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 2rem;
-        .about-text{
-            flex: 1 1 30rem;
-            p, h3, span{
-                color: var(--color-white);
-            }
-            p{
-                font-size: 1.3rem;
+/*footer section */
 
-                span{
-                    font-weight: var(--font-weight-bold);
-                    text-transform: uppercase;
-                }
-            }
-            h3{
-                font-size: var(--font-size-x-large);
-                text-align: center;
-            }
+.footer-section{
+  background-color: var(--color-blue);
+  
+  padding: 5rem 1.2rem 1.2rem 1.2rem;
+  .footer{
+    .footer-credit-subcontainer{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-top: 1px solid var(--color-white);
+      margin-top: 1.2rem;
+      padding-top: 1.0rem;
+      .credit{
+        .credit-para, .credit-span{
+          font-size: var(--font-size-smaller);
         }
-        .about-image{
-            flex: 1 1 30rem;
-            width: 400px;
-            height: 400px;
-            img{
-                width: 100%;
-                border: 5px solid var(--color-white);
-                border-radius: 50%;
-                object-fit: cover;
-            }
+        .credit-span{
+          color: var(--color-white);
+          font-style: italic;
         }
+        a{
+          color: var(--color-white);
+          &:hover{
+            text-decoration: underline;
+          }
+          
+        }
+      }
+      
     }
+    .safe-policies{
+      display: flex;
+      flex-direction: row-reverse;
+      a{
+        margin-left: 1.2rem;
+        font-size: var(--font-size-smaller);
+        color: var(--color-white);
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
 }
 
-section.testimonial{
-    margin-top: 10rem;
+  
+.latest-news{
+  margin-bottom: 5rem;
+  .container{
+    .row{
+      .header-text{
+        margin-bottom: -2rem;
+          h3{
+              span{
+                  font-size: var(--font-size-large);
+                  position:relative;
+                  display: inline-block;
+                  cursor: pointer;
+                  &::before{
+                      content: "";
+                      width: 0;
+                      height: 0.3rem;
+                      position:absolute;
+                      background-color: var(--color-blue);
+                      transition: width .3s linear;
+                      left: 0;
+                      bottom: 0;
+                  }
+                  &:hover::before{
+                      width: 100%;
+                  }
+              }
+          }
+      }
+      .latestnewsitem{
+        border: 2px solid gray;
+      }
+    }
+  }
 }
-*/

@@ -25,24 +25,24 @@
             <div class="header-container">
                 <div class="socialicons">
                     <p>Follow us</p>
-                    <a class="fab fa-youtube" aria-hidden="true"></a>
-                    <a class="fab fa-facebook-f" aria-hidden="true"></a>
-                    <a class="fab fa-twitter" aria-hidden="true"></a>
-                    <a class="fab fa-instagram" aria-hidden="true"></a>
-                    <a class="fab fa-linkedin" aria-hidden="true"></a>
+                    <a href="#" class="fab fa-youtube" aria-hidden="true"></a>
+                    <a href="#" class="fab fa-facebook-f" aria-hidden="true"></a>
+                    <a href="#" class="fab fa-twitter" aria-hidden="true"></a>
+                    <a href="#" class="fab fa-instagram" aria-hidden="true"></a>
+                    <a href="#" class="fab fa-linkedin" aria-hidden="true"></a>
                 </div>
                 <div class="sub-container">
                     <div class="logo-container">
-                        <a class="logo">passOneTouch</a>
+                        <a href="#" class="logo">passOneTouch</a>
                     </div>
                     <div class="menu">
                         <div class="start-test main-menu">
-                            <a>start test</a>
+                            <a href="#">start test</a>
                             <i class="fas fa-chevron-down" aria-hidden="true"></i>
                             <div class="dropdown">
-                                <a>Teachers Exams</a>
-                                <a>Wassce</a>
-                                <a>BECE</a>
+                                <a href="#">Teachers Exams</a>
+                                <a href="#">Wassce</a>
+                                <a href="#">BECE</a>
                             </div>
                         </div>
                         <div class="about sub-menu main-menu">
@@ -50,6 +50,9 @@
                         </div>
                         <div class="testimonials sub-menu main-menu">
                             <a href="#testimonials">testimonials</a>
+                        </div>
+                        <div class="latest-news sub-menu main-menu">
+                            <a href="#latest-news">latest news</a>
                         </div>
                     </div>
 
@@ -61,13 +64,15 @@
                         </form>
                     </div>
                     <div class="signupLogin">
-                        <a class="login">log in</a>
-                        <a class="signup btn">sign up</a>
+                        <a href="#" class="login">log in</a>
+                        <a href="#" class="signup btn">sign up</a>
                     </div>
                 </div>
             </div>
         </header>
         <main>
+
+            <!--about section start-->
             <section id="about-section" class="about-section">
                 <div class="container">
                     <div class="row py-5 g-3 align-items-center">
@@ -83,10 +88,13 @@
                     </div>
                 </div>
             </section>
+            <!--about section ends-->
+
+            <!--Testimonials start-->
             <section class="testimonials" id="testimonials">
                 <div class="container">
-                    <div class="row g-5 my-5">
-                        <div class="col-12 text-center my-3 header-text">
+                    <div class="row g-5 mt-5">
+                        <div class="col-12 text-center mt-3 header-text">
                             <h3><span>testimonials</span></h3>
                         </div>
                         <!-- Testimonial 1 -->
@@ -112,7 +120,56 @@
                     </div>
                 </div>
             </section>
+            <!--Testimonials ends-->
+            
+            <!--latest news-->
+            <section id="latest-news" class="latest-news">
+                <div class="container">
+                    <div class="row g-5 mt-5">
+                        <div class="col-12 text-center header-text">
+                            <h3><span>latest news</span></h3>
+                        </div>
+                        <div class="latestnewsitem col-12 col-md-4 col-sm-6 d-flex flex-column align-items-center text-center">
+                            <img class="img-fluid w-50 mb-3" src="Asset/images/testimonial/testimonial4.jpeg" alt="latest news">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <a href="#">read more</a>
+                        </div>
+                        <div class="latestnewsitem col-12 col-md-4 col-sm-6 d-flex flex-column align-items-center text-center">
+                            <img class="img-fluid w-50 mb-3" src="Asset/images/testimonial/testimonial5.jpeg" alt="latest news">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <a href="#">read more</a>
+                        </div>
+                        <div class="latestnewsitem col-12 col-md-4 col-sm-6 d-flex flex-column align-items-center text-center">
+                            <img class="img-fluid w-50 mb-3" src="Asset/images/testimonial/testimonial6.jpeg" alt="latest news">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <a href="#">read more</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
+
+        <!-- footer start -->
+        <footer class="footer-section">
+            <section class="footer">
+                    <div class="safe-policies">
+                        <a href="#">terms of use</a>
+                        <a href="#">privacy policy</a>
+                        <a href="#">cookie consent</a>
+                    </div>
+                    <div class="footer-credit-subcontainer">
+                        <div class="credit">
+                            <p class="credit-para">&copy;copyright <span class="credit-span"></span> passonetouch. designed by <a href="#">abradu</a></p>
+                        </div>
+                    </div>
+            </section>
+        </footer>
+        <!--footer ends-->
+
+        <!--Link to javascripts used-->
+        <script src="js/date.js"></script>
+
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
         <script>
             AOS.init({

@@ -209,6 +209,7 @@ template {
   --font-family-base: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
   --font-family-title: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif;
   /* Font Sizes */
+  --font-size-smaller: 1.3rem;
   --font-size-small: 1.4rem;
   --font-size-medium: 1.6rem;
   --font-size-large: 1.8rem;
@@ -333,8 +334,11 @@ header .header-container .socialicons {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  background-color: var(--color-primary);
+  background-color: var(--color-blue);
   padding: var(--header-padding);
+  z-index: 1001;
+  position: relative;
+  margin-bottom: 5rem;
 }
 header .header-container .socialicons p {
   cursor: pointer;
@@ -359,8 +363,11 @@ header .header-container .sub-container {
   align-items: center;
   justify-content: space-around;
   background-color: var(--color-white);
-  padding: 3rem 0;
+  padding: 5rem 0 2rem 0;
   border-bottom: 2px solid var(--color-blue);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
 }
 header .header-container .sub-container .logo-container {
   transition: 0.4s linear !important;
@@ -509,7 +516,7 @@ section {
   color: var(--color-white);
 }
 .about-section .container .row .about-text p, .about-section .container .row .about-text span {
-  font-size: var(--font-size-medium);
+  font-size: var(--font-size-small);
   color: var(--color-white);
 }
 .about-section .container .row .about-text span {
@@ -524,6 +531,9 @@ section {
 /*TESTIMONIALS */
 .testimonials .container {
   margin-top: 5rem;
+}
+.testimonials .container .row .header-text {
+  margin-bottom: -2rem;
 }
 .testimonials .container .row .header-text h3 span {
   font-size: var(--font-size-large);
@@ -556,50 +566,72 @@ section {
   font-size: 1.4rem;
 }
 
-/*section.about{
-    background-color: var(--color-primary);
-    color: var(--color-white);
-    padding: 3rem 5rem;
-    .about-container{
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 2rem;
-        .about-text{
-            flex: 1 1 30rem;
-            p, h3, span{
-                color: var(--color-white);
-            }
-            p{
-                font-size: 1.3rem;
-
-                span{
-                    font-weight: var(--font-weight-bold);
-                    text-transform: uppercase;
-                }
-            }
-            h3{
-                font-size: var(--font-size-x-large);
-                text-align: center;
-            }
-        }
-        .about-image{
-            flex: 1 1 30rem;
-            width: 400px;
-            height: 400px;
-            img{
-                width: 100%;
-                border: 5px solid var(--color-white);
-                border-radius: 50%;
-                object-fit: cover;
-            }
-        }
-    }
+/*footer section */
+.footer-section {
+  background-color: var(--color-blue);
+  padding: 5rem 1.2rem 1.2rem 1.2rem;
+}
+.footer-section .footer .footer-credit-subcontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid var(--color-white);
+  margin-top: 1.2rem;
+  padding-top: 1rem;
+}
+.footer-section .footer .footer-credit-subcontainer .credit .credit-para, .footer-section .footer .footer-credit-subcontainer .credit .credit-span {
+  font-size: var(--font-size-smaller);
+}
+.footer-section .footer .footer-credit-subcontainer .credit .credit-span {
+  color: var(--color-white);
+  font-style: italic;
+}
+.footer-section .footer .footer-credit-subcontainer .credit a {
+  color: var(--color-white);
+}
+.footer-section .footer .footer-credit-subcontainer .credit a:hover {
+  text-decoration: underline;
+}
+.footer-section .footer .safe-policies {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.footer-section .footer .safe-policies a {
+  margin-left: 1.2rem;
+  font-size: var(--font-size-smaller);
+  color: var(--color-white);
+}
+.footer-section .footer .safe-policies a:hover {
+  text-decoration: underline;
 }
 
-section.testimonial{
-    margin-top: 10rem;
+.latest-news {
+  margin-bottom: 5rem;
 }
-*/
+.latest-news .container .row .header-text {
+  margin-bottom: -2rem;
+}
+.latest-news .container .row .header-text h3 span {
+  font-size: var(--font-size-large);
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.latest-news .container .row .header-text h3 span::before {
+  content: "";
+  width: 0;
+  height: 0.3rem;
+  position: absolute;
+  background-color: var(--color-blue);
+  transition: width 0.3s linear;
+  left: 0;
+  bottom: 0;
+}
+.latest-news .container .row .header-text h3 span:hover::before {
+  width: 100%;
+}
+.latest-news .container .row .latestnewsitem {
+  border: 2px solid gray;
+}
 
 /*# sourceMappingURL=style.css.map */
