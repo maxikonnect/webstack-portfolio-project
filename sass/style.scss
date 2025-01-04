@@ -217,52 +217,55 @@ a{
 
 /* NAVIGATION BAR */
 header {
-    .header-container {
+  .header-container {
+    display: flex;
+    flex-direction: column;
+    
+    .socialicons {
       display: flex;
-      flex-direction: column;
-  
-      .socialicons {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        background-color: var(--color-blue);
-        padding: var(--header-padding);
-        p {
-          cursor: pointer;
-          color: var(--color-yellow);
-          padding: var(--nav-item-padding-large);
-          font-size: 1.1rem;
-          font-weight: var(--font-weight-bold);
-        }
-  
-        a {
-          cursor: pointer;
-          text-decoration: none;
-          color: var(--color-white);
-          padding: var(--nav-item-padding-small);
-          font-size: var(--font-size-large);
-          transition: transform 0.2s linear !important;
-          &:hover{
-            transform: scale(1.20);
-          }
+      align-items: center;
+      justify-content: flex-end;
+      background-color: var(--color-blue);
+      padding: var(--header-padding);
+      p {
+        cursor: pointer;
+        color: var(--color-yellow);
+        padding: var(--nav-item-padding-large);
+        font-size: 1.1rem;
+        font-weight: var(--font-weight-bold);
+      }
+
+      a {
+        cursor: pointer;
+        text-decoration: none;
+        color: var(--color-white);
+        padding: var(--nav-item-padding-small);
+        font-size: var(--font-size-large);
+        transition: transform 0.2s linear !important;
+        &:hover{
+          transform: scale(1.20);
         }
       }
-  
+    }
+    .super-sub-container{
+      background-color: var(--color-white);
+      border-bottom: 2px solid var(--color-blue);
       .sub-container {
         display: flex;
         align-items: center;
-        justify-content: space-around;
-        background-color: var(--color-white);
+        justify-content: space-between;
+        
         padding: 2rem 0 2rem 0;
-        border-bottom: 2px solid var(--color-blue);
+        
         z-index: 1000;
+        margin: 0 10px;
         .logo-container {
           transition: .4s linear !important;
           .logo {
             cursor: pointer;
             font-size: var(--font-size-x-large);
             font-weight: var(--font-weight-regular);
-
+  
             
           }
           &:hover{
@@ -273,7 +276,7 @@ header {
         .menu {
           display: flex;
           cursor: pointer;
-          gap: 4rem;
+          gap: 2rem;
           transition: .3s linear !important;
           .sub-menu {
             a {
@@ -304,7 +307,7 @@ header {
             transition: .2s linear !important;
             .start-test {
               position: relative;
-             
+              
               a {
                 padding: 0 0.3rem;
               }
@@ -349,7 +352,7 @@ header {
       .signupLogin {
         a {
           padding: 0 0.8rem;
-          font-size: var(--font-size-large);
+          font-size: var(--font-size-medium);
           cursor: pointer;
         }
   
@@ -365,7 +368,7 @@ header {
           outline: 1px solid var(--color-blue);
           background-color: var(--color-blue);
           color: var(--color-white);
-          padding: 0.5rem 1rem;
+          padding: 0.5rem 0.8rem;
           border-radius: 10px;
           transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
   
@@ -421,9 +424,27 @@ header {
         position: relative;
         top: -5px;
         cursor: pointer;
+        display: none;
+      }
+    }
+    
+  }
+}
+
+@media (max-width: 960px){
+  .header{
+    .header-container{
+      .super-sub-container{
+        .sub-container{
+          .menu{
+            display: none;
+          }
+        }
       }
     }
   }
+}
+
 
 /* body container */
 section{
