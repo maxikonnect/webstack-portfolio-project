@@ -258,7 +258,6 @@ header {
         padding: 2rem 0 2rem 0;
         
         z-index: 1000;
-        margin: 0 10px;
         .logo-container {
           transition: .4s linear !important;
           .logo {
@@ -418,11 +417,10 @@ header {
           right: 10px;
         }
       }
-      .menu-toggle{
+      #menu-toggle{
         font-size: var(--font-size-x-large);
         height: 3rem;
         position: relative;
-        top: -5px;
         cursor: pointer;
         display: none;
       }
@@ -436,8 +434,41 @@ header {
     .header-container{
       .super-sub-container{
         .sub-container{
+          position: relative;
           .menu{
             display: none;
+          }
+          .signupLogin{
+            display: none;
+          }
+          #menu-toggle{
+            display: block;
+          }
+          .active{
+            display: block;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 80px;
+            color: white;
+            z-index: 1000;
+            background-color: var(--color-white);
+            width: 100%;
+            padding: 10px 10px;
+            .start-test{
+              position: relative;
+              .dropdown{
+                position: absolute;
+                left: 90px;
+                top: 0px;
+              }
+              i{
+                color: var(--color-blue);
+              }
+            }
+            a{
+              color: var(--color-blue);
+            }
           }
         }
       }
@@ -650,6 +681,7 @@ section{
 .works{
   margin-top: 6rem;
   .works-content{
+    margin-top: 2rem;
     .single-how-works{
       text-align: center;
       border-radius: 3px;
@@ -658,6 +690,9 @@ section{
       margin-bottom: 2rem;
       padding-bottom: 1.5rem;
       transition: .3s linear !important;
+      &:hover{
+        transform: scaleY(1.05);
+      }
     }
   }
 }

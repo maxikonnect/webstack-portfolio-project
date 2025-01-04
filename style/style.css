@@ -365,7 +365,6 @@ header .header-container .super-sub-container .sub-container {
   justify-content: space-between;
   padding: 2rem 0 2rem 0;
   z-index: 1000;
-  margin: 0 10px;
 }
 header .header-container .super-sub-container .sub-container .logo-container {
   transition: 0.4s linear !important;
@@ -498,18 +497,52 @@ header .header-container .super-sub-container .search-form button {
   top: 8px;
   right: 10px;
 }
-header .header-container .super-sub-container .menu-toggle {
+header .header-container .super-sub-container #menu-toggle {
   font-size: var(--font-size-x-large);
   height: 3rem;
   position: relative;
-  top: -5px;
   cursor: pointer;
   display: none;
 }
 
 @media (max-width: 960px) {
+  .header .header-container .super-sub-container .sub-container {
+    position: relative;
+  }
   .header .header-container .super-sub-container .sub-container .menu {
     display: none;
+  }
+  .header .header-container .super-sub-container .sub-container .signupLogin {
+    display: none;
+  }
+  .header .header-container .super-sub-container .sub-container #menu-toggle {
+    display: block;
+  }
+  .header .header-container .super-sub-container .sub-container .active {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    color: white;
+    z-index: 1000;
+    background-color: var(--color-white);
+    width: 100%;
+    padding: 10px 10px;
+  }
+  .header .header-container .super-sub-container .sub-container .active .start-test {
+    position: relative;
+  }
+  .header .header-container .super-sub-container .sub-container .active .start-test .dropdown {
+    position: absolute;
+    left: 90px;
+    top: 0px;
+  }
+  .header .header-container .super-sub-container .sub-container .active .start-test i {
+    color: var(--color-blue);
+  }
+  .header .header-container .super-sub-container .sub-container .active a {
+    color: var(--color-blue);
   }
 }
 /* body container */
@@ -676,6 +709,9 @@ section {
 .works {
   margin-top: 6rem;
 }
+.works .works-content {
+  margin-top: 2rem;
+}
 .works .works-content .single-how-works {
   text-align: center;
   border-radius: 3px;
@@ -684,6 +720,9 @@ section {
   margin-bottom: 2rem;
   padding-bottom: 1.5rem;
   transition: 0.3s linear !important;
+}
+.works .works-content .single-how-works:hover {
+  transform: scaleY(1.05);
 }
 
 .single-how-works-picture {
