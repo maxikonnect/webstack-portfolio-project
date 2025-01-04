@@ -342,6 +342,7 @@ header {
                 }
             }
           }
+          
         }
       }
   
@@ -414,7 +415,13 @@ header {
           right: 10px;
         }
       }
-      
+      .menu-toggle{
+        font-size: var(--font-size-x-large);
+        height: 3rem;
+        position: relative;
+        top: -5px;
+        cursor: pointer;
+      }
     }
   }
 
