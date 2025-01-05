@@ -719,10 +719,33 @@ section {
   font-weight: var(--font-weight-bold);
 }
 .signup .form-container .form-row .form-group-container .form-group {
+  margin-bottom: 1.2rem;
   color: var(--color-white);
+}
+.signup .form-container .form-row .form-group-container .form-group input[type=text],
+.signup .form-container .form-row .form-group-container .form-group input[type=email],
+.signup .form-container .form-row .form-group-container .form-group input[type=password] {
+  width: 100%;
+  padding: 1.4rem 2rem;
+}
+.signup .form-container .form-row .form-group-container .form-group label {
+  color: var(--color-white);
+  font-size: var(--font-size-small);
 }
 .signup .form-container .form-row .form-group-container .form-group .primary-button {
   width: 100%;
+}
+.signup .form-container .form-row .form-group-container .form-group-login {
+  margin-top: -2rem;
+}
+.signup .form-container .form-row .form-group-container .form-group-login p {
+  color: var(--color-white);
+}
+.signup .form-container .form-row .form-group-container .form-group-login p a {
+  color: var(--color-white);
+}
+.signup .form-container .form-row .form-group-container .form-group-login p a:hover {
+  color: var(--color-blue);
 }
 
 /*footer section */
