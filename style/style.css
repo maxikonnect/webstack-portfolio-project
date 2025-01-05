@@ -373,6 +373,7 @@ header .header-container .super-sub-container .sub-container .logo-container .lo
   cursor: pointer;
   font-size: var(--font-size-x-large);
   font-weight: var(--font-weight-regular);
+  padding: 0 10px;
 }
 header .header-container .super-sub-container .sub-container .logo-container:hover {
   transform: scale(1.05);
@@ -422,23 +423,26 @@ header .header-container .super-sub-container .sub-container .menu .main-menu .d
   display: flex;
   flex-direction: column;
   min-width: 200px;
-  background-color: var(--color-blue);
+  background-color: var(--color-white);
   z-index: 1000;
   display: none;
 }
 header .header-container .super-sub-container .sub-container .menu .main-menu .dropdown a {
   padding: 1.4rem 0.5rem;
   display: block;
-  color: rgb(230, 230, 230);
+  color: var(--color-blue);
 }
 header .header-container .super-sub-container .sub-container .menu .main-menu .dropdown a:hover {
-  color: var(--color-white);
+  color: #32baf5;
 }
 header .header-container .super-sub-container .sub-container .menu .main-menu:hover i {
   transform: rotate(180deg);
 }
 header .header-container .super-sub-container .sub-container .menu .main-menu:hover .dropdown {
   display: block;
+}
+header .header-container .super-sub-container .signupLogin {
+  padding: 0 10px;
 }
 header .header-container .super-sub-container .signupLogin a {
   padding: 0 0.8rem;
@@ -503,6 +507,7 @@ header .header-container .super-sub-container #menu-toggle {
   position: relative;
   cursor: pointer;
   display: none;
+  padding: 0 10px;
 }
 
 @media (max-width: 960px) {
@@ -535,8 +540,15 @@ header .header-container .super-sub-container #menu-toggle {
   }
   .header .header-container .super-sub-container .sub-container .active .start-test .dropdown {
     position: absolute;
-    left: 90px;
+    left: 100px;
     top: 0px;
+    background-color: var(--color-blue);
+  }
+  .header .header-container .super-sub-container .sub-container .active .start-test .dropdown a {
+    color: var(--color-white);
+  }
+  .header .header-container .super-sub-container .sub-container .active .start-test .dropdown a:hover {
+    color: rgb(230, 230, 230);
   }
   .header .header-container .super-sub-container .sub-container .active .start-test i {
     color: var(--color-blue);

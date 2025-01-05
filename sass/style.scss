@@ -264,6 +264,7 @@ header {
             cursor: pointer;
             font-size: var(--font-size-x-large);
             font-weight: var(--font-weight-regular);
+            padding: 0 10px;
   
             
           }
@@ -322,15 +323,15 @@ header {
                 display: flex;
                 flex-direction: column;
                 min-width: 200px;
-                background-color: var(--color-blue);
+                background-color: var(--color-white);
                 z-index: 1000;
                 display: none;
                 a{
                     padding: 1.4rem 0.5rem;
                     display: block;
-                    color: rgb(230, 230, 230);
+                    color: var(--color-blue);
                     &:hover{
-                        color: var(--color-white);
+                        color: #32baf5;
                     }
                 }
             }
@@ -349,6 +350,7 @@ header {
       }
   
       .signupLogin {
+        padding: 0 10px;
         a {
           padding: 0 0.8rem;
           font-size: var(--font-size-medium);
@@ -423,6 +425,7 @@ header {
         position: relative;
         cursor: pointer;
         display: none;
+        padding: 0 10px;
       }
     }
     
@@ -459,8 +462,15 @@ header {
               position: relative;
               .dropdown{
                 position: absolute;
-                left: 90px;
+                left: 100px;
                 top: 0px;
+                background-color: var(--color-blue);
+                a{
+                  color: var(--color-white);
+                  &:hover{
+                    color: rgb(230, 230, 230);
+                  }
+                }
               }
               i{
                 color: var(--color-blue);
@@ -468,6 +478,7 @@ header {
             }
             a{
               color: var(--color-blue);
+              
             }
           }
         }
