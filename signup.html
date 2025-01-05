@@ -122,7 +122,8 @@
                                     <div class="form-group col-1-2">
                                         <label for="your-password">password:</label>
                                         <span class="form-field-container">
-                                            <input type="password" id="your-password" name="your-password" placeholder="Enter your password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"autocomplete="on" accesskey="p" required>
+                                            <input type="password" id="your-password" name="your-password" placeholder="Enter your password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Password must be at least 8 characters, including an uppercase letter, a lowercase letter, and a number." autocomplete="on" accesskey="p" required>
+                                            <i class="form-field-icon"></i>
                                         </span> 
                                         <p class="form-help" aria-live="polite">Password must be at least 8 characters, including an uppercase letter, a lowercase letter, and a number.</p>
                                     </div>
@@ -130,6 +131,7 @@
                                         <label for="confirm-password">confirm password:</label>
                                         <span class="form-field-container">
                                             <input type="password" id="confirm-password" name="confirm-password" placeholder="Re-enter your password"  autocomplete="off" accesskey="c" required>
+                                            <i class="form-field-icon"></i>
                                         </span> 
                                         <p class="form-help" aria-live="polite">Please ensure this matches the password entered above.</p>
                                     </div>
