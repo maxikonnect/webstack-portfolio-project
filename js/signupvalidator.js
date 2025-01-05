@@ -6,6 +6,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const outputLastName = document.querySelector(".form-help-lastname");
     const nameExp = /^[A-Za-zÀ-ž'\-\s]{3,}$/;
 
+    const emailExp = /[a-z0-9\%+_-.]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+    const emailInput = document.getElementById("your-email");
+    const emailOutput = document.querySelector(".form-help-email");
+
     // Validate first name
     function validateFirstName() {
         const firstValue = firstName.value.trim();
@@ -42,6 +46,11 @@ document.addEventListener("DOMContentLoaded", () => {
         return result;
     }
 
+    function validateEmail(){
+        const emailValue = emailInput.value.trim();
+        const result = emailExp.test(emailValue);
+
+    }
     firstName.addEventListener("input", () => {
         validateFirstName();
     });
@@ -49,4 +58,8 @@ document.addEventListener("DOMContentLoaded", () => {
     lastName.addEventListener("input", () => {
         validateLastName();
     });
+
+    emailInput.addEventListener("input", () => {
+        validateEmail();
+    })
 });

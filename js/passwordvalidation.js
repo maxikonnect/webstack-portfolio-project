@@ -4,8 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const passwordError = document.getElementById('password-error'); // Ensure this element exists in your HTML
     const form = document.querySelector('form');
 
-    //FIRST NAME
-    const firstName = document.getElementById('your-first-name');
 
     confirmPassword.addEventListener('input', () => {
         if (confirmPassword.value !== password.value) {
