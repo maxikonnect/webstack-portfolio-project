@@ -93,8 +93,8 @@
                                         <label for="your-first-name">First Name:</label>
                                         <div class="form-field">
                                             <span class="form-field-container">
-                                                <input type="text" name="your-first-name" id="your-first-name" placeholder="e.g. Afia" maxlength="55" autocomplete="on" accesskey="f" required>
-                                                <i class="form-field-icon"></i>
+                                                <input type="text" name="your-first-name" id="your-first-name" pattern="^[A-Za-zÀ-ž'\-\s]{3,}$" placeholder="e.g. Afia" maxlength="55" autocomplete="on" accesskey="f" required>
+                                                
                                             </span>
                                             <p class="form-help-firstname" aria-live="polite"></p>
                                         </div>
@@ -103,10 +103,9 @@
                                         <label for="your-last-name">last name:</label>
                                         <div class="form-field">
                                             <span class="form-field-container">
-                                                <input type="text" id="your-last-name" name="your-last-name" placeholder="e.g Davis" pattern="[A-Za-zÀ-ž'\-\s]{3,}" maxlength="55" autocomplete="on" accesskey="l" required>
-                                                <i class="form-field-icon"></i>
+                                                <input type="text" id="your-last-name" name="your-last-name" placeholder="e.g Davis" pattern="^[A-Za-zÀ-ž'\-\s]{3,}" maxlength="55" autocomplete="on" accesskey="l" required>
                                             </span>
-                                            <p class="form-help" aria-live="polite">last name should be atleast three characters and only contain letters</p>
+                                            <p class="form-help-lastname" aria-live="polite"></p>
                                         </div>
                                     </div>
                                     <div class="form-group">

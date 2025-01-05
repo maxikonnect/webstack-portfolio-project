@@ -1,24 +1,52 @@
-document.addEventListener("DOMContentLoaded", ()=>{
-    const output = document.querySelector(".form-help-firstname");
+document.addEventListener("DOMContentLoaded", () => {
     const firstName = document.getElementById("your-first-name");
-    const form = document.querySelector("form");
-    const firstNameExp = /[A-Za-zÀ-ž'\-\s]{3,}/;
+    const outputFirstName = document.querySelector(".form-help-firstname");
 
-    firstName.addEventListener("input", ()=>{
-        const firstValue = firstName.value;
-        const result = firstNameExp.test(firstValue);
+    const lastName = document.getElementById("your-last-name"); 
+    const outputLastName = document.querySelector(".form-help-lastname");
+    const nameExp = /^[A-Za-zÀ-ž'\-\s]{3,}$/;
+
+    // Validate first name
+    function validateFirstName() {
+        const firstValue = firstName.value.trim();
+        const result = nameExp.test(firstValue);
         let response = "";
 
-        if(!result){
-            response = "First name should be at least 3 characters and only contains letters";
-            output.style.color = "red";
-        }else{
+        if (!result) {
+            response = "First name should be at least 3 characters and only contain letters.";
+            outputFirstName.style.color = "red";
+        } else {
             response = "Valid first name";
-            output.style.color = "green";
+            outputFirstName.style.color = "green";
         }
-        
-        output.textContent = response;
-    })
-})
 
-477
+        outputFirstName.textContent = response;
+        return result;
+    }
+
+    // Validate last name
+    function validateLastName() {
+        const lastValue = lastName.value.trim();
+        const result = nameExp.test(lastValue);
+        let response = "";
+
+        if (!result) {
+            response = "Last name should be at least 3 characters and only contain letters.";
+            outputLastName.style.color = "red";
+        } else {
+            response = "Valid last name";
+            outputLastName.style.color = "green";
+        }
+
+        outputLastName.textContent = response;
+        return result;
+    }
+
+    firstName.addEventListener("input", () => {
+        validateFirstName();
+    });
+
+    lastName.addEventListener("input", () => {
+        validateLastName();
+    });
+});
