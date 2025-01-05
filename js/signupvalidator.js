@@ -2,11 +2,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const firstName = document.getElementById("your-first-name");
     const outputFirstName = document.querySelector(".form-help-firstname");
 
-    const lastName = document.getElementById("your-last-name"); 
+    const lastName = document.getElementById("your-last-name");
     const outputLastName = document.querySelector(".form-help-lastname");
     const nameExp = /^[A-Za-zÀ-ž'\-\s]{3,}$/;
 
-    const emailExp = /[a-z0-9\%+_-.]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+    const emailExp = /^[a-z0-9%+_.\-]+@[a-z0-9.\-]+\.[a-z]{2,}$/;
     const emailInput = document.getElementById("your-email");
     const emailOutput = document.querySelector(".form-help-email");
 
@@ -46,20 +46,38 @@ document.addEventListener("DOMContentLoaded", () => {
         return result;
     }
 
-    function validateEmail(){
+    // Validate email
+    function validateEmail() {
         const emailValue = emailInput.value.trim();
         const result = emailExp.test(emailValue);
+        let response = "";
 
+        if (!result) {
+            response = "Enter a valid email like 'example@gmail.com'";
+            emailOutput.style.color = "red";
+        } else {
+            response = "Valid email";
+            emailOutput.style.color = "blue";
+        }
+
+        emailOutput.textContent = response;
+        return result;
     }
-    firstName.addEventListener("input", () => {
-        validateFirstName();
-    });
 
-    lastName.addEventListener("input", () => {
-        validateLastName();
-    });
+    // Attach event listeners for real-time validation
+    firstName.addEventListener("input", validateFirstName);
+    lastName.addEventListener("input", validateLastName);
+    emailInput.addEventListener("input", validateEmail);
 
-    emailInput.addEventListener("input", () => {
-        validateEmail();
-    })
+    // Validate on form submission
+    document.querySelector("form").addEventListener("submit", (event) => {
+        const isFirstNameValid = validateFirstName();
+        const isLastNameValid = validateLastName();
+        const isEmailValid = validateEmail();
+
+        if (!isFirstNameValid || !isLastNameValid || !isEmailValid) {
+            event.preventDefault(); // Prevent form submission
+            alert("Please correct the errors before submitting the form.");
+        }
+    });
 });
