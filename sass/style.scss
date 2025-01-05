@@ -651,23 +651,26 @@ section{
 
 /** SIGN UP **/
 .signup{
-    
+   
     .form-container{
+      
       display: flex;
       align-items: center;
       justify-content: center;
       min-height: 100vh;
       width: 100%;
       padding: 0 10px;
-      background-color: #000;
+      background-color: #333;
     .form-row{
-      max-width: 600px;
+      margin: 20px 0;
+      max-width: 500px;
       border: 1px solid grey;
       border-radius: 10px;
       padding: 2rem;
       backdrop-filter: blur(8px);
       -webkit-backdrop-filter: blur(8px);
       .header-text{
+        font-variant: small-caps;
         text-align: center;
         h3, p{
           color: var(--color-white);
@@ -682,11 +685,18 @@ section{
         .form-group{
           margin-bottom: 1.2rem;
           color: var(--color-white);
+          .form-field{
+            p{
+              color: var(--color-white);
+            }
+          }
           input[type="text"],
           input[type="email"],
           input[type="password"]{
             width: 100%;
             padding: 1.4rem 2rem;
+            text-transform: lowercase;
+            font-size: var(--font-size-small);
           }
           label{
             color: var(--color-white);
