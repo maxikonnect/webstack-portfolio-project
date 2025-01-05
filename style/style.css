@@ -629,6 +629,17 @@ section {
   width: 100%;
 }
 
+/* Helpers
+      ============================= */
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
 /*TESTIMONIALS */
 .testimonials .container {
   margin-top: 5rem;
@@ -679,9 +690,48 @@ section {
   background-color: var(--color-dark-blue);
 }
 
+/** SIGN UP **/
+.signup .form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 0 10px;
+  background-color: #000;
+}
+.signup .form-container .form-row {
+  max-width: 600px;
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding: 2rem;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.signup .form-container .form-row .header-text {
+  text-align: center;
+}
+.signup .form-container .form-row .header-text h3, .signup .form-container .form-row .header-text p {
+  color: var(--color-white);
+}
+.signup .form-container .form-row .header-text h3 span, .signup .form-container .form-row .header-text p span {
+  color: var(--color-white);
+  font-weight: var(--font-weight-bold);
+}
+.signup .form-container .form-row .form-group-container .form-group {
+  color: var(--color-white);
+}
+.signup .form-container .form-row .form-group-container .form-group .primary-button {
+  width: 100%;
+}
+
 /*footer section */
 .footer-section {
   background-color: var(--color-blue);
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   padding: 5rem 1.2rem 1.2rem 1.2rem;
 }
 .footer-section .footer .footer-credit-subcontainer {
