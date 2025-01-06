@@ -674,8 +674,20 @@ section{
       .header-text{
         font-variant: small-caps;
         text-align: center;
+        p{
+          font-size: var(--font-size-small);
+          a{
+            color: var(--color-blue);
+            &:hover{
+              text-decoration: underline;
+            }
+          }
+        }
         .para{
           font-size: var(--font-size-medium);
+          a{
+            color: var(--color-blue);
+          }
         }
         h1{
           color: var(--color-white);
@@ -690,6 +702,7 @@ section{
         }
         
       }
+      
       .form-group-container{
         .form-group{
           margin-bottom: 1.2rem;
@@ -699,6 +712,13 @@ section{
               color: var(--color-white);
               font-size: 1.2rem;
               margin-top: 1rem;
+              
+            }
+            .message{
+              width: 100%;
+              font-size: var(--font-size-small);
+              padding: 0 10px;
+              text-transform: lowercase;
             }
           }
           input[type="text"],
@@ -740,6 +760,19 @@ section{
               &:hover{
                 text-decoration: underline;
               }
+            }
+          }
+        }
+        .form-group-contact{
+          p, a{
+            color: var(--color-white);
+            font-size: var(--font-size-medium);
+            font-weight: var(--font-weight-bold);
+          }
+          a{
+            color: var(--color-blue);
+            &:hover{
+              text-decoration: underline;
             }
           }
         }

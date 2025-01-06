@@ -715,8 +715,20 @@ section {
   font-variant: small-caps;
   text-align: center;
 }
+.signup .form-container .form-row .header-text p {
+  font-size: var(--font-size-small);
+}
+.signup .form-container .form-row .header-text p a {
+  color: var(--color-blue);
+}
+.signup .form-container .form-row .header-text p a:hover {
+  text-decoration: underline;
+}
 .signup .form-container .form-row .header-text .para {
   font-size: var(--font-size-medium);
+}
+.signup .form-container .form-row .header-text .para a {
+  color: var(--color-blue);
 }
 .signup .form-container .form-row .header-text h1 {
   color: var(--color-white);
@@ -737,6 +749,12 @@ section {
   color: var(--color-white);
   font-size: 1.2rem;
   margin-top: 1rem;
+}
+.signup .form-container .form-row .form-group-container .form-group .form-field .message {
+  width: 100%;
+  font-size: var(--font-size-small);
+  padding: 0 10px;
+  text-transform: lowercase;
 }
 .signup .form-container .form-row .form-group-container .form-group input[type=text],
 .signup .form-container .form-row .form-group-container .form-group input[type=email],
@@ -772,6 +790,17 @@ section {
   color: var(--color-blue);
 }
 .signup .form-container .form-row .form-group-container .form-group-login a p:hover {
+  text-decoration: underline;
+}
+.signup .form-container .form-row .form-group-container .form-group-contact p, .signup .form-container .form-row .form-group-container .form-group-contact a {
+  color: var(--color-white);
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-bold);
+}
+.signup .form-container .form-row .form-group-container .form-group-contact a {
+  color: var(--color-blue);
+}
+.signup .form-container .form-row .form-group-container .form-group-contact a:hover {
   text-decoration: underline;
 }
 

@@ -14,6 +14,34 @@ document.addEventListener("DOMContentLoaded", () => {
     const passwordInput = document.getElementById("your-password");
     const passwordOutput = document.querySelector(".form-help-password");
 
+    const messageInput = document.getElementById("message");
+    const messageOutput = document.querySelector(".form-help-message");
+
+    // Validate contact message
+    function validateMessage() {
+        const messageValue = messageInput.value.trim();
+        let result = true;
+        let response = "";
+    
+        if (messageValue === "") {
+            response = "Enter a message";
+            messageOutput.style.color = "red";
+            messageOutput.textContent = response;
+            result = false;
+        } else if (messageValue.length < 10) {
+            response = "Message is too short";
+            messageOutput.style.color = "red";
+            messageOutput.textContent = response;
+            result = false;
+        } else {
+            response = "Message looks good";
+            messageOutput.style.color = "green";
+            messageOutput.textContent = response;
+            result = true;
+        }
+        return result;
+    }
+    
     // Validate first name
     function validateFirstName() {
         const firstValue = firstName.value.trim();
@@ -68,14 +96,14 @@ document.addEventListener("DOMContentLoaded", () => {
         return result;
     }
 
-
+    // Validate password
     function validatePassword() {
         const passwordValue = passwordInput.value.trim();
         const result = passwordExp.test(passwordValue);
         let response = "";
 
         if (!result) {
-            response = "Enter atleast 8 characters, including an uppercase letter, a lowercase letter, and a number.";
+            response = "Enter at least 8 characters, including an uppercase letter, a lowercase letter, and a number.";
             passwordOutput.style.color = "red";
         } else {
             response = "Valid password";
@@ -85,10 +113,11 @@ document.addEventListener("DOMContentLoaded", () => {
         passwordOutput.textContent = response;
         return result;
     }
+
     // Attach event listeners for real-time validation
     firstName.addEventListener("input", validateFirstName);
     lastName.addEventListener("input", validateLastName);
     emailInput.addEventListener("input", validateEmail);
     passwordInput.addEventListener("input", validatePassword);
-
+    messageInput.addEventListener("input", validateMessage); 
 });
