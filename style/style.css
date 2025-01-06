@@ -804,6 +804,7 @@ section {
 }
 
 .works {
+  padding: 20px;
   margin-top: 6rem;
 }
 .works .works-content {
@@ -817,6 +818,10 @@ section {
   margin-bottom: 2rem;
   padding-bottom: 1.5rem;
   transition: 0.3s linear !important;
+}
+.works .works-content .single-how-works h3 {
+  color: var(--color-black);
+  font-size: var(--font-size-large);
 }
 .works .works-content .single-how-works:hover {
   transform: scaleY(1.05);

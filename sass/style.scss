@@ -783,6 +783,7 @@ section{
 
 
 .works{
+  padding: 20px;
   margin-top: 6rem;
   .works-content{
     margin-top: 2rem;
@@ -794,6 +795,11 @@ section{
       margin-bottom: 2rem;
       padding-bottom: 1.5rem;
       transition: .3s linear !important;
+
+      h3{
+        color: var(--color-black);
+        font-size: var(--font-size-large);
+      }
       &:hover{
         transform: scaleY(1.05);
       }
