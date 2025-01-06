@@ -859,30 +859,30 @@ section {
 }
 
 /*PRIVACY POLICY */
-.policy-container {
+.policyterms-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
 }
-.policy-container a {
+.policyterms-container a {
   text-transform: lowercase;
 }
-.policy-container h1, .policy-container h2, .policy-container h3, .policy-container h4, .policy-container h5, .policy-container h6, .policy-container ul li {
+.policyterms-container h1, .policyterms-container h2, .policyterms-container h3, .policyterms-container h4, .policyterms-container h5, .policyterms-container h6, .policyterms-container ul li {
   line-height: 1.4;
 }
-.policy-container h1 {
+.policyterms-container h1 {
   font-size: var(--font-size-xx-large);
   color: var(--color-blue);
 }
-.policy-container h2 {
+.policyterms-container h2 {
   font-size: var(--font-size-x-large);
   margin: 20px 0 2px 0;
 }
-.policy-container h3 {
+.policyterms-container h3 {
   font-size: var(--font-size-large);
   margin-top: 1rem;
 }
-.policy-container p, .policy-container ul li {
+.policyterms-container p, .policyterms-container ul li {
   font-size: 1.5rem;
   color: rgb(60, 60, 60);
 }
