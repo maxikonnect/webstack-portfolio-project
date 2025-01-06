@@ -473,6 +473,7 @@ header .header-container .super-sub-container .signupLogin .btn:active {
 }
 header .header-container .super-sub-container .search-form {
   position: relative;
+  margin-right: 10px;
 }
 header .header-container .super-sub-container .search-form input[type=text] {
   font-size: var(--font-size-medium);
@@ -483,7 +484,7 @@ header .header-container .super-sub-container .search-form input[type=text] {
 header .header-container .super-sub-container .search-form input[type=text]:focus {
   border: 1px solid var(--color-blue);
   border-radius: 10px;
-  padding: 1.2rem 1.2rem;
+  padding: 1rem 1rem;
 }
 header .header-container .super-sub-container .search-form input[type=text]::placeholder {
   font-size: var(--font-size-medium);
@@ -855,6 +856,35 @@ section {
   color: #767f86;
   border: 1px solid #d3d6d9;
   border-radius: 3px;
+}
+
+/*PRIVACY POLICY */
+.policy-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.policy-container a {
+  text-transform: lowercase;
+}
+.policy-container h1, .policy-container h2, .policy-container h3, .policy-container h4, .policy-container h5, .policy-container h6, .policy-container ul li {
+  line-height: 1.4;
+}
+.policy-container h1 {
+  font-size: var(--font-size-xx-large);
+  color: var(--color-blue);
+}
+.policy-container h2 {
+  font-size: var(--font-size-x-large);
+  margin: 20px 0 2px 0;
+}
+.policy-container h3 {
+  font-size: var(--font-size-large);
+  margin-top: 1rem;
+}
+.policy-container p, .policy-container ul li {
+  font-size: 1.5rem;
+  color: rgb(60, 60, 60);
 }
 
 /*# sourceMappingURL=style.css.map */

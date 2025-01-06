@@ -387,6 +387,7 @@ header {
       /*search for */
       .search-form {
         position: relative;
+        margin-right: 10px;
         input[type="text"] {
           font-size: var(--font-size-medium);
           opacity: 0.8;
@@ -396,7 +397,7 @@ header {
           &:focus {
             border: 1px solid var(--color-blue);
             border-radius: 10px;
-            padding: 1.2rem 1.2rem;
+            padding: 1rem 1rem;
           }
       
           &::placeholder {
@@ -837,3 +838,32 @@ section{
     border-radius: 3px;
 }
 
+/*PRIVACY POLICY */
+.policy-container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  a{
+    text-transform: lowercase;
+  }
+  h1, h2, h3, h4, h5, h6, ul li{
+    line-height: 1.4;
+  }
+  h1{
+    font-size: var(--font-size-xx-large);
+    color: var(--color-blue);
+  }
+  h2{
+    font-size: var(--font-size-x-large);
+    margin: 20px 0 2px 0;
+    
+  }
+  h3{
+    font-size: var(--font-size-large);
+    margin-top: 1rem;
+  }
+  p, ul li{
+    font-size: 1.5rem;
+    color: rgb(60, 60, 60);
+  }
+}
