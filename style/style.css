@@ -715,6 +715,13 @@ section {
   font-variant: small-caps;
   text-align: center;
 }
+.signup .form-container .form-row .header-text .para {
+  font-size: var(--font-size-medium);
+}
+.signup .form-container .form-row .header-text h1 {
+  color: var(--color-white);
+  font-size: var(--font-size-x-large);
+}
 .signup .form-container .form-row .header-text h3, .signup .form-container .form-row .header-text p {
   color: var(--color-white);
 }
@@ -747,17 +754,25 @@ section {
   width: 100%;
 }
 .signup .form-container .form-row .form-group-container .form-group-login {
-  margin-top: -2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .signup .form-container .form-row .form-group-container .form-group-login p {
   color: var(--color-white);
   font-size: 1.2rem;
 }
 .signup .form-container .form-row .form-group-container .form-group-login p a {
-  color: var(--color-white);
+  color: var(--color-blue);
 }
 .signup .form-container .form-row .form-group-container .form-group-login p a:hover {
+  text-decoration: underline;
+}
+.signup .form-container .form-row .form-group-container .form-group-login a p {
   color: var(--color-blue);
+}
+.signup .form-container .form-row .form-group-container .form-group-login a p:hover {
+  text-decoration: underline;
 }
 
 /*footer section */

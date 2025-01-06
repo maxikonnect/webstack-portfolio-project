@@ -674,6 +674,13 @@ section{
       .header-text{
         font-variant: small-caps;
         text-align: center;
+        .para{
+          font-size: var(--font-size-medium);
+        }
+        h1{
+          color: var(--color-white);
+          font-size: var(--font-size-x-large);
+        }
         h3, p{
           color: var(--color-white);
           span{
@@ -712,18 +719,29 @@ section{
           }
         }
         .form-group-login{
-          margin-top: -2rem;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
           p{
             color: var(--color-white);
             font-size: 1.2rem;
+            
             a{
-              color: var(--color-white);
+              color: var(--color-blue);
+              
               &:hover{
-                color: var(--color-blue);
+                text-decoration: underline;
               }
             }
           }
-          
+          a{
+            p{
+              color: var(--color-blue);
+              &:hover{
+                text-decoration: underline;
+              }
+            }
+          }
         }
       }
     }
