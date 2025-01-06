@@ -12,9 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 passwordError.textContent = 'Passwords do not match.';
             }
         } else {
-            confirmPassword.setCustomValidity('');
+            confirmPassword.setCustomValidity('Password match');
             if (passwordError) {
-                passwordError.textContent = '';
+                passwordError.textContent = 'Password match';
+                passwordError.style.color = "green";
             }
         }
     });
