@@ -10,6 +10,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const emailInput = document.getElementById("your-email");
     const emailOutput = document.querySelector(".form-help-email");
 
+    const passwordExp = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/;
+    const passwordInput = document.getElementById("your-password");
+    const passwordOutput = document.querySelector(".form-help-password");
+
     // Validate first name
     function validateFirstName() {
         const firstValue = firstName.value.trim();
@@ -57,27 +61,34 @@ document.addEventListener("DOMContentLoaded", () => {
             emailOutput.style.color = "red";
         } else {
             response = "Valid email";
-            emailOutput.style.color = "blue";
+            emailOutput.style.color = "green";
         }
 
         emailOutput.textContent = response;
         return result;
     }
 
+
+    function validatePassword() {
+        const passwordValue = passwordInput.value.trim();
+        const result = passwordExp.test(passwordValue);
+        let response = "";
+
+        if (!result) {
+            response = "Enter atleast 8 characters, including an uppercase letter, a lowercase letter, and a number.";
+            passwordOutput.style.color = "red";
+        } else {
+            response = "Valid password";
+            passwordOutput.style.color = "green";
+        }
+
+        passwordOutput.textContent = response;
+        return result;
+    }
     // Attach event listeners for real-time validation
     firstName.addEventListener("input", validateFirstName);
     lastName.addEventListener("input", validateLastName);
     emailInput.addEventListener("input", validateEmail);
+    passwordInput.addEventListener("input", validatePassword);
 
-    // Validate on form submission
-    document.querySelector("form").addEventListener("submit", (event) => {
-        const isFirstNameValid = validateFirstName();
-        const isLastNameValid = validateLastName();
-        const isEmailValid = validateEmail();
-
-        if (!isFirstNameValid || !isLastNameValid || !isEmailValid) {
-            event.preventDefault(); // Prevent form submission
-            alert("Please correct the errors before submitting the form.");
-        }
-    });
 });

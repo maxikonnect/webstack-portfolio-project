@@ -535,6 +535,7 @@ section{
   padding: 10px;
   width: 100px;
   margin: 15px auto;
+  cursor: pointer;
   &:hover {
     color: var(--color-blue);
     background-color: var(--color-white);
@@ -663,7 +664,7 @@ section{
       background-color: #333;
     .form-row{
       margin: 20px 0;
-      max-width: 500px;
+      width: 400px;
       border: 1px solid grey;
       border-radius: 10px;
       padding: 2rem;
@@ -688,6 +689,8 @@ section{
           .form-field{
             p{
               color: var(--color-white);
+              font-size: 1.2rem;
+              margin-top: 1rem;
             }
           }
           input[type="text"],
@@ -711,6 +714,7 @@ section{
           margin-top: -2rem;
           p{
             color: var(--color-white);
+            font-size: 1.2rem;
             a{
               color: var(--color-white);
               &:hover{
