@@ -847,6 +847,11 @@ section {
   text-decoration: underline;
 }
 
+.footer-sect .footer-logged p {
+  float: right;
+  margin: 1rem;
+}
+
 .works {
   padding: 20px;
   margin-top: 6rem;
@@ -1019,7 +1024,27 @@ section {
 
 /* loggedinpage */
 .loggedheader .header-container {
+  display: flex;
   border-bottom: 1px solid black;
+  position: fixed;
+  top: -1rem;
+  padding: 3rem 0 2rem 1rem;
+  z-index: 999;
+  background-color: var(--color-white);
+  border-bottom: 1px solid black;
+  width: 100%;
+}
+.loggedheader .header-container .header-container-sub {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.loggedheader .header-container .header-container-sub > * {
+  font-size: var(--font-size-large);
+  cursor: pointer;
+}
+.loggedheader .header-container .header-menu {
+  display: inline-block;
 }
 .loggedheader .header-container .header-menu i {
   margin: 2rem 1rem 2rem 2rem;
@@ -1029,10 +1054,10 @@ section {
 .loggedheader .header-container .header-menu a {
   font-size: var(--font-size-large);
 }
-.loggedheader .menu {
+.loggedheader .menu-items {
   position: fixed;
   top: 6rem;
-  left: 0rem;
+  left: 0;
   height: 100vh;
   background-color: var(--color-white);
   width: 20rem;
@@ -1045,11 +1070,56 @@ section {
   z-index: 99;
   border-right: 1px solid var(--color-black);
 }
-.loggedheader .menu .user {
+.loggedheader .menu-items .user {
   display: flex;
   font-size: var(--font-size-medium);
   align-items: center;
   gap: 0.6rem;
+  margin-top: 1.2rem;
+  cursor: pointer;
+}
+.loggedheader .menu-items .user p:hover {
+  color: var(--color-blue);
+}
+
+/*logged in page home */
+.scores {
+  margin-top: 10rem;
+  height: 100vh;
+}
+.scores .containerscores .rowscores {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+.scores .containerscores .rowscores .column {
+  flex: 1 1 30rem;
+  border: 1px solid black;
+  padding: 20px;
+  margin: 20px;
+}
+.scores .containerscores .rowscores .column .totalscore, .scores .containerscores .rowscores .column .averagescore {
+  color: var(--color-red);
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-bold);
+}
+.scores .containerscores .rowscores .column .tests {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+.scores .containerscores .rowscores .column .tests .title {
+  font-size: var(--font-size-medium);
+}
+.scores .containerscores .rowscores .column .tests p {
+  font-size: var(--font-size-small);
+}
+
+/*menu toggle for logged in page */
+.menu-items.menutoggle {
+  left: -35rem;
 }
 
 /*# sourceMappingURL=style.css.map */

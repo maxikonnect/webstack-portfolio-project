@@ -23,26 +23,28 @@
     </head>
     <body>
         <header class="loggedheader" id="loggedheader">
-          <div class="header-container">
-            <div class="header-menu"><i class="fas fa-bars" aria-hidden="true"></i><a href="#">passonetouch</a></div>
-          </div>
-          <div class="menu">
-            <div class="user"><i class="fa fa-user-circle" aria-hidden="true"></i><p>Hello maxi</p></div>
-            <div class="user"><i class="fa fa-building" aria-hidden="true"></i><p>home</p></div>
-            <div class="user"><i class="fa fa-tasks" aria-hidden="true"></i><p>start tests</p></div>
-            <div class="user"><i class="fa fa-sign-out" aria-hidden="true"></i><p>logout</p></div>
-          </div>
-        </header>
-        <main>
+            <div class="header-container">
+              <div class="header-container-sub">
+                <div id="menu-toggle-icon" class="fas fa-bars"></div> <!-- Menu Toggle Icon -->
+                <div class="logo">passonetouch</div>
+              </div>
+            </div>
+            <div class="menu-items">
+              <div class="user"><i class="fa fa-user-circle" aria-hidden="true"></i><p>Hello Maxi</p></div>
+              <div class="user" id="user-home"><i class="fa fa-building" aria-hidden="true"></i><a href="loggedinpagehome.html">Home</a></div>
+              <div class="user" id="user-start-tests"><i class="fa fa-tasks" aria-hidden="true"></i><a href="loggedinpagetest.html">Start Tests</a></div>
+              <div class="user"><i class="fa fa-sign-out" aria-hidden="true"></i><p>Logout</p></div>
+            </div>
+          </header>
+          <main>
             <h1 class="visually-hidden">start tests</h1>
-            <section id="latest-news" class="works">
+            <section id="latest-news" class="works user-tests">
                 <div class="container">
                     <div class="col-12 text-center header-text">
                         <h3><span>start tests</span></h3>
                     </div>
                     <div class="works-content" data-aos="fade-up">
                         <div class="row g-3">
-                            
                             <div class="col-12 col-md-3 col-6">
                                 <div class="single-how-works">
                                     <div class="single-how-works-icon">
@@ -66,7 +68,43 @@
                                     <div class="single-how-works-icon">
                                         <img src="Asset/images/testimonial/testimonial5.jpeg" alt="Principal Superintendent Test" class="img-fluid w-100 mb-3">
                                     </div>
-                                    <h3>TEST 3</h3>
+                                    <h3>TEST 4</h3>
+                                    <button class="primary-button" onclick="window.location.href='#'">start now</button>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3 col-6">
+                                <div class="single-how-works">
+                                    <div class="single-how-works-icon">
+                                        <img src="Asset/images/testimonial/testimonial5.jpeg" alt="Principal Superintendent Test" class="img-fluid w-100 mb-3">
+                                    </div>
+                                    <h3>TEST 4</h3>
+                                    <button class="primary-button" onclick="window.location.href='#'">start now</button>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3 col-6">
+                                <div class="single-how-works">
+                                    <div class="single-how-works-icon">
+                                        <img src="Asset/images/testimonial/testimonial5.jpeg" alt="Principal Superintendent Test" class="img-fluid w-100 mb-3">
+                                    </div>
+                                    <h3>TEST 1</h3>
+                                    <button class="primary-button" onclick="window.location.href='#'">start now</button>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3 col-6">
+                                <div class="single-how-works">
+                                    <div class="single-how-works-icon">
+                                        <img src="Asset/images/testimonial/testimonial5.jpeg" alt="Principal Superintendent Test" class="img-fluid w-100 mb-3">
+                                    </div>
+                                    <h3>TEST 2</h3>
+                                    <button class="primary-button" onclick="window.location.href='#'">start now</button>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3 col-6">
+                                <div class="single-how-works">
+                                    <div class="single-how-works-icon">
+                                        <img src="Asset/images/testimonial/testimonial5.jpeg" alt="Principal Superintendent Test" class="img-fluid w-100 mb-3">
+                                    </div>
+                                    <h3>TEST 4</h3>
                                     <button class="primary-button" onclick="window.location.href='#'">start now</button>
                                 </div>
                             </div>
@@ -86,19 +124,10 @@
         </main>
 
         <!-- footer start -->
-        <footer class="footer-section">
-            <section class="footer">
-                <div class="safe-policies">
-                    <a href="termsofuse.html">terms of use</a>
-                    <a href="policy.html">privacy policy</a>
-                    <a href="contact.html">contact us</a>
-                </div>
-                <div class="footer-credit-subcontainer">
-                    <div class="credit">
-                        <p class="credit-para">&copy;copyright <span class="credit-span"></span> passonetouch. designed by <a href="https://github.com/maxikonnect">abradu</a></p>
-                    </div>
-                </div>
-            </section>
+        <footer class="footer-sect">
+            <div class="footer-logged">
+                <p class="credit-para">&copy;copyright <span class="credit-span"></span> passonetouch. designed by <a href="https://github.com/maxikonnect">abradu</a></p>
+            </div>
         </footer>
         <!--footer ends-->
 
@@ -109,6 +138,7 @@
         <!--Toggle menu-->
         <script src="js/menutoggle.js"></script>
 
+        <script src="js/loggedinmenu.js"></script>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
         <script>
