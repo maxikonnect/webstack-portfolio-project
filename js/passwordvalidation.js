@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
             confirmPassword.setCustomValidity('Passwords do not match.');
             if (passwordError) {
                 passwordError.textContent = 'Passwords do not match.';
+                passwordError.style.color = "red";
             }
         } else {
             confirmPassword.setCustomValidity('Password match');

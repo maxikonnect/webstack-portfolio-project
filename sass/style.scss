@@ -1015,3 +1015,42 @@ section{
   opacity: 0.4;
   text-decoration: none;
 }
+
+/* loggedinpage */
+.loggedheader{
+  .header-container{
+    border-bottom: 1px solid black;
+    .header-menu{
+
+      i{
+        margin: 2rem 1rem 2rem 2rem;
+        font-size: var(--font-size-large);
+        cursor: pointer;
+      }
+      a{
+        font-size: var(--font-size-large);
+      }
+    }
+  }
+  .menu{
+    position: fixed;
+    top: 6rem; left: 0rem;
+    height: 100vh;
+    background-color: var(--color-white);
+    width: 20rem;
+    border-right: var(--border-bold);
+    padding: 1rem 1rem;
+    display: flex;
+    gap: 2rem;
+    flex-flow: column;
+    transition: 0.2s linear !important;
+    z-index: 99;
+    border-right: 1px solid var(--color-black);
+    .user{
+      display: flex;
+      font-size: var(--font-size-medium);
+      align-items: center;
+      gap: 0.6rem;
+    }
+  }
+}
