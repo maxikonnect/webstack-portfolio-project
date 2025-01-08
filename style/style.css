@@ -847,6 +847,11 @@ section {
   text-decoration: underline;
 }
 
+.footer-sect {
+  position: relative;
+  bottom: 0;
+  right: 0;
+}
 .footer-sect .footer-logged p {
   float: right;
   margin: 1rem;
@@ -1085,35 +1090,50 @@ section {
 /*logged in page home */
 .scores {
   margin-top: 10rem;
-  height: 100vh;
+  min-height: 100vh;
 }
 .scores .containerscores .rowscores {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  justify-content: center;
   gap: 2rem;
 }
 .scores .containerscores .rowscores .column {
   flex: 1 1 30rem;
-  border: 1px solid black;
+  /* Outer column border */
   padding: 20px;
   margin: 20px;
 }
-.scores .containerscores .rowscores .column .totalscore, .scores .containerscores .rowscores .column .averagescore {
-  color: var(--color-red);
-  font-size: var(--font-size-medium);
-  font-weight: var(--font-weight-bold);
-}
-.scores .containerscores .rowscores .column .tests {
+.scores .containerscores .rowscores .column .column-score-header {
+  border: 5px solid green;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin-bottom: 20px;
+  padding: 2rem;
+  transition: border 0.2s linear;
 }
-.scores .containerscores .rowscores .column .tests .title {
+.scores .containerscores .rowscores .column .column-score-header:hover {
+  border: 5px solid var(--color-blue);
+}
+.scores .containerscores .rowscores .column .column-score-header .totalscore, .scores .containerscores .rowscores .column .column-score-header .averagescore {
   font-size: var(--font-size-medium);
 }
-.scores .containerscores .rowscores .column .tests p {
+.scores .containerscores .rowscores .column .column-tests {
+  border: 1px solid black;
+  padding: 2rem;
+}
+.scores .containerscores .rowscores .column .column-tests .tests {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  border-bottom: 1px solid rgb(150, 150, 150);
+  padding-bottom: 20px;
+}
+.scores .containerscores .rowscores .column .column-tests .tests .title {
+  font-size: var(--font-size-medium);
+}
+.scores .containerscores .rowscores .column .column-tests .tests p {
   font-size: var(--font-size-small);
 }
 
