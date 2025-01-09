@@ -1161,3 +1161,17 @@ section{
     left: -35rem;
 }
 
+
+/*QUIZ PAGE */
+.header{
+  .headerContainer{
+    display: flex;
+    align-items: center;
+    .quizheader{
+      p{
+        font-size: var(--font-size-medium);
+      }
+    }
+  }
+}
+
