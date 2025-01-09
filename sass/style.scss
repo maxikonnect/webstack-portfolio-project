@@ -1167,11 +1167,49 @@ section{
   .headerContainer{
     display: flex;
     align-items: center;
-    .quizheader{
-      p{
+    justify-content: space-around;
+    margin: 3rem auto;
+    width: 90%;
+
+    p{
+      font-size: var(--font-size-large);
+    }
+  }
+}
+
+.maincontainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 500px;
+  margin: 0 auto;
+  .quizContainer{
+    .navigation{
+      .before{
+        margin: 2rem 2rem 2rem 0;
+      }
+      .before, .next{
         font-size: var(--font-size-medium);
       }
     }
   }
 }
 
+.question-wrapper{
+  margin-bottom: 1.5rem;
+
+  .question-text{
+    margin-bottom: 0.5rem;
+    text-transform: none;
+    font-size: var(--font-size-medium);
+  }
+  .options-container{
+    position: relative;
+    left: 2rem;
+    input[type="radio"]{
+      position: absolute;
+      left: -2rem;
+    }
+    
+  }
+}

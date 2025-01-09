@@ -1146,9 +1146,43 @@ section {
 .header .headerContainer {
   display: flex;
   align-items: center;
+  justify-content: space-around;
+  margin: 3rem auto;
+  width: 90%;
 }
-.header .headerContainer .quizheader p {
+.header .headerContainer p {
+  font-size: var(--font-size-large);
+}
+
+.maincontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.maincontainer .quizContainer .navigation .before {
+  margin: 2rem 2rem 2rem 0;
+}
+.maincontainer .quizContainer .navigation .before, .maincontainer .quizContainer .navigation .next {
   font-size: var(--font-size-medium);
+}
+
+.question-wrapper {
+  margin-bottom: 1.5rem;
+}
+.question-wrapper .question-text {
+  margin-bottom: 0.5rem;
+  text-transform: none;
+  font-size: var(--font-size-medium);
+}
+.question-wrapper .options-container {
+  position: relative;
+  left: 2rem;
+}
+.question-wrapper .options-container input[type=radio] {
+  position: absolute;
+  left: -2rem;
 }
 
 /*# sourceMappingURL=style.css.map */
