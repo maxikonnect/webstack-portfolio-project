@@ -1,10 +1,19 @@
 const quiz = {
-    scenario: `Use this scenario to answer question 6 and 7.
+    scenario1: `Use this scenario to answer question 6 and 7.
                 Ama works as a receptionist at an educational institution. 
                 Her boss just came through the door and yelled at her, 
                 telling her that the front office was a mess and that she needed to get up 
                 and clean it immediately. After her boss left the room, Ama grabbed some new papers 
                 and violently slammed them into the dustbin.`,
+
+    scenario2:`Use the information below to answer questions 26 to 28.
+            The administration of a senior high school wants to know what proportion 
+            their students are satisfied with the library facilities. Eighteen (18) 
+            library staff are keen to help. They select 200 students in the library during 
+            the first week of the exam period and ask them to fill in a questionnaire on 
+            satisfaction with the library.`,
+    scenario3: `<div>SECTION B</div>
+                <p>TRUE/FALSE</p>`,
     JS: [
         {
             "id": 1,
@@ -115,7 +124,7 @@ const quiz = {
             "answer": "They are the results of a group decision process",
             "score": 0,
             "selectedOption": null
-        }
+        },
         {
             id: 11,
             question: "The District Director of Education's Office phone bill in 2020 is GHC 4,200.00. It increases by 10% in 2021 and a further 20% increase in the first six months of 2022. If the Director settles the bill, how much more will she have to pay at the end of June 2022?",
@@ -311,34 +320,9 @@ const quiz = {
             score: 0,
             selectedOption: null
         },
+        
         {
             id: 26,
-            question: "An argument is sure to be a sound argument if it is a/an…",
-            options: {
-                a: "Guarantee of truth of its conclusion",
-                b: "Argument with true premises",
-                c: "Argument with a true conclusion",
-                d: "Argument which is completely valid"
-            },
-            answer: "Argument with true premises",
-            score: 0,
-            selectedOption: null
-        },
-        {
-            id: 27,
-            question: "Teachers could be made to be more accountable when they are given the…",
-            options: {
-                a: "Training in teaching and examining",
-                b: "Option to transfer to places where they want to serve",
-                c: "Opportunity for professional growth",
-                d: "Freedom to select content and methods of teaching"
-            },
-            answer: "Opportunity for professional growth",
-            score: 0,
-            selectedOption: null
-        },
-        {
-            id: 28,
             question: "What is the population that the sample was selected from?",
             options: {
                 a: "The 200 students who completed the questionnaire",
@@ -351,7 +335,7 @@ const quiz = {
             selectedOption: null
         },
         {
-            id: 29,
+            id: 27,
             question: "In the survey conducted by the library staff at the senior high school, what is the population that the school administration is interested in?",
             options: {
                 a: "The 200 students who completed the questionnaire",
@@ -364,7 +348,7 @@ const quiz = {
             selectedOption: null
         },
         {
-            id: 30,
+            id: 28,
             question: "What is the sample size for the survey?",
             options: {
                 a: "200",
@@ -375,8 +359,568 @@ const quiz = {
             answer: "200",
             score: 0,
             selectedOption: null
+        },
+        {
+            id: 29,
+            question: "An argument is sure to be a sound argument if it is a/an…",
+            options: {
+                a: "Guarantee of truth of its conclusion",
+                b: "Argument with true premises",
+                c: "Argument with a true conclusion",
+                d: "Argument which is completely valid"
+            },
+            answer: "Argument with true premises",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 30,
+            question: "Teachers could be made to be more accountable when they are given the…",
+            options: {
+                a: "Training in teaching and examining",
+                b: "Option to transfer to places where they want to serve",
+                c: "Opportunity for professional growth",
+                d: "Freedom to select content and methods of teaching"
+            },
+            answer: "Opportunity for professional growth",
+            score: 0,
+            selectedOption: null
+        },
+        {
+        id: 31,
+        question: "Who won the best teacher (Leadership and Administration) in the 2022 Ghana Teacher Prize?",
+        options: {
+            a: "Lean Owusu Boateng",
+            b: "Mr. Joseph Kwaku Agbevanu",
+            c: "Madam Stella Gyimaah Larbi",
+            d: "Ivy Asantewa Owusu"
+        },
+        answer: "Mr. Joseph Kwaku Agbevanu",
+        score: 0,
+        selectedOption: null
+        },
+        {
+            id: 32,
+            question: "In a teacher-centered school, the headteacher undertakes all the following activities to enhance teaching and learning except…",
+            options: {
+                a: "Motivating and sustaining teachers' interest in teaching",
+                b: "Encouraging teachers to develop lesson plans that build on existing knowledge",
+                c: "Encouraging teachers to avoid tests because they demoralize students",
+                d: "Empowering teachers to involve each learner in the teaching/learning process"
+            },
+            answer: "Encouraging teachers to avoid tests because they demoralize students",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 33,
+            question: "The general competence intended by Ghana’s pre-tertiary education curriculum framework to promote entrepreneurial skills in learners is…",
+            options: {
+                a: "Personal development and leadership",
+                b: "Critical thinking and problem solving",
+                c: "Creativity and innovation",
+                d: "Communication and collaboration"
+            },
+            answer: "Creativity and innovation",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 34,
+            question: "The type of test that measures the performance of learners against the standards covered in the curriculum is called a/an…",
+            options: {
+                a: "Norm-referenced test",
+                b: "Diagnostic test",
+                c: "Criterion-referenced test",
+                d: "Aptitude test"
+            },
+            answer: "Criterion-referenced test",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 35,
+            question: "Which of the following is not one of the core domains of the national teachers' standards?",
+            options: {
+                a: "Values and attitudes",
+                b: "Practice",
+                c: "Knowledge",
+                d: "Ethics"
+            },
+            answer: "Ethics",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 36,
+            question: "Which of the following is not a tool for formative assessment in the school system?",
+            options: {
+                a: "Project",
+                b: "Oral questions",
+                c: "Multiple choice questions",
+                d: "Inventory"
+            },
+            answer: "Inventory",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 37,
+            question: "Which of the following relates to the affective domain of students' behavior?",
+            options: {
+                a: "Stereotypes",
+                b: "Feelings",
+                c: "Attitudes",
+                d: "All of the above"
+            },
+            answer: "All of the above",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 38,
+            question: "The topmost responsibility of a headteacher is to…",
+            options: {
+                a: "Provide leadership for learning",
+                b: "Maintain school records",
+                c: "Handle discipline problems",
+                d: "Administer the guidance program"
+            },
+            answer: "Provide leadership for learning",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 39,
+            question: "The first important step in teaching is…",
+            options: {
+                a: "Writing questions and diagnostic assessments",
+                b: "Planning beforehand",
+                c: "Organizing material to be taught",
+                d: "Knowing the background of the students"
+            },
+            answer: "Knowing the background of the students",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 40,
+            question: "In what year did GES replace promotion interviews with promotion examinations?",
+            options: {
+                a: "2020",
+                b: "2019",
+                c: "2018",
+                d: "2017"
+            },
+            answer: "2019",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 41,
+            question: "The main objective of classroom assessment is to…",
+            options: {
+                a: "Report on learners' performance to parents",
+                b: "Measure teachers' effectiveness",
+                c: "Improve teaching and learning",
+                d: "Compare learners' performance"
+            },
+            answer: "Improve teaching and learning",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 42,
+            question: "A teacher teaches in a remote school where newspapers are delivered irregularly. With the importance of keeping the students abreast with current affairs in mind, what is the best way to keep the students updated?",
+            options: {
+                a: "Urge the pupils to listen to stories circulating in the community",
+                b: "Try all the available means to get all the newspapers delivered to the school",
+                c: "Gather back issues of newspapers and let pupils compile them",
+                d: "Encourage the pupils to listen to the daily broadcasts from a radio"
+            },
+            answer: "Encourage the pupils to listen to the daily broadcasts from a radio",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 43,
+            question: "Learners are most likely to be intrinsically motivated to learn and master subject matter when they……",
+            options: {
+                a: "Perceive that their performance will compare favorably with that of their peers",
+                b: "Know they will receive positive reinforcement for achieving instructional objectives",
+                c: "Know they will be tested for their understanding of the content in the near future",
+                d: "Believe that the work they are doing is interesting and relates to their own lives"
+            },
+            answer: "Believe that the work they are doing is interesting and relates to their own lives",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 44,
+            question: "The fundamental aim of supervision is to help……",
+            options: {
+                a: "Teachers to understand pupils",
+                b: "Teachers in improving methods",
+                c: "Teachers dealing with pupils",
+                d: "Children learn more effectively"
+            },
+            answer: "Children learn more effectively",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 45,
+            question: "To make learning effective, an instructional goal must be meaningful in terms of……….",
+            options: {
+                a: "Students needs and purposes",
+                b: "Standards of others",
+                c: "Objectives of the curriculum",
+                d: "Intellectual ideas"
+            },
+            answer: "Students needs and purposes",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 46,
+            question: "Procedures used to determine a learner’s abilities are referred to as ……….",
+            options: {
+                a: "Typical performance test",
+                b: "Norm referenced test",
+                c: "Maximum performance test",
+                d: "Criterion-referenced test"
+            },
+            answer: "Maximum performance test",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 47,
+            question: "What are the three components of an educational process?",
+            options: {
+                a: "Teaching, learning and practice",
+                b: "Teacher, students and education",
+                c: "Education, teacher and books",
+                d: "Direction, instruction and skill"
+            },
+            answer: "Teaching, learning and practice",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 48,
+            question: "Which one of the following does not characterize a well-planned lesson?",
+            options: {
+                a: "Varied teaching and learning resources are utilized to promote learning",
+                b: "Varied procedures and activities are undertaken by the pupils",
+                c: "Lesson objectives are specific, measurable and achievable",
+                d: "Lesson notes are vetted by school heads"
+            },
+            answer: "Lesson notes are vetted by school heads",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 49,
+            question: "The capitation grant provided to a school can be used for the ……",
+            options: {
+                a: "Procure stationery",
+                b: "Organise extra classes for pupils",
+                c: "Attend to sanitation and minor repairs and maintenance",
+                d: "Acquire teaching and learning resources"
+            },
+            answer: "Attend to sanitation and minor repairs and maintenance",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 50,
+            question: "What is the most important factor a teacher should consider in selecting and utilizing instructional materials?",
+            options: {
+                a: "Objectives of the lesson",
+                b: "Degree of interest on the part of the students",
+                c: "Availability of instructional materials",
+                d: "Attractiveness of instructional material"
+            },
+            answer: "Objectives of the lesson",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 51,
+            question: "In any school situation, performance tasks are hands-on activities that require students to demonstrate their ability to perform certain actions.",
+            options: {
+                a: "True",
+                b: "False"
+            },
+            answer: "True",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 52,
+            question: "The final outcome of successful strategic competitiveness is above average returns.",
+            options: {
+                a: "True",
+                b: "False"
+            },
+            answer: "True",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 53,
+            question: "Teachers who are respected and liked are associated with greater student satisfaction and higher achievement.",
+            options: {
+                a: "True",
+                b: "False"
+            },
+            answer: "True",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 54,
+            question: "Monitoring involves the development of a forecast of what might happen at a future point in time.",
+            options: {
+                a: "True",
+                b: "False"
+            },
+            answer: "True",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 55,
+            question: "A teacher cannot exhibit referent power from the first day in class by giving students a sense of belonging and acceptance.",
+            options: {
+                a: "True",
+                b: "False"
+            },
+            answer: "False",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 56,
+            question: "Since the health of a nation's economy affects the performance of individual firms and industries, organizations study the economic environment to identify changes, trends, and their strategic implications.",
+            options: {
+                a: "True",
+                b: "False"
+            },
+            answer: "True",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 57,
+            question: "Licensure and exit tests are the best predictors of classroom performance of teachers.",
+            options: {
+                a: "True",
+                b: "False"
+            },
+            answer: "True",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 58,
+            question: "External environment analysis should be conducted annually.",
+            options: {
+                a: "True",
+                b: "False"
+            },
+            answer: "True",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 59,
+            question: "If a person teaches with a high degree of clarity, he/she will spend less time going over material.",
+            options: {
+                a: "True",
+                b: "False"
+            },
+            answer: "True",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 60,
+            question: "Students' performance is higher in classes where the teacher devotes large amounts of time to the materials needed rather than teaching content.",
+            options: {
+                a: "True",
+                b: "False"
+            },
+            answer: "False",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 61,
+            question: "In Ghana, the National Teachers Standards set out the minimum levels of practice that all trained teachers must reach by the end of their pre-service teacher education course in order to play such a critical role.",
+            options: {
+                a: "True",
+                b: "False"
+            },
+            answer: "True",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 62,
+            question: "The purpose of evaluating is to make a judgment about the quality of education provided.",
+            options: {
+                a: "True",
+                b: "False"
+            },
+            answer: "True",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 63,
+            question: "Measurement is the qualitative assessment of performance of learners.",
+            options: {
+                a: "True",
+                b: "False"
+            },
+            answer: "False",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 64,
+            question: "What a teacher does not say is as important as what a teacher does say.",
+            options: {
+                a: "True",
+                b: "False"
+            },
+            answer: "True",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 65,
+            question: "Competitive activities have little value in establishing or maintaining an effective classroom climate and should thus be avoided.",
+            options: {
+                a: "True",
+                b: "False"
+            },
+            answer: "False",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 66,
+            question: "Students feel important and are encouraged to participate in class when a teacher uses their ideas in moving a class lecture or activity forward.",
+            options: {
+                a: "True",
+                b: "False"
+            },
+            answer: "True",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 67,
+            question: "The advancement in literacy, numeracy as well as Science, Technology, Engineering and Mathematics (STEM) fields is central to the Ministry of Education’s vision of producing learners with strong experiential learning capabilities and backgrounds in career-focused programmes.",
+            options: {
+                a: "True",
+                b: "False"
+            },
+            answer: "True",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 68,
+            question: "Strategies such as writing detailed test questions or prompts, including clear directions, and establishing and communicating clear grading criteria increase test reliability.",
+            options: {
+                a: "True",
+                b: "False"
+            },
+            answer: "True",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 69,
+            question: "The standard-based curriculum was rolled out for the primary schools in Ghana in the academic year 2017/2018.",
+            options: {
+                a: "True",
+                b: "False"
+            },
+            answer: "True",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 70,
+            question: "Written assessments are activities in which the students select or compose a response to a prompt.",
+            options: {
+                a: "True",
+                b: "False"
+            },
+            answer: "True",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 71,
+            question: "The teacher cannot alter the classroom climate but should work for student success regardless of the climate.",
+            options: {
+                a: "True",
+                b: "False"
+            },
+            answer: "False",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 72,
+            question: "The overall goal of the Ministry of Education is to provide relevant and quality education for disadvantaged Ghanaians.",
+            options: {
+                a: "True",
+                b: "False"
+            },
+            answer: "True",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 73,
+            question: "The National Teaching Council is not the mandated body that oversees the posting of newly trained teachers in Ghana.",
+            options: {
+                a: "True",
+                b: "False"
+            },
+            answer: "False",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 74,
+            question: "The skill that must be demonstrated in performance tasks cannot vary considerably.",
+            options: {
+                a: "True",
+                b: "False"
+            },
+            answer: "False",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 75,
+            question: "In a school, teachers have many different types of assessment available to them.",
+            options: {
+                a: "True",
+                b: "False"
+            },
+            answer: "True",
+            score: 0,
+            selectedOption: null
         }
-        
     ]
 };
 
@@ -410,10 +954,27 @@ function setQuestions() {
     if (currentPage === 1) {
         const scenarioHTML = `
             <div class="scenario">
-                <p><strong>Scenario:</strong> ${quiz.scenario}</p>
+                <p><strong>Scenario:</strong> ${quiz.scenario1}</p>
             </div>
         `;
         questionContainer.innerHTML += scenarioHTML;
+    }
+
+    if(currentPage === 5){
+        const scenario1HTML = `
+        <div>
+            <p><strong>Scenario:</strong> ${quiz.scenario2}</p>
+        </div>`;
+    questionContainer.innerHTML += scenario1HTML;
+    }
+
+    if(currentPage === 10){
+        const scenario2HTML = `
+        <div>
+            <p>SECTION B</p>
+            <P>TRUE/FALSE</p>
+        </div>`;
+    questionContainer.innerHTML += scenario2HTML;
     }
 
     for (let i = startIndex; i < endIndex; i++) {
