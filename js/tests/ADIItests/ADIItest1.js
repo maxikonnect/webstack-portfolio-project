@@ -12,8 +12,6 @@ const quiz = {
             library staff are keen to help. They select 200 students in the library during 
             the first week of the exam period and ask them to fill in a questionnaire on 
             satisfaction with the library.`,
-    scenario3: `<div>SECTION B</div>
-                <p>TRUE/FALSE</p>`,
     JS: [
         {
             "id": 1,
