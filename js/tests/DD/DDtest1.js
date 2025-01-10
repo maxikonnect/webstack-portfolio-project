@@ -393,19 +393,6 @@ const quiz = {
                 selectedOption: null
             },
             {
-                id: 30,
-                question: "The time frame which it takes teachers to adopt, change, introduced into the school by policy or head teacher is referred to as……..",
-                options: [
-                    "Cultural lag",
-                    "Culture inertia",
-                    "Cultural diffusion",
-                    "Acculturation"
-                ],
-                answer: "Cultural lag",
-                score: 0,
-                selectedOption: null
-            },
-            {
                 id: 31,
                 question: "The two main parts of a school's budget comprise?",
                 options: [

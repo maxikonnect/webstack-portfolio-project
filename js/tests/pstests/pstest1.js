@@ -895,8 +895,8 @@ let currentPage = 0;
          }))
      };
 
-     localStorage.setItem('quizResults', JSON.stringify(results));
-     window.location.href = './result1.html'; // Navigate to the results page
+     localStorage.setItem('quizResults1', JSON.stringify(results));
+     window.location.href = './psresult1.html'; // Navigate to the results page
  }
 
  // Initialize the quiz

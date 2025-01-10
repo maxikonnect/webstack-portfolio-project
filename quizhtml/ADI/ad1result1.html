@@ -6,7 +6,7 @@
         <meta name="author" content="Abradu Frimpong Kwame">
 
         <meta name="description" content="An interactive platform where students can practice objective questions to enhance their exam preparation and improve their chances of success.">
-        <title>PS TEST 1 ANSWERS - PassOneTouch</title>
+        <title>ADI TEST 1 ANSWERS - PassOneTouch</title>
         <!--FONT AWESOME-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
@@ -23,17 +23,21 @@
         <link rel="stylesheet" href="./style/mediaquery.css">
     </head>
     <body>
-        <header>
-            <button class="returnback"><a href="../../loggedinpagehome.html">Return To QuestionS Page</a></button>
-        </header>
-        <h1>Quiz Results</h1>
-        <div class="testresult"></div>
+        <div class="resultContainer">
+            <header>
+                <button class="returnback"><a href="../../loggedinpagehome.html">Return To Question Page</a></button>
+            </header>
+            <div class="quizresults">
+                <h1>Quiz Results</h1>
+                <div class="testresult"></div>
+            </div>
+        </div>
         <script>
     
     
             function displayResults() {
                 // Retrieve results from local storage
-                const results = JSON.parse(localStorage.getItem('quizResults'));
+                const results = JSON.parse(localStorage.getItem('ad1QuizResults1'));
     
                 // Display the score and details
                 const resultContainer = document.querySelector('.testresult');
@@ -58,6 +62,6 @@
             displayResults();
         </script>
         
-        <script src="../../js/tests/pstests/pstest2.js"></script>
+        <script src="../../js/tests/ADItests/ADItest1.js"></script>
     </body>
 </html>

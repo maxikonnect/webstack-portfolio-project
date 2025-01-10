@@ -1105,8 +1105,8 @@ function showScore() {
         }))
     };
 
-    localStorage.setItem('quizResults', JSON.stringify(results));
-    window.location.href = './result1.html'; // Navigate to the results page
+    localStorage.setItem('ADIIQuizResults1', JSON.stringify(results));
+    window.location.href = './ad2result1.html'; // Navigate to the results page
 }
 
 // Initialize the quiz
