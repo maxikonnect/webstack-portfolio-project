@@ -1060,6 +1060,7 @@ function addSubmitButton() {
 
     let submitText = document.createElement('p');
     submitText.textContent = 'Finished With Test. View Results';
+    submitText.classList.add("submitText")
     submitNotice.appendChild(submitText);
 
     let submit = document.createElement('button');

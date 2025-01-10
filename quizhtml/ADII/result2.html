@@ -27,7 +27,7 @@
             <button class="returnback"><a href="../../loggedinpagehome.html">Return To Question Page</a></button>
         </header>
         <h1>Quiz Results</h1>
-        <div class="result"></div>
+        <div class="testresult"></div>
         <script>
     
     
@@ -36,7 +36,7 @@
                 const results = JSON.parse(localStorage.getItem('quizResults'));
     
                 // Display the score and details
-                const resultContainer = document.querySelector('.result');
+                const resultContainer = document.querySelector('.testresult');
                 if (results) {
                     const scoreText = `Total Score: ${results.totalScore} out of ${results.details.length}`;
                     resultContainer.innerHTML += `<h2>${scoreText}</h2>`;
