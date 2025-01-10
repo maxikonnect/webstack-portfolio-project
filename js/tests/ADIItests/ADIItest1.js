@@ -1064,6 +1064,7 @@ function addSubmitButton() {
 
     let submit = document.createElement('button');
     submit.textContent = 'View Results';
+    submit.classList.add("submitresults");
     submit.addEventListener('click', validateAndShowScore);
     result.appendChild(submit);
 }

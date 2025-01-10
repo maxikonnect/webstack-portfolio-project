@@ -848,15 +848,16 @@ let currentPage = 0;
      result.innerHTML = '';
      submitNotice.innerHTML = '';
 
-     let submitText = document.createElement('p');
-     submitText.textContent = 'Finished With Test. View Results';
-     submitNotice.appendChild(submitText);
+    let submitText = document.createElement('p');
+    submitText.textContent = 'Finished With Test. View Results';
+    submitText.classList.add("submitText")
+    submitNotice.appendChild(submitText);
 
-     let submit = document.createElement('button');
-     submit.textContent = 'View Results';
-     submit.classList.add("submitresults")
-     submit.addEventListener('click', validateAndShowScore);
-     result.appendChild(submit);
+    let submit = document.createElement('button');
+    submit.textContent = 'View Results';
+    submit.classList.add("submitresults");
+    submit.addEventListener('click', validateAndShowScore);
+    result.appendChild(submit);
  }
 
  // Validate and show score

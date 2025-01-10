@@ -1223,18 +1223,28 @@ button:disabled {
   margin-bottom: 10px;
 }
 
+.result {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submitText {
+  font-size: Var(--font-size-small);
+}
+
 .submitresults {
   margin-top: 1rem;
   font-size: var(--font-size-medium);
   padding: 1rem;
-  background-color: var(--color-blue);
-  color: var(--color-white);
+  color: var(--color-blue);
+  background-color: var(--color-white);
   border-radius: 10px;
   border: 1px solid var(--color-blue);
 }
 .submitresults:hover {
-  color: var(--color-blue);
-  background-color: var(--color-white);
+  background-color: var(--color-blue);
+  color: var(--color-white);
   outline: 1px solid var(--color-blue);
 }
 .submitresults:active {
