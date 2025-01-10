@@ -949,6 +949,15 @@ function setQuestions() {
     const endIndex = Math.min(startIndex + questionsPerPage, totalQuestions);
 
     // Display scenario if it's the second page
+    if(currentPage === 0){
+        const scenarioHTML = `
+            <p class="true-false">SECTION A</p>
+            <p class="true-false">MULTIPLE CHOICE QUESTIONS</p>
+            <p class="instructions"><strong>INSTRUCTION: </strong>Answer all the questions in this section by choosing the circle corresponding to the correct answer.</p>
+        `
+        questionContainer.innerHTML += scenarioHTML;
+    }
+
     if (currentPage === 1) {
         const scenarioHTML = `
             <div class="scenario">
@@ -967,14 +976,12 @@ function setQuestions() {
     }
 
     if(currentPage === 10){
-        const scenario2HTML = `
-        <div>
-            <p>SECTION B</p>
-            <P>TRUE/FALSE</p>
-        </div>`;
-    questionContainer.innerHTML += scenario2HTML;
+        const scenario1HTML = `
+        <p class="true-false">SECTION B </p>
+        <p class="true-false">TRUE/FALSE </p>
+        `
+        questionContainer.innerHTML += scenario1HTML; 
     }
-
     for (let i = startIndex; i < endIndex; i++) {
         const question = quiz.JS[i];
         const questionHTML = `

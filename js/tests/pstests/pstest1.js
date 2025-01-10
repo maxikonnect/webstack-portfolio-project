@@ -327,7 +327,400 @@ const quiz = {
             "answer": "4 years",
             "score": 0,
             "selectedOption": null
-        }
+        },
+        {
+            id: 42,
+            question: "Which of the following is the most effective way to engage students in the learning process?",
+            options: [
+                "Lecturing for long periods of time",
+                "Incorporating hands-on activities and group discussions",
+                "Providing reading assignments without further explanation",
+                "Allowing students to study on their own without guidance"
+            ],
+            answer: "Incorporating hands-on activities and group discussions",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 43,
+            question: "What is the primary benefit of using formative assessments in the classroom?",
+            options: [
+                "They provide a final grade for students",
+                "They help teachers adjust instruction to meet students' needs",
+                "They are only used for schoolwide testing purposes",
+                "They give students a sense of accomplishment"
+            ],
+            answer: "They help teachers adjust instruction to meet students' needs",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 44,
+            question: "Which of the following strategies is the most effective for managing classroom behavior?",
+            options: [
+                "Ignoring disruptive behavior",
+                "Consistently enforcing rules and expectations",
+                "Allowing students to make their own rules",
+                "Raising your voice to gain attention"
+            ],
+            answer: "Consistently enforcing rules and expectations",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 45,
+            question: "How can teachers foster critical thinking skills in their students?",
+            options: [
+                "By giving them multiple-choice tests only",
+                "By encouraging open-ended questions and discussions",
+                "By providing lectures with no interaction",
+                "By limiting group work opportunities"
+            ],
+            answer: "By encouraging open-ended questions and discussions",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 46,
+            question: "Which of the following is considered a key component of effective classroom management?",
+            options: [
+                "Allowing students to choose the topics they study",
+                "Setting clear expectations for behavior and academic work",
+                "Not providing any form of assessment",
+                "Allowing students to talk without restrictions"
+            ],
+            answer: "Setting clear expectations for behavior and academic work",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 47,
+            question: "Which of these teaching strategies is most likely to improve student engagement?",
+            options: [
+                "Assigning lengthy homework assignments every day",
+                "Using technology to create interactive learning experiences",
+                "Delivering lectures without involving students in discussions",
+                "Limiting group activities in favor of individual work"
+            ],
+            answer: "Using technology to create interactive learning experiences",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 49,
+            question: "Which of the following is the most effective way to support students with diverse learning needs?",
+            options: [
+                "Ignoring their unique challenges and treating all students the same",
+                "Providing accommodations and personalized support",
+                "Expecting all students to learn at the same pace",
+                "Giving extra homework assignments"
+            ],
+            answer: "Providing accommodations and personalized support",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 50,
+            question: "How does peer collaboration contribute to student learning?",
+            options: [
+                "It encourages competition among students",
+                "It allows students to work together and learn from one another",
+                "It only benefits students who already understand the material",
+                "It reduces the need for teacher involvement in the classroom"
+            ],
+            answer: "It allows students to work together and learn from one another",
+            score: 0,
+            selectedOption: null
+        },        
+        {
+            id: 48,
+            question: "Why is differentiated instruction important in a classroom?",
+            options: [
+                "It makes all students learn the same content at the same pace",
+                "It helps meet the diverse needs and learning styles of students",
+                "It allows students to select their own assignments",
+                "It simplifies the teaching process for the teacher"
+            ],
+            answer: "It helps meet the diverse needs and learning styles of students",
+            score: 0,
+            selectedOption: null
+        },
+        
+        {
+            id: 51,
+            question: "A well-organized curriculum helps students achieve higher academic success and is essential for effective teaching.",
+            options: {
+                a: "True",
+                b: "False"
+            },
+            answer: "True",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 52,
+            question: "Regular assessments are important for tracking student progress and identifying areas that require improvement.",
+            options: {
+                a: "True",
+                b: "False"
+            },
+            answer: "True",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 53,
+            question: "A teacher’s effectiveness can be measured purely by the academic performance of their students.",
+            options: {
+                a: "True",
+                b: "False"
+            },
+            answer: "False",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 54,
+            question: "Incorporating student feedback into teaching methods can improve overall learning outcomes.",
+            options: {
+                a: "True",
+                b: "False"
+            },
+            answer: "True",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 55,
+            question: "Professional development opportunities for teachers do not impact student achievement significantly.",
+            options: {
+                a: "True",
+                b: "False"
+            },
+            answer: "False",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 56,
+            question: "Teachers should not adapt their teaching methods based on the diverse needs of students.",
+            options: {
+                a: "True",
+                b: "False"
+            },
+            answer: "False",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 57,
+            question: "Classroom management techniques are only important for maintaining discipline and do not affect learning.",
+            options: {
+                a: "True",
+                b: "False"
+            },
+            answer: "False",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 58,
+            question: "Using technology in the classroom enhances student engagement and learning outcomes.",
+            options: {
+                a: "True",
+                b: "False"
+            },
+            answer: "True",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 59,
+            question: "Teacher collaboration and teamwork contribute to a positive school climate and improve student achievement.",
+            options: {
+                a: "True",
+                b: "False"
+            },
+            answer: "True",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 60,
+            question: "Classroom assessments should be used solely for grading purposes and not for informing instruction.",
+            options: {
+                a: "True",
+                b: "False"
+            },
+            answer: "False",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 61,
+            question: "Setting clear learning objectives is essential for guiding student learning and measuring progress.",
+            options: {
+                a: "True",
+                b: "False"
+            },
+            answer: "True",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 62,
+            question: "Providing immediate and constructive feedback helps students improve and fosters a growth mindset.",
+            options: {
+                a: "True",
+                b: "False"
+            },
+            answer: "True",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 63,
+            question: "Students perform better when teachers are actively engaged in their own professional growth and development.",
+            options: {
+                a: "True",
+                b: "False"
+            },
+            answer: "True",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 64,
+            question: "Effective lesson planning is not necessary for ensuring student engagement and learning success.",
+            options: {
+                a: "True",
+                b: "False"
+            },
+            answer: "False",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 65,
+            question: "A positive and inclusive classroom environment promotes higher student motivation and achievement.",
+            options: {
+                a: "True",
+                b: "False"
+            },
+            answer: "True",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 66,
+            question: "Teachers should avoid using collaborative learning strategies as they disrupt the class flow.",
+            options: {
+                a: "True",
+                b: "False"
+            },
+            answer: "False",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 67,
+            question: "Teacher-student relationships play a crucial role in fostering student success and emotional well-being.",
+            options: {
+                a: "True",
+                b: "False"
+            },
+            answer: "True",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 68,
+            question: "A teacher's enthusiasm and passion for the subject do not influence student learning and engagement.",
+            options: {
+                a: "True",
+                b: "False"
+            },
+            answer: "False",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 69,
+            question: "Student assessments should be varied and not limited to traditional exams or quizzes.",
+            options: {
+                a: "True",
+                b: "False"
+            },
+            answer: "True",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 70,
+            question: "Educational standards provide clear expectations for student achievement and guide teaching practices.",
+            options: {
+                a: "True",
+                b: "False"
+            },
+            answer: "True",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 71,
+            question: "Teachers should avoid integrating real-world connections into lessons, as they are irrelevant to student learning.",
+            options: {
+                a: "True",
+                b: "False"
+            },
+            answer: "False",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 72,
+            question: "Collaborative teaching strategies such as team-teaching and peer teaching can enhance student learning experiences.",
+            options: {
+                a: "True",
+                b: "False"
+            },
+            answer: "True",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 73,
+            question: "Assessing student progress through performance-based tasks provides more authentic insights into learning than traditional testing.",
+            options: {
+                a: "True",
+                b: "False"
+            },
+            answer: "True",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 74,
+            question: "Teachers should encourage a fixed mindset in students to build confidence in their abilities.",
+            options: {
+                a: "True",
+                b: "False"
+            },
+            answer: "False",
+            score: 0,
+            selectedOption: null
+        },
+        {
+            id: 75,
+            question: "Regular reflection on teaching practices allows teachers to improve and adapt to the evolving needs of their students.",
+            options: {
+                a: "True",
+                b: "False"
+            },
+            answer: "True",
+            score: 0,
+            selectedOption: null
+        }        
     ]
 };
 
@@ -360,6 +753,22 @@ let currentPage = 0;
 
     const startIndex = currentPage * questionsPerPage;
     const endIndex = Math.min(startIndex + questionsPerPage, totalQuestions);
+
+    if(currentPage === 0){
+        const scenarioHTML = `
+            <p class="true-false">SECTION A</p>
+            <p class="true-false">MULTIPLE CHOICE QUESTIONS</p>
+            <p class="instructions"><strong>INSTRUCTION: </strong>Answer all the questions in this section by choosing the circle corresponding to the correct answer.</p>
+        `
+        questionContainer.innerHTML += scenarioHTML;
+    }
+    if(currentPage === 10){
+        const scenario1HTML = `
+        <p class="true-false">SECTION B </p>
+        <p class="true-false">TRUE/FALSE </p>
+        `
+        questionContainer.innerHTML += scenario1HTML; 
+    }
 
     for (let i = startIndex; i < endIndex; i++) {
         const question = quiz.JS[i];
@@ -416,6 +825,7 @@ let currentPage = 0;
  function updateNavigationButtons() {
      before.disabled = currentPage === 0;
      next.disabled = currentPage === totalPages - 1;
+
  }
 
  // Add navigation functionality
@@ -444,6 +854,7 @@ let currentPage = 0;
 
      let submit = document.createElement('button');
      submit.textContent = 'View Results';
+     submit.classList.add("submitresults")
      submit.addEventListener('click', validateAndShowScore);
      result.appendChild(submit);
  }

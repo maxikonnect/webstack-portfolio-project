@@ -526,6 +526,14 @@ section{
     }
 }
 
+
+/* BUTTON CSS */
+button:disabled{
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+
 .primary-button{
   outline: 1px solid var(--color-blue);
   background-color: var(--color-blue);
@@ -1181,15 +1189,28 @@ section{
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 500px;
+  max-width: 600px;
   margin: 0 auto;
   .quizContainer{
+    padding: 2rem;
+    margin: 2rem;
+    border: 1px solid rgb(90, 90, 90);
+    border-radius: 10px;
     .navigation{
       .before{
         margin: 2rem 2rem 2rem 0;
       }
-      .before, .next{
+      .before, .next, i,{
         font-size: var(--font-size-medium);
+        padding: .6rem;
+        background-color: var(--color-blue);
+        color: var(--color-white);
+        border-radius: 10px;
+        &:hover{
+          color: var(--color-blue);
+          background-color: var(--color-white);
+          outline: 1px solid var(--color-blue);
+        }
       }
     }
   }
@@ -1210,6 +1231,40 @@ section{
       position: absolute;
       left: -2rem;
     }
-    
+    .option-label{
+      font-size: var(--font-size-small);
+      margin-top: -2rem;
+    }
+  }
+}
+
+/*TRUE OR FALSE AND OTHER INSTRUCTIONS*/
+.true-false{
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+}
+.instructions{
+  font-size: var(--font-size-small);
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.submitresults{
+  margin-top: 1rem;
+  font-size: var(--font-size-medium);
+  padding: 1rem;
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  border-radius: 10px;
+  border: 1px solid var(--color-blue);
+  &:hover{
+    color: var(--color-blue);
+    background-color: var(--color-white);
+    outline: 1px solid var(--color-blue);
+  }
+  &:active{
+    background-color: var(--color-blue);
+    color: var(--color-white);
   }
 }
