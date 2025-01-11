@@ -3,6 +3,7 @@ const quiz = {
         {
             "id": 1,
             "question": "Which of the following best illustrates a teacher applying a constructivists approach to student learning?",
+            
             "options": [
                 "A language arts teacher provides students with concrete reward each time they turn in a written assignment that is free of errors",
                 "A math teacher has students use hands-on materials and real-world problems to acquire new concepts and practices",
@@ -13,6 +14,7 @@ const quiz = {
             "score": 0,
             "selectedOption": null
         },
+
         {
             "id": 2,
             "question": "A JHS teacher gives students a term project that involves various activities such as conducting research, interviewing people, writing a report, and making a group presentation in class. Which of the following strategies should the teacher use to help the students successfully carry out their projects?",
@@ -467,20 +469,20 @@ const quiz = {
             "selectedOption": null
         },
         {
-            id: 37,
-            question: "The time frame which it takes teachers to adopt, change, introduced into the school by policy or head teacher is referred to as……..",
-            options: [
+            "id": 37,
+            "question": "The time frame which it takes teachers to adopt, change, introduced into the school by policy or head teacher is referred to as……..",
+            "options": [
                 "Cultural lag",
                 "Culture inertia",
                 "Cultural diffusion",
                 "Acculturation"
             ],
-            answer: "Cultural lag",
-            score: 0,
-            selectedOption: null
+            "answer": "Cultural lag",
+            "score": 0,
+            "selectedOption": null
         },
         {
-            "id": 39,
+            "id": 38,
             "question": "Which of the following is not an informal assessment?",
             "options": [
                 "Observation",
@@ -493,7 +495,7 @@ const quiz = {
             "selectedOption": null
         },
         {
-            "id": 2,
+            "id": 39,
             "question": "What name is given to the highest decision making body of GES?",
             "options": { "a": "council of state", "b": "council of elders", "c": "council for special initiative", "d": "GES council" },
             "answer": "GES council",
@@ -501,7 +503,15 @@ const quiz = {
             "selectedOption": null
         },
         {
-            "id": 40,
+            "id": 39,
+            "question": "What name is given to the highest decision making body of GES?",
+            "options": { "a": "council of state", "b": "council of elders", "c": "council for special initiative", "d": "GES council" },
+            "answer": "GES council",
+            "score": 0,
+            "selectedOption": null
+        },
+        {
+            "id": 41,
             "question": "Evidence of a positive school ethos includes consistent shared values and standards.",
             "options": [
                 "True",
@@ -511,8 +521,9 @@ const quiz = {
             "score": 0,
             "selectedOption": null
         },
+        
         {
-            "id": 41,
+            "id": 42,
             "question": "It is important that circuit supervisors keep their teachers’ lesson plan notebooks.",
             "options": [
                 "True",
@@ -523,14 +534,14 @@ const quiz = {
             "selectedOption": null
         },
         {
-            "id": 42,
+            "id": 43,
             "question": "Students learn best in a multitude of ways rather than one dominant means.",
             "answer": "True",
             "score": 0,
             "selectedOption": null
         },
         {
-            "id": 43,
+            "id": 44,
             "question": "A school head promoting professional learning community can lead to a sense of competition among teachers in a school.",
             "options": [
                 "True",
@@ -541,7 +552,7 @@ const quiz = {
             "selectedOption": null
         },
         {
-            "id": 44,
+            "id": 45,
             "question": "As a supervisor, consulting your staff in advance when developing a plan may direct your attention to potential pitfalls.",
             "options": [
                 "True",
@@ -552,7 +563,7 @@ const quiz = {
             "selectedOption": null
         },
         {
-            "id": 45,
+            "id": 46,
             "question": "The need for a supervisor to engage in a human relations angle of supervision means that the supervisor should be involved in problem solving and learner-centered education.",
             "options": [
                 "True",
@@ -563,7 +574,7 @@ const quiz = {
             "selectedOption": null
         },
         {
-            "id": 46,
+            "id": 47,
             "question": "In mainstreaming special education students, it is important that they experience an education environment that reinforces the differences between special education and general students.",
             "options": [
                 "True",
@@ -574,7 +585,7 @@ const quiz = {
             "selectedOption": null
         },
         {
-            "id": 47,
+            "id": 48,
             "question": "The school head should ensure that aid vouchers are numbered sequentially and entered the same in the logbook and properly filled.",
             "options": [
                 "True",
@@ -585,7 +596,7 @@ const quiz = {
             "selectedOption": null
         },
         {
-            "id": 48,
+            "id": 49,
             "question": "Climate change, Environmental Education for sustainable Development have become major tools for protecting the environment and ensuring sustainable development.",
             "options": [
                 "True",
@@ -596,7 +607,7 @@ const quiz = {
             "selectedOption": null
         },
         {
-            "id": 49,
+            "id": 50,
             "question": "Even though homework is important in the instructional system and teachers must therefore give homework as part of the instructional process, it is not scored as part of the School-based Assessment in Ghana.",
             "options": [
                 "True",
@@ -607,7 +618,7 @@ const quiz = {
             "selectedOption": null
         },
         {
-            "id": 50,
+            "id": 51,
             "question": "A teacher must test his/her students when assessing them.",
             "options": [
                 "True",
@@ -618,7 +629,7 @@ const quiz = {
             "selectedOption": null
         },
         {
-            "id": 51,
+            "id": 52,
             "question": "Objective type tests cannot be used to assess higher order thinking abilities.",
             "options": [
                 "True",
@@ -629,7 +640,7 @@ const quiz = {
             "selectedOption": null
         },
         {
-            "id": 52,
+            "id": 53,
             "question": "Transfers within the GES is an external exercise.",
             "options": [
                 "True",
@@ -640,7 +651,7 @@ const quiz = {
             "selectedOption": null
         },
         {
-            "id": 53,
+            "id": 54,
             "question": "Transfers within the GES structure, decision making takes place only within the GES council.",
             "options": [
                 "True",
@@ -651,7 +662,7 @@ const quiz = {
             "selectedOption": null
         },
         {
-            "id": 54,
+            "id": 55,
             "question": "The GES Act 1995 (Act 506) and the Education Act 2008 (Act 877)",
             "options": [
                 "True",
@@ -662,7 +673,7 @@ const quiz = {
             "selectedOption": null
         },
         {
-            "id": 55,
+            "id": 56,
             "question": "The GES Act 1974, the new structure and content of education was introduced which brought about the JSS concept implemented on a pilot basis from 1976 to 1987.",
             "options": [
                 "True",
@@ -673,7 +684,7 @@ const quiz = {
             "selectedOption": null
         },
         {
-            "id": 56,
+            "id": 57,
             "question": "The Ministry of Education’s main mandate is to formulate education policies, a legal incident in this monitoring and evaluating their performance.",
             "options": [
                 "True",
@@ -684,7 +695,7 @@ const quiz = {
             "selectedOption": null
         },
         {
-            "id": 57,
+            "id": 58,
             "question": "Legitimate power of a school head is conferred by virtue of his or her appointment to the position and therefore can exert administrative authority.",
             "options": [
                 "True",
@@ -695,45 +706,30 @@ const quiz = {
             "selectedOption": null
         },
         {
-            id: 58,
-            question: "Using technology in the classroom enhances student engagement and learning outcomes.",
-            options: {
-                a: "True",
-                b: "False"
-            },
-            answer: "True",
-            score: 0,
-            selectedOption: null
+            "id": 59,
+            "question": "Using technology in the classroom enhances student engagement and learning outcomes.",
+            "options": [
+                 "True",
+                 "False"
+            ],
+            "answer": "True",
+            "score": 0,
+            "selectedOption": null
         },
         {
-            id: 59,
-            question: "Teacher collaboration and teamwork contribute to a positive school climate and improve student achievement.",
-            options: {
-                a: "True",
-                b: "False"
-            },
-            answer: "True",
-            score: 0,
-            selectedOption: null
-        },
-        {
-            id: 60,
-            question: "Classroom assessments should be used solely for grading purposes and not for informing instruction.",
-            options: {
-                a: "True",
-                b: "False"
-            },
-            answer: "False",
-            score: 0,
-            selectedOption: null
+            "id": 60,
+            "question": "Teacher collaboration and teamwork contribute to a positive school climate and improve student achievement.",
+            "options": [
+                "True",
+                "False"
+            ],
+            "answer": "True",
+            "score": 0,
+            "selectedOption": null
         }
     ]
 }
 
-// TOTAL QUIZ QUESTIONS
-const totalQuestionsContainer = document.querySelector(".totalQuestionsContainer");
-const entireQuestions = totalQuestionsContainer.querySelector(".totalQuestions");
-entireQuestions.textContent = quiz.JS.length;
 
 // HTML SELECTORS
 const quizContainer = document.querySelector(".quizContainer");
@@ -898,8 +894,8 @@ function showScore() {
         }))
     };
 
-    localStorage.setItem('quizResults', JSON.stringify(results));
-    window.location.href = './result1.html'; // Navigate to the results page
+    localStorage.setItem('ddQuizResults2', JSON.stringify(results));
+    window.location.href = './ddresult2.html'; // Navigate to the results page
 }
 
 // Initialize the quiz

@@ -929,10 +929,6 @@ const quiz = {
     ]
 }
 
-// TOTAL QUIZ QUESTIONS
-const totalQuestionsContainer = document.querySelector(".totalQuestionsContainer");
-const entireQuestions = totalQuestionsContainer.querySelector(".totalQuestions");
-entireQuestions.textContent = quiz.JS.length;
 
 // HTML SELECTORS
 const quizContainer = document.querySelector(".quizContainer");

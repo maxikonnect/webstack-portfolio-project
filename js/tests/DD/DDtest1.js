@@ -680,10 +680,6 @@ const quiz = {
     ]
 }
 
-// TOTAL QUIZ QUESTIONS
-const totalQuestionsContainer = document.querySelector(".totalQuestionsContainer");
-const entireQuestions = totalQuestionsContainer.querySelector(".totalQuestions");
-entireQuestions.textContent = quiz.JS.length;
 
 // HTML SELECTORS
 const quizContainer = document.querySelector(".quizContainer");
@@ -848,8 +844,8 @@ function showScore() {
         }))
     };
 
-    localStorage.setItem('quizResults', JSON.stringify(results));
-    window.location.href = './result1.html'; // Navigate to the results page
+    localStorage.setItem('ddQuizResults1', JSON.stringify(results));
+    window.location.href = './ddresult1.html'; // Navigate to the results page
 }
 
 // Initialize the quiz

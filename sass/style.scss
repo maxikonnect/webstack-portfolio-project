@@ -1189,7 +1189,7 @@ button:disabled{
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 600px;
+  max-width: 960px;
   margin: 0 auto;
   .quizContainer{
     padding: 2rem;
@@ -1219,23 +1219,50 @@ button:disabled{
 }
 
 .question-wrapper{
-  margin-bottom: 1.5rem;
+  margin-bottom: 50px;
 
   .question-text{
     margin-bottom: 0.5rem;
     text-transform: none;
     font-size: var(--font-size-medium);
+    margin-bottom: 20px;
+    line-height: 2;
+    .question-number{
+      font-weight: var(--font-weight-bold);
+    }
   }
   .options-container{
     position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
     left: 2rem;
+    margin-top: 1rem;
+    .options{
+      margin-bottom: 2rem;
+      position: relative;
+      top: 2px;
+    }
     input[type="radio"]{
       position: absolute;
       left: -2rem;
+      font-size: var(--font-size-large);
+      width: 2rem;
     }
     .option-label{
       font-size: var(--font-size-small);
       margin-top: -2rem;
+    }
+  }
+}
+
+@media (max-width: 480px){
+  .question-wrapper{
+    .options-container{
+      top: 0px;
+      display: flex;
+      flex-direction: column;
+      gap: 100px;
     }
   }
 }
