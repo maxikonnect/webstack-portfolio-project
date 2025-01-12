@@ -1,19 +1,19 @@
 const quiz = {
     scenario1:`Use the following scenario to answer questions 6, 7, 8, 9, and 
-    10 A mentee teacher observed that the mentor is utilizing a teaching strategy 
+    10.  A mentee teacher observed that the mentor is utilizing a teaching strategy 
     characterized by a sequence of learning activities that shift the responsibility 
     from the teacher to the students. The mentor provides appropriate instruction, 
     assists students, and then allows them to work in groups and eventually, as individuals, 
     carry out the exercise. Though the teacher provided promptings occasionally, 
     students worked on their own to solve problems.`,
 
-    scenario2:`Use the following scenario to answer questions 21, 22, 23, and 24 A novice teacher noted 
+    scenario2:`Use the following scenario to answer questions 21, 22, 23, and 24.  A novice teacher noted 
     on a particular day that the teacher to be observed has the students 
     working in groups outside the classroom. The topic for the day was wasted 
     management and the novice teacher observed that the students were working around
      the compound looking at the school’s waste disposal system and taking notes.`,
 
-     scenario3:`Use the following scenario to answer questions 41, 42 and 43
+     scenario3:`Use the following scenario to answer questions 41, 42 and 43.
     A teacher taking up a new assignment at a new school was told by the school
      head during orientation that a teacher in this school is expected to examine 
      one’s underlying beliefs about teaching and learning and one’s alignment 
@@ -997,16 +997,25 @@ function setQuestions() {
 
     if(currentPage === 1){
         const scenario1HTML = `
+            <div>
+            <p><strong>Scenario:</strong> ${quiz.scenario1}</p>
+            </div>;
         `
         questionContainer.innerHTML += scenario1HTML;
     }
     if(currentPage === 4){
         const scenario2HTML = `
+            <div>
+            <p><strong>Scenario:</strong> ${quiz.scenario2}</p>
+            </div>;
         `
         questionContainer.innerHTML += scenario2HTML;
     }
     if(currentPage === 8){
         const scenario3HTML = `
+            <div>
+            <p><strong>Scenario:</strong> ${quiz.scenario3}</p>
+            </div>;
         `
         questionContainer.innerHTML += scenario3HTML;
     }
