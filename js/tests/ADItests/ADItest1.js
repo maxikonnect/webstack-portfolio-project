@@ -1094,7 +1094,7 @@ function showScore() {
     };
 
     localStorage.setItem('ad1QuizResults1', JSON.stringify(results));
-    window.location.href = './ad1result1.html'; // Navigate to the results page
+    window.location.href = './ad1result1.html'; 
 }
 
 // Initialize the quiz

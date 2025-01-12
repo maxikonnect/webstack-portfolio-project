@@ -286,7 +286,7 @@ const quiz = {
       
       {
         "id": 21,
-        "question": "Use the following scenario to answer questions 22, 23, 24, and 25. A novice teacher noted on a particular day that the teacher to be observed has the students working in groups outside the classroom. The topic for the day was waste management and the novice teacher observed that the students were working around the compound looking at the school’s waste disposal system and taking notes.",
+        "question": "The teaching strategy adopted by the teacher enables students to ",
         "options": [
           "Apply knowledge in the classroom to solve real-world problems.",
           "Illustrate how to use a taught concept.",
