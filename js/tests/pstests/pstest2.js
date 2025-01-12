@@ -2,14 +2,14 @@ const quiz = {
     JS: [
         {
             id: 1,
-            question: "The tenure of office of members of the GES Council is ______________",
+            question: "Who is responsible for appointing members to the GES Council?",
             options: [
-                "Three (3) years",
-                "Two (2) years",
-                "Four (4) years",
-                "Five (5) years"
+                "The President",
+                "The Minister of Education",
+                "Parliament",
+                "The GES Director-General"
             ],
-            answer: "Three (3) years",
+            answer: "The President",
             score: 0,
             selectedOption: null
         },
@@ -966,6 +966,7 @@ let currentPage = 0;
         const scenario1HTML = `
         <p class="true-false">SECTION B </p>
         <p class="true-false">TRUE/FALSE </p>
+        <p class="true-false">Answer all questions in this section by identifying whether the statement provided is true or false.</p>
         `
         questionContainer.innerHTML += scenario1HTML; 
     }

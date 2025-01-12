@@ -761,6 +761,7 @@ let currentPage = 0;
         const scenario1HTML = `
         <p class="true-false">SECTION B </p>
         <p class="true-false">TRUE/FALSE </p>
+        <p class="true-false">Answer all questions in this section by identifying whether the statement provided is true or false.</p>
         `
         questionContainer.innerHTML += scenario1HTML; 
     }
