@@ -116,19 +116,19 @@
             const sumMarks = averageMarksArray.reduce((acc, cum) => acc + cum, 0);
             const sumMarksPercent = averageMarksPercentArray.reduce((acc, cum)=> acc + cum, 0);
 
-            if(averageMarksArray.length == 0 ){
+            if(averageMarksArray.length == 0 && averageMarksPercentArray.length == 0){
                 averageMarks.textContent += "-";
+                averageMarksPercent.textContent += "-";
             }else{
                 averageMarks.textContent += `${sumMarks / averageMarksArray.length}`;
+                averageMarksPercent.textContent += `${sumMarksPercent / averageMarksPercentArray.length}%`;
             }
             
-            averageMarksPercent.textContent += `${sumMarksPercent / averageMarksPercentArray.length}%`; 
+             
         </script>
         <!--Date update-->
         <script src="../js/date.js"></script>
 
-        <!--Toggle menu-->
-        <script src="../js/menutoggle.js"></script>
 
         <script src="../js/loggedinmenu.js"></script>
 

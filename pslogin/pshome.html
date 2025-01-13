@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
         <meta name="author" content="Abradu Frimpong Kwame">
         <meta name="description" content="An interactive platform where students can practice objective questions to enhance their exam preparation and improve their chances of success.">
-        <title>Home - PassOneTouch</title>
+        <title>PS Home - PassOneTouch</title>
         <!--FONT AWESOME-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
@@ -115,15 +115,19 @@
             const sumMarks = averageMarksArray.reduce((acc, cum) => acc + cum, 0);
             const sumMarksPercent = averageMarksPercentArray.reduce((acc, cum)=> acc + cum, 0);
 
-            averageMarks.textContent += `${sumMarks / averageMarksArray.length}`;
-            averageMarksPercent.textContent += `${sumMarksPercent / averageMarksPercentArray.length}%`; 
+            if(averageMarksArray.length == 0 && averageMarksPercentArray.length == 0){
+                averageMarks.textContent += "-";
+                averageMarksPercent.textContent += "-";
+            }else{
+                averageMarks.textContent += `${sumMarks / averageMarksArray.length}`;
+                averageMarksPercent.textContent += `${sumMarksPercent / averageMarksPercentArray.length}%`;
+            }
         </script>
         
         <!--Date update-->
         <script src="../js/date.js"></script>
 
         <!--Toggle menu-->
-        <script src="../js/menutoggle.js"></script>
         <script src="../js/loggedinmenu.js"></script>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
