@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
         <meta name="author" content="Abradu Frimpong Kwame">
         <meta name="description" content="An interactive platform where students can practice objective questions to enhance their exam preparation and improve their chances of success.">
-        <title>Home - PassOneTouch</title>
+        <title>DD Home - PassOneTouch</title>
         <!--FONT AWESOME-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
@@ -33,6 +33,7 @@
               <div class="user"><i class="fa fa-user-circle" aria-hidden="true"></i><p>Hello Maxi</p></div>
               <div class="user" id="user-home"><i class="fa fa-building" aria-hidden="true"></i><a href="./ddhome.html">Home</a></div>
               <div class="user" id="user-start-tests"><i class="fa fa-tasks" aria-hidden="true"></i><a href="./ddtestpage.html">Start Tests</a></div>
+              <div class="user" id="user-check-tests"><i class="fa fa-tasks" aria-hidden="true"></i><a href="./ddresultspage.html">check tests results</a></div>
               <div class="user"><i class="fa fa-sign-out" aria-hidden="true"></i><p>Logout</p></div>
             </div>
           </header>
@@ -43,8 +44,8 @@
                     <div class="rowscores">
                         <div class="column">
                             <div class="column-score-header">
-                                <div class="averageMarks">average marks: </div>
-                                <div class="averageMarksPercent"> average score(Percent): </div>
+                                <div>average marks: <span class="averageMarks"></span></div>
+                                <div> average score(Percent):<span class="averageMarksPercent"></span> </div>
                             </div> 
                         </div>
                         <div class="column">
@@ -112,8 +113,8 @@
             };
         
             displayResult('ddQuizResults1', '.testscore1', '.testscore1percent');
-            displayResult('ddQuizResults1', '.testscore2', '.testscore2percent');
-            displayResult('ddQuizResults1', '.testscore3','.testscore3percent');
+            displayResult('ddQuizResults2', '.testscore2', '.testscore2percent');
+            displayResult('ddQuizResults3', '.testscore3','.testscore3percent');
             const sumMarks = averageMarksArray.reduce((acc, cum) => acc + cum, 0);
             const sumMarksPercent = averageMarksPercentArray.reduce((acc, cum)=> acc + cum, 0);
 

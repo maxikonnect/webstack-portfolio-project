@@ -30,11 +30,12 @@
               </div>
             </div>
             <div class="menu-items">
-              <div class="user"><i class="fa fa-user-circle" aria-hidden="true"></i><p>Hello Maxi</p></div>
-              <div class="user" id="user-home"><i class="fa fa-building" aria-hidden="true"></i><a href="./adIIhome.html">Home</a></div>
-              <div class="user" id="user-start-tests"><i class="fa fa-tasks" aria-hidden="true"></i><a href="./adIItestpage.html">Start Tests</a></div>
-              <div class="user"><i class="fa fa-sign-out" aria-hidden="true"></i><p>Logout</p></div>
-            </div>
+                <div class="user"><i class="fa fa-user-circle" aria-hidden="true"></i><p>Hello Maxi</p></div>
+                <div class="user" id="user-home"><i class="fa fa-building" aria-hidden="true"></i><a href="./adIIhome.html">Home</a></div>
+                <div class="user" id="user-start-tests"><i class="fa fa-tasks" aria-hidden="true"></i><a href="./adIItestpage.html">Start Tests</a></div>
+                <div class="user" id="user-check-tests"><i class="fa fa-tasks" aria-hidden="true"></i><a href="./adIIresultspage.html">check tests results</a></div>
+                <div class="user"><i class="fa fa-sign-out" aria-hidden="true"></i><p>Logout</p></div>
+              </div>
           </header>
           <main>
             <h1 class="visually-hidden">start tests</h1>
@@ -43,8 +44,8 @@
                     <div class="rowscores">
                         <div class="column">
                             <div class="column-score-header">
-                                <div class="averageMarks">average marks: </div>
-                                <div class="averageMarksPercent"> average score(Percent): </div>
+                                <div>average marks: <span class="averageMarks"></span></div>
+                                <div> average score(Percent):<span class="averageMarksPercent"></span> </div>
                             </div> 
                         </div>
                         <div class="column">
@@ -68,6 +69,11 @@
                                     <p class="test#3">test3:</p>
                                     <p class="testscore3"><span> - </span></p>
                                     <p class="testscore3percent"><span> - </span></p>
+                                </div>
+                                <div class="tests">
+                                    <p class="test#4">test4:</p>
+                                    <p class="testscore4"><span> - </span></p>
+                                    <p class="testscore4percent"><span> - </span></p>
                                 </div>
                             </div>
                                 
@@ -111,8 +117,9 @@
             };
         
             displayResult('ADIIQuizResults1', '.testscore1', '.testscore1percent');
-            displayResult('ADIIQuizResults1', '.testscore2', '.testscore2percent');
-            displayResult('ADIIQuizResults1', '.testscore3','.testscore3percent');
+            displayResult('ADIIQuizResults2', '.testscore2', '.testscore2percent');
+            displayResult('ADIIQuizResults3', '.testscore3','.testscore3percent');
+            displayResult('ADIIQuizResults4', '.testscore4','.testscore4percent');
             const sumMarks = averageMarksArray.reduce((acc, cum) => acc + cum, 0);
             const sumMarksPercent = averageMarksPercentArray.reduce((acc, cum)=> acc + cum, 0);
 
@@ -121,7 +128,7 @@
                 averageMarksPercent.textContent += "-";
             }else{
                 averageMarks.textContent += `${sumMarks / averageMarksArray.length}`;
-                averageMarksPercent.textContent += `${sumMarksPercent / averageMarksPercentArray.length}%`;
+                averageMarksPercent.textContent += `${(sumMarksPercent / averageMarksPercentArray.length).toFixed(2)}%`;
             }
             
              

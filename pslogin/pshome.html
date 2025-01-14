@@ -30,9 +30,10 @@
               </div>
             </div>
             <div class="menu-items">
-              <div class="user"><i class="fa fa-user-circle" aria-hidden="true"></i><p>Hello Maxi</p></div>
+              <div class="user"><i class="fa fa-user-circle" aria-hidden="true"></i><p>Welcome Maxi</p></div>
               <div class="user" id="user-home"><i class="fa fa-building" aria-hidden="true"></i><a href="./pshome.html">Home</a></div>
               <div class="user" id="user-start-tests"><i class="fa fa-tasks" aria-hidden="true"></i><a href="./pspagetest.html">Start Tests</a></div>
+              <div class="user" id="user-check-tests"><i class="fa fa-tasks" aria-hidden="true"></i><a href="./psresultspage.html">check tests results</a></div>
               <div class="user"><i class="fa fa-sign-out" aria-hidden="true"></i><p>Logout</p></div>
             </div>
           </header>
@@ -43,8 +44,8 @@
                     <div class="rowscores">
                         <div class="column">
                             <div class="column-score-header">
-                                <div class="averageMarks">average marks: </div>
-                                <div class="averageMarksPercent"> average score(Percent): </div>
+                                <div>average marks: <span class="averageMarks"></span></div>
+                                <div> average score(Percent):<span class="averageMarksPercent"></span> </div>
                             </div> 
                         </div>
                         <div class="column">
@@ -119,8 +120,18 @@
                 averageMarks.textContent += "-";
                 averageMarksPercent.textContent += "-";
             }else{
-                averageMarks.textContent += `${sumMarks / averageMarksArray.length}`;
-                averageMarksPercent.textContent += `${sumMarksPercent / averageMarksPercentArray.length}%`;
+                const aveMarks = `${sumMarks / averageMarksArray.length}`
+                
+
+                const aveMarksPercent = `${sumMarksPercent / averageMarksPercentArray.length}`;
+                averageMarksPercent.textContent += `aveMarksPercent%`;
+
+                if(aveMarks < 35){
+                    averageMarks.style.color = "red";
+                    
+                }else{
+                    averageMarks.style.color = "green";
+                }
             }
         </script>
         

@@ -6,7 +6,7 @@
         <meta name="author" content="Abradu Frimpong Kwame">
 
         <meta name="description" content="An interactive platform where students can practice objective questions to enhance their exam preparation and improve their chances of success.">
-        <title>DD TEST 3 ANSWERS - PassOneTouch</title>
+        <title>ADII TEST 4 ANSWERS - PassOneTouch</title>
         <!--FONT AWESOME-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
@@ -25,10 +25,10 @@
     <body>
         <div class="resultContainer">
             <header>
-                <button class="returnback"><a href="../../ddlogin/ddhome.html">Return To Question Page</a></button>
+                <button class="returnback"><a href="../../loggedinpagehome.html">Return To Question Page</a></button>
             </header>
             <div class="quizresults">
-                <h1>Deputy Director Test 3 Quiz Results</h1>
+                <h1>Quiz Results</h1>
                 <div class="testresult"></div>
             </div>
         </div>
@@ -37,7 +37,7 @@
     
             function displayResults() {
                 // Retrieve results from local storage
-                const results = JSON.parse(localStorage.getItem('ddQuizResults3'));
+                const results = JSON.parse(localStorage.getItem('ADIIQuizResults4'));
     
                 // Display the score and details
                 const resultContainer = document.querySelector('.testresult');
@@ -62,6 +62,6 @@
             displayResults();
         </script>
         
-        <script src="../../js/tests/DD/DDtest3.js"></script>
+        <script src="../../js/tests/ADIItests/ADIItest4.js"></script>
     </body>
 </html>
