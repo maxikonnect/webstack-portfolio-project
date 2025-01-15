@@ -2,9 +2,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const firstName = document.getElementById("your-first-name");
     const outputFirstName = document.querySelector(".form-help-firstname");
 
-    const lastName = document.getElementById("your-last-name");
-    const outputLastName = document.querySelector(".form-help-lastname");
-    const nameExp = /^[A-Za-zÀ-ž'\-\s]{3,}$/;
+    /* const lastName = document.getElementById("your-last-name");
+    const outputLastName = document.querySelector(".form-help-lastname"); */
+    const nameExp = /^[A-Za-zÀ-ž'\-\s]{3,}$/; 
 
     const emailExp = /^[a-z0-9%+_.\-]+@[a-z0-9.\-]+\.[a-z]{2,}$/;
     const emailInput = document.getElementById("your-email");
@@ -14,8 +14,49 @@ document.addEventListener("DOMContentLoaded", () => {
     const passwordInput = document.getElementById("your-password");
     const passwordOutput = document.querySelector(".form-help-password");
 
+    /*validate momo number*/
+    const momoExp = /^[0-9]{10}$/; // Regex for 10-digit numbers
+    const momoInput = document.getElementById("your-momo-number");
+    const momoOutput = document.querySelector(".form-help-momo");
+
     const messageInput = document.getElementById("message");
-    const messageOutput = document.querySelector(".form-help-message");
+    const messageOutput = document.querySelector(".form-help-message"); 
+
+
+    //Exam type
+    const examTypeSelect = document.getElementById("exam-type");
+
+    // Access the specific option with value "principal_superintendent"
+    const principalSuperintendent = Array.from(examTypeSelect.options).find(
+    (option) => option.value === "principal_superintendent"
+    );
+
+    const assistantDirectorI = Array.from(examTypeSelect.options).find(
+        (option) => option.value === "assistant_director_I"
+    );
+
+    const assistantDirectorII = Array.from(examTypeSelect.options).find(
+        (option) => option.value === "assistant_director_II"
+    );
+
+    const deputy_director = Array.from(examTypeSelect.options).find(
+        (option) => option.value === "deputy_director"
+    );
+
+    const momoAmount = document.querySelector(".momo-amount");
+    examTypeSelect.addEventListener("change", () => {
+        const selectedValue = examTypeSelect.value; // Get selected value
+        if (
+            selectedValue === "principal_superintendent" ||
+            selectedValue === "assistant_director_I" ||
+            selectedValue === "assistant_director_II" ||
+            selectedValue === "deputy_director"
+        ) {
+            momoAmount.textContent = `MoMo Amount To Pay: 50 Cedis`; // Update text
+        } else {
+            momoAmount.textContent = `MoMo Amount: Not Applicable`; // Default case
+        }
+    });
 
     // Validate contact message
     function validateMessage() {
@@ -49,10 +90,10 @@ document.addEventListener("DOMContentLoaded", () => {
         let response = "";
 
         if (!result) {
-            response = "First name should be at least 3 characters and only contain letters.";
+            response = "username should be at least 3 characters and only contain letters.";
             outputFirstName.style.color = "red";
         } else {
-            response = "Valid first name";
+            response = "Valid username";
             outputFirstName.style.color = "green";
         }
 
@@ -61,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Validate last name
-    function validateLastName() {
+    /* function validateLastName() {
         const lastValue = lastName.value.trim();
         const result = nameExp.test(lastValue);
         let response = "";
@@ -76,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         outputLastName.textContent = response;
         return result;
-    }
+    } */
 
     // Validate email
     function validateEmail() {
@@ -114,10 +155,27 @@ document.addEventListener("DOMContentLoaded", () => {
         return result;
     }
 
+    function validateMomoNumber() {
+        const momoInputValue = momoInput.value.trim();
+        const isValid = momoExp.test(momoInputValue);
+        let message = "";
+
+        if (!isValid) {
+            message = "Enter a valid 10-digit mobile number.";
+            momoOutput.style.color = "red";
+        } else {
+            message = "Valid MoMo number.";
+            momoOutput.style.color = "green";
+        }
+
+        momoOutput.textContent = message;
+        return isValid;
+    }
     // Attach event listeners for real-time validation
     firstName.addEventListener("input", validateFirstName);
-    lastName.addEventListener("input", validateLastName);
+    //lastName.addEventListener("input", validateLastName);
     emailInput.addEventListener("input", validateEmail);
     passwordInput.addEventListener("input", validatePassword);
-    messageInput.addEventListener("input", validateMessage); 
+    messageInput.addEventListener("input", validateMessage);
+    momoInput.addEventListener("input", validateMomoNumber);
 });

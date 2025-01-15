@@ -406,6 +406,7 @@ header .header-container .super-sub-container .sub-container {
 }
 header .header-container .super-sub-container .sub-container .try-for-free {
   display: inline-block;
+  position: relative;
 }
 header .header-container .super-sub-container .sub-container .try-for-free a {
   font-weight: var(--font-weight-bold);
@@ -416,6 +417,7 @@ header .header-container .super-sub-container .sub-container .try-for-free a {
   border-radius: 10px;
   color: var(--color-white);
   background-color: var(--color-blue);
+  transition: transform 0.3s ease;
 }
 @keyframes design {
   10% {
@@ -786,6 +788,10 @@ button:disabled {
   margin-bottom: 1.2rem;
   color: var(--color-white);
 }
+.signup .form-container .form-row .form-group-container .form-group hr {
+  color: var(--color-white);
+  border: 1px solid var(--color-white);
+}
 .signup .form-container .form-row .form-group-container .form-group .form-field p {
   color: var(--color-white);
   font-size: 1.2rem;
@@ -799,7 +805,8 @@ button:disabled {
 }
 .signup .form-container .form-row .form-group-container .form-group input[type=text],
 .signup .form-container .form-row .form-group-container .form-group input[type=email],
-.signup .form-container .form-row .form-group-container .form-group input[type=password] {
+.signup .form-container .form-row .form-group-container .form-group input[type=password],
+.signup .form-container .form-row .form-group-container .form-group select {
   width: 100%;
   padding: 1.4rem 2rem;
   text-transform: lowercase;
@@ -1334,8 +1341,29 @@ button:disabled {
   border-radius: 10px;
 }
 .resultContainer .returnback {
+  margin: 2rem auto;
+  margin: 2rem;
   font-size: var(--font-size-large);
   color: var(--color-blue);
+}
+.resultContainer .returnback .try-for-free {
+  text-align: center;
+  color: var(--color-white);
+  background-color: var(--color-blue);
+  outline: 2px solid var(--color-blue);
+  padding: 1.2rem 1.2rem;
+  animation: design 1s linear infinite;
+}
+@keyframes design {
+  10% {
+    background-color: var(--color-purple);
+  }
+  50% {
+    background-color: var(--color-grey);
+  }
+  100% {
+    background-color: var(--color-green);
+  }
 }
 .resultContainer .returnback:hover {
   text-decoration: underline;

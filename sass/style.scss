@@ -475,40 +475,7 @@ header {
   }
 }
 
-.confetti-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 200px;
-  pointer-events: none;
-  overflow: hidden;
-}
 
-.confetti-container::before,
-.confetti-container::after {
-  content: '';
-  position: absolute;
-  width: 6px;
-  height: 12px;
-  background-color: red;
-  opacity: 0.8;
-  animation: confetti-fall 3s infinite ease-in-out;
-}
-
-.confetti-container::after {
-  left: 50%;
-  background-color: yellow;
-}
-
-@keyframes confetti-fall {
-  0% {
-    transform: translateY(0) rotate(0deg);
-  }
-  100% {
-    transform: translateY(200px) rotate(360deg);
-  }
-}
 
 @media (max-width: 960px){
   .header{
@@ -792,6 +759,10 @@ button:disabled{
         .form-group{
           margin-bottom: 1.2rem;
           color: var(--color-white);
+          hr{
+            color: var(--color-white);
+            border: 1px solid var(--color-white);
+          }
           .form-field{
             p{
               color: var(--color-white);
@@ -808,7 +779,8 @@ button:disabled{
           }
           input[type="text"],
           input[type="email"],
-          input[type="password"]{
+          input[type="password"],
+          select{
             width: 100%;
             padding: 1.4rem 2rem;
             text-transform: lowercase;
@@ -1403,14 +1375,35 @@ button:disabled{
   border: 1px solid rgb(90, 90, 90);
   padding: 2rem;
   border-radius: 10px;
-  
   .returnback{
+    margin: 2rem auto;
+    margin: 2rem;
     font-size: var(--font-size-large);
     color: var(--color-blue);
+    .try-for-free{
+      text-align: center;
+      color: var(--color-white);
+      background-color: var(--color-blue);
+      outline: 2px solid var(--color-blue);
+      padding: 1.2rem 1.2rem;
+      animation: design 1s linear infinite;
+    }
+    @keyframes design {
+      10%{
+        background-color: var(--color-purple);
+      }
+      50%{
+        background-color: var(--color-grey);
+      }
+      100%{
+        background-color: var(--color-green);
+      }
+    }
     &:hover{
       text-decoration: underline;
       color: var(--color-blue);
     }
+    
   }
   .quizresults{
     h1{

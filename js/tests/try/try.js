@@ -53,6 +53,7 @@ const quiz = {
             "selectedOption": null
         },
         {
+            "id": 5,
             "question": "The characteristics of a Profession include: <br>" +
             "I. Certification <br>" +
             "II. Guided by a body of ethics and standards <br>" +
