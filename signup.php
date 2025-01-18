@@ -198,7 +198,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                         <label for="your-password">password:</label>
                                         <div class="form-field">
                                             <span class="form-field-container">
-                                                <input type="password" id="your-password" name="password" value="<?php echo htmlspecialchars($password)?>" placeholder="Enter your password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Password must be at least 8 characters, including an uppercase letter, a lowercase letter, and a number." autocomplete="on" accesskey="p" required>
+                                                <input type="password" id="your-password" name="password"  placeholder="Enter your password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Password must be at least 8 characters, including an uppercase letter, a lowercase letter, and a number." autocomplete="on" accesskey="p" required>
                                             </span> 
                                             <p class="form-help-password" aria-live="polite"></p>
                                             <p class="red-text"><?php echo htmlspecialchars($password_err); ?></p>
@@ -208,7 +208,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                         <label for="confirm-password">confirm password:</label>
                                         <div class="form-field">
                                             <span class="form-field-container">
-                                                <input type="password" id="confirm-password" name="confirmPassword" value="<?php echo htmlspecialchars($confirmPassword)?>" placeholder="Re-enter your password" required>
+                                                <input type="password" id="confirm-password" name="confirmPassword"  placeholder="Re-enter your password" autocomplete="off" accesskey="c" required>
                                                 <i class="form-field-icon"></i>
                                             </span> 
                                             <p id="password-error" class="form-help" aria-live="polite"></p>
