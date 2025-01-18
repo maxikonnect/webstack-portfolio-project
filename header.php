@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./style/mediaquery.css">
 </head>
-
+<body>
     <header class="header" id="header">
         <div class="header-container">
         <div class="socialicons">
@@ -77,4 +77,3 @@
         </div>
         </div>
     </header>
-<body>

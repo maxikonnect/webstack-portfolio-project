@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <?php require('header.php') ?>
+    <?php require 'header.php' ?>
         <main>
             <h1 class="visually-hidden">Homepage</h1>
             <!--about section start-->
@@ -109,25 +109,8 @@
         </section>
         <!--latest news ends-->   
         </main>
-        <?php require('footer.php') ?>
-   
 
-        <!--Link to javascripts used-->
-        <!--Date update-->
-        <script src="js/date.js"></script>
-
-        <!--Pop up effect-->
-        <script src="./js/popup.js"></script>
-        <!--Toggle menu-->
-        <script src="js/menutoggle.js"></script>
-
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-        <script>
-            AOS.init({
-            duration: 600,
-            delay: 200,
-            });
-        </script>   
+        <!--footer start -->
+        <?php require 'footer.php' ?>
     </body>
 </html>

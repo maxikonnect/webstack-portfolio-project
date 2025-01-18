@@ -21,36 +21,7 @@
         <link rel="stylesheet" href="./style/style.css">
         <link rel="stylesheet" href="./style/mediaquery.css">
     </head>
-    <body>
-        <header class="header" id="header">
-          <div class="header-container">
-            <div class="socialicons">
-                <p>Follow us</p>
-                <a href="#" class="fab fa-youtube" aria-hidden="true" aria-label="YouTube"></a>
-                <a href="#" class="fab fa-facebook-f" aria-hidden="true" aria-label="Facebook"></a>
-                <a href="#" class="fab fa-twitter" aria-hidden="true" aria-label="Twitter"></a>
-                <a href="#" class="fab fa-instagram" aria-hidden="true" aria-label="Instagram"></a>
-                <a href="#" class="fab fa-linkedin" aria-hidden="true" aria-label="LinkedIn"></a>
-            </div>
-            <div class="super-sub-container">
-              <div class="sub-container">
-                <div class="logo-container">
-                    <a href="index.html" class="logo">passOneTouch</a>
-                </div>
-
-                <!--SEARCH FORM-->
-                <div class="search-container">
-                    <form class="search-form" action="" method="">
-                        <input type="text" placeholder="search..." name="search">
-                        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-                    </form>
-                </div>
-                <div id="menu-toggle" class="fas fa-bars">
-                </div>
-              </div>
-            </div>
-          </div>
-        </header>
+    <?php require 'headerlogsign.php' ?>  
         <main>
             <h1 class="visually-hidden">Homepage</h1>
             <section class="signup" id="signup">
@@ -115,20 +86,7 @@
         </main>
 
         <!-- footer start -->
-        <footer class="footer-section">
-            <section class="footer">
-                <div class="safe-policies">
-                    <a href="termsofuse.html">terms of use</a>
-                    <a href="policy.html">privacy policy</a>
-                    <a href="contact.html">contact us</a>
-                </div>
-                <div class="footer-credit-subcontainer">
-                    <div class="credit">
-                        <p class="credit-para">&copy;copyright <span class="credit-span"></span> passonetouch. designed by <a href="https://github.com/maxikonnect">abradu</a></p>
-                    </div>
-                </div>
-            </section>
-        </footer>
+        <?php require 'footer.php' ?>
         <!--footer ends-->
 
         <!--Link to javascripts used-->
