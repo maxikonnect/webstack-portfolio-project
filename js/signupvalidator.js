@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const firstName = document.getElementById("your-first-name");
-    const outputFirstName = document.querySelector(".form-help-firstname");
+    const username = document.getElementById("username");
+    const outputusername = document.querySelector(".form-help-username");
 
     /* const lastName = document.getElementById("your-last-name");
     const outputLastName = document.querySelector(".form-help-lastname"); */
-    const nameExp = /^[A-Za-zÀ-ž'\-\s]{3,}$/; 
+    const nameExp = /^[A-Za-z0-9_]{3,}$/; 
 
     const emailExp = /^[a-z0-9%+_.\-]+@[a-z0-9.\-]+\.[a-z]{2,}$/;
-    const emailInput = document.getElementById("your-email");
+    const emailInput = document.getElementById("email");
     const emailOutput = document.querySelector(".form-help-email");
 
     const passwordExp = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/;
@@ -84,20 +84,20 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     
     // Validate first name
-    function validateFirstName() {
-        const firstValue = firstName.value.trim();
+    function validateusername() {
+        const firstValue = username.value.trim();
         const result = nameExp.test(firstValue);
         let response = "";
 
         if (!result) {
-            response = "username should be at least 3 characters and only contain letters.";
-            outputFirstName.style.color = "red";
+            response = "Username should be at least 3 characters and only contain letters, numbers and underscore.";
+            outputusername.style.color = "red";
         } else {
             response = "Valid username";
-            outputFirstName.style.color = "green";
+            outputusername.style.color = "green";
         }
 
-        outputFirstName.textContent = response;
+        outputusername.textContent = response;
         return result;
     }
 
@@ -172,7 +172,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return isValid;
     }
     // Attach event listeners for real-time validation
-    firstName.addEventListener("input", validateFirstName);
+    username.addEventListener("input", validateusername);
     //lastName.addEventListener("input", validateLastName);
     emailInput.addEventListener("input", validateEmail);
     passwordInput.addEventListener("input", validatePassword);

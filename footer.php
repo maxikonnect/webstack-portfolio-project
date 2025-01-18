@@ -21,11 +21,7 @@
 <!--Toggle menu-->
 <script src="js/menutoggle.js"></script>
 
-<!--password validation -->
-<script src="js/passwordvalidation.js"></script>
 
-<!--signup validator-->
-<script src="js/signupvalidator.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script>
