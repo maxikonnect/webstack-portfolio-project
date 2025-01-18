@@ -116,36 +116,8 @@
             </div>
         </main>
         <!-- footer start -->
-        <footer class="footer-section">
-            <section class="footer">
-                <div class="safe-policies">
-                    <a href="termsofuse.html">terms of use</a>
-                    <a href="policy.html">privacy policy</a>
-                    <a href="contact.html">contact us</a>
-                </div>
-                <div class="footer-credit-subcontainer">
-                    <div class="credit">
-                        <p class="credit-para">&copy;copyright <span class="credit-span"></span> passonetouch. designed by <a href="https://github.com/maxikonnect">abradu</a></p>
-                    </div>
-                </div>
-            </section>
-        </footer>
+        <?php require 'footer.php' ?>
         <!--footer ends-->
-
-        <!--Link to javascripts used-->
-        <!--Date update-->
-        <script src="js/date.js"></script>
-
-        <!--Toggle menu-->
-        <script src="js/menutoggle.js"></script>
-
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-        <script>
-            AOS.init({
-            duration: 600,
-            delay: 200,
-            });
-        </script>   
+        
     </body>
 </html>

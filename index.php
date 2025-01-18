@@ -1,5 +1,27 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        <meta name="author" content="Abradu Frimpong Kwame">
+        
+        <meta name="description" content="An interactive platform where students can practice objective questions to enhance their exam preparation and improve their chances of success.">
+        <title>Home - PassOneTouch</title>
+        <!--FONT AWESOME-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+        <!--Google Fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+        
+        <!--Bootstrap-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+        <!--LINK TO STYLESHEET-->
+        <link rel="stylesheet" href="./style/style.css">
+        <link rel="stylesheet" href="./style/mediaquery.css">
+    </head>
     <?php require 'header.php' ?>
         <main>
             <h1 class="visually-hidden">Homepage</h1>
@@ -70,7 +92,7 @@
                                 <p>
                                     Three pre-tertiary education labour unions have given the government up to the end of September this year to address a number of issues affecting their members as well as teaching and learning in schools.
                                 </p>
-                                <button class="primary-button" onclick="window.location.href='news/latestnews1.html'">
+                                <button class="primary-button" onclick="window.location.href='news/latestnews1.php'">
                                     read more
                                 </button>
                             </div>
@@ -84,7 +106,7 @@
                                 <p>
                                     WAEC Cancels Results of 4,591 Candidates
                                 </p>
-                                <button class="primary-button" onclick="window.location.href='news/latestnews2.html'">
+                                <button class="primary-button" onclick="window.location.href='news/latestnews2.php'">
                                     read more
                                 </button>
                             </div>
@@ -98,7 +120,7 @@
                                 <p>
                                     Three pre-tertiary education labour unions have given the government up to the end of September this year to address a number of issues affecting their members as well as teaching and learning in school.
                                 </p>
-                                <button class="primary-button" onclick="window.location.href='news/latestnews3.html'">
+                                <button class="primary-button" onclick="window.location.href='news/latestnews3.php'">
                                     read more
                                 </button>
                             </div>

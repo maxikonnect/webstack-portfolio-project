@@ -2,9 +2,9 @@
  <footer class="footer-section">
     <section class="footer">
         <div class="safe-policies">
-            <a href="termsofuse.php" title="View our terms of use">terms of use</a>
-            <a href="policy.php" title="View our privacy policy">privacy policy</a>
-            <a href="contact.php" title="Contact us for support">contact us</a>
+            <a href="../termsofuse.php" title="View our terms of use">terms of use</a>
+            <a href="../policy.php" title="View our privacy policy">privacy policy</a>
+            <a href="../contact.php" title="Contact us for support">contact us</a>
         </div>
         <div class="footer-credit-subcontainer">
             <div class="credit">
@@ -16,16 +16,16 @@
 <!--footer ends-->
 
 <!--Date update-->
-<script src="js/date.js"></script>
+<script src="../js/date.js"></script>
 
 <!--Toggle menu-->
-<script src="js/menutoggle.js"></script>
+<script src="../js/menutoggle.js"></script>
 
 <!--password validation -->
-<script src="js/passwordvalidation.js"></script>
+<script src="../js/passwordvalidation.js"></script>
 
 <!--signup validator-->
-<script src="js/signupvalidator.js"></script>
+<script src="../js/signupvalidator.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script>

@@ -22,53 +22,7 @@
         <link rel="stylesheet" href="./style/style.css">
         <link rel="stylesheet" href="./style/mediaquery.css">
     </head>
-    <body>
-        <header class="header" id="header">
-            <div class="header-container">
-                <div class="socialicons">
-                    <p>Follow us</p>
-                    <a href="#" class="fab fa-youtube" aria-hidden="true" aria-label="YouTube"></a>
-                    <a href="#" class="fab fa-facebook-f" aria-hidden="true" aria-label="Facebook"></a>
-                    <a href="#" class="fab fa-twitter" aria-hidden="true" aria-label="Twitter"></a>
-                    <a href="#" class="fab fa-instagram" aria-hidden="true" aria-label="Instagram"></a>
-                    <a href="#" class="fab fa-linkedin" aria-hidden="true" aria-label="LinkedIn"></a>
-                </div>
-                <div class="super-sub-container">
-                    <div class="sub-container">
-                        <div class="logo-container">
-                            <a href="index.html" class="logo">passOneTouch</a>
-                        </div>
-                        <!--
-                        <div class="menu">
-                            <div class="start-test main-menu">
-                                <a href="#">start test</a>
-                                <i class="fas fa-chevron-down" aria-hidden="true"></i>
-                                <div class="dropdown" role="menu" aria-labelledby="start-test">
-                                    <a href="teachersexams.html">Teachers Exams</a>
-                                    <a href="#">Wassce</a>
-                                    <a href="#">BECE</a>
-                                </div>
-                            </div>
-                        </div>
-                        -->
-
-                        <!-- SEARCH FORM -->
-                        <div class="search-container">
-                            <form class="search-form" action="" method="">
-                                <input type="text" placeholder="search..." name="search">
-                                <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-                            </form>
-                        </div>
-                        <div class="signupLogin">
-                            <a href="login.html" class="login">log in</a>
-                            <a href="signup.html" class="signup btn">sign up</a>
-                        </div>
-                        <div id="menu-toggle" class="fas fa-bars"></div>
-                    </div>
-                </div>
-            </div>
-        </header>
-
+        <?php require 'headerlogsign.php' ?>
         <main>
             <h1 class="visually-hidden">tests</h1>
             
@@ -124,37 +78,7 @@
                 </div>
             </section>
         </main>
-
-        <!-- footer start -->
-        <footer class="footer-section">
-            <section class="footer">
-                <div class="safe-policies">
-                    <a href="termsofuse.html">terms of use</a>
-                    <a href="policy.html">privacy policy</a>
-                    <a href="contact.html">contact us</a>
-                </div>
-                <div class="footer-credit-subcontainer">
-                    <div class="credit">
-                        <p class="credit-para">&copy; copyright <span class="credit-span"></span> passOneTouch. Designed by <a href="https://github.com/maxikonnect">Abradu</a></p>
-                    </div>
-                </div>
-            </section>
-        </footer>
-        <!-- footer ends -->
-
-        <!-- Link to javascripts used -->
-        <!-- Date update -->
-        <script src="js/date.js"></script>
-
-        <!-- Toggle menu -->
-        <script src="js/menutoggle.js"></script>
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-        <script>
-            AOS.init({
-                duration: 600,
-                delay: 200,
-            });
-        </script>
+        <!--footer starts -->
+        <?php require 'footer.php' ?>
     </body>
 </html>

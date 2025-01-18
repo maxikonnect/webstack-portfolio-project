@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
         <meta name="author" content="Abradu Frimpong Kwame">
         <meta name="description" content="An interactive platform where students can practice objective questions to enhance their exam preparation and improve their chances of success.">
-        <title>Privacy Policy - PassOneTouch</title>
+        <title>Terms Of Use - PassOneTouch</title>
         <!--FONT AWESOME-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
@@ -21,52 +21,7 @@
         <link rel="stylesheet" href="./style/style.css">
         <link rel="stylesheet" href="./style/mediaquery.css">
     </head>
-    <body>
-        <header class="header" id="header">
-          <div class="header-container">
-            <div class="socialicons">
-                <p>Follow us</p>
-                <a href="#" class="fab fa-youtube" aria-hidden="true" aria-label="YouTube"></a>
-                <a href="#" class="fab fa-facebook-f" aria-hidden="true" aria-label="Facebook"></a>
-                <a href="#" class="fab fa-twitter" aria-hidden="true" aria-label="Twitter"></a>
-                <a href="#" class="fab fa-instagram" aria-hidden="true" aria-label="Instagram"></a>
-                <a href="#" class="fab fa-linkedin" aria-hidden="true" aria-label="LinkedIn"></a>
-            </div>
-            <div class="super-sub-container">
-              <div class="sub-container">
-                <div class="logo-container">
-                    <a href="index.html" class="logo">passOneTouch</a>
-                </div>
-                <div class="menu">
-                    <div class="start-test main-menu">
-                        <a href="#">start test</a>
-                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
-                        <div class="dropdown" role="menu" aria-labelledby="start-test">
-                            <a href="teachersexams.html">Teachers Exams</a>
-                            <!--
-                            <a href="#">Wassce</a>
-                            <a href="#">BECE</a> -->
-                        </div>
-                    </div>
-                </div>
-
-                <!--SEARCH FORM-->
-                <div class="search-container">
-                    <form class="search-form" action="" method="">
-                        <input type="text" placeholder="search..." name="search">
-                        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-                    </form>
-                </div>
-                <div class="signupLogin">
-                    <a href="login.html" class="login">log in</a>
-                    <a href="signup.html" class="signup btn">sign up</a>
-                </div>
-                <div id="menu-toggle" class="fas fa-bars">
-                </div>
-              </div>
-            </div>
-          </div>
-        </header>
+    <?php require 'headerlogsign.php' ?>
         <main>
            <div class="policyterms-container">
                 <h1>Terms of Use of <code>[passonetouch.com]</code></h1>
@@ -281,37 +236,7 @@
                 <p>Therefore, European consumers or consumers based in Norway, Iceland, or Liechtenstein can use this platform to settle disputes arising from online contracts. You can access the platform <a href="https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home.chooseLanguage">via the following link</a>.</p>
             </div> 
         </main>
-        <!-- footer start -->
-        <footer class="footer-section">
-            <section class="footer">
-                <div class="safe-policies">
-                    <a href="termsofuse.html">terms of use</a>
-                    <a href="policy.html">privacy policy</a>
-                    <a href="contact.html">contact us</a>
-                </div>
-                <div class="footer-credit-subcontainer">
-                    <div class="credit">
-                        <p class="credit-para">&copy;copyright <span class="credit-span"></span> passonetouch. designed by <a href="https://github.com/maxikonnect">abradu</a></p>
-                    </div>
-                </div>
-            </section>
-        </footer>
-        <!--footer ends-->
-
-        <!--Link to javascripts used-->
-        <!--Date update-->
-        <script src="js/date.js"></script>
-
-        <!--Toggle menu-->
-        <script src="js/menutoggle.js"></script>
-
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-        <script>
-            AOS.init({
-            duration: 600,
-            delay: 200,
-            });
-        </script>   
+        <!--footer starts -->
+        <?php require 'footer.php' ?>  
     </body>
 </html>
