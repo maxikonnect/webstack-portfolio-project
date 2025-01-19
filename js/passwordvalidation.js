@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+/* document.addEventListener('DOMContentLoaded', () => {
     const password = document.getElementById('your-password');
     const confirmPassword = document.getElementById('confirm-password');
     const passwordError = document.getElementById('password-error'); // Ensure this element exists in your HTML
@@ -30,3 +30,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+*/

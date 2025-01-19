@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let response = "";
 
         if (!result) {
-            response = "Username should be at least 3 characters and only contain letters, numbers and underscore.";
+            response = "Username should be at least 3 characters and only contain letters, numbers or underscore.";
             outputusername.style.color = "red";
         } else {
             response = "Valid username";

@@ -1,3 +1,11 @@
+<?php
+
+    session_start();
+    if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+        header("Location: ../login.php");
+        exit;
+    }
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
@@ -26,15 +34,16 @@
             <div class="header-container">
               <div class="header-container-sub">
                 <div id="menu-toggle-icon" class="fas fa-bars"></div> <!-- Menu Toggle Icon -->
-                <div class="logo"><a href="./adIIhome.html">passonetouch</a></div>
+                <div class="logo"><a href="pshome.html">passonetouch</a></div>
               </div>
             </div>
             <div class="menu-items">
-                <div class="user"><i class="fa fa-user-circle" aria-hidden="true"></i><p>Hello Maxi</p></div>
-                <div class="user" id="user-home"><i class="fa fa-building" aria-hidden="true"></i><a href="./adIIhome.html">Home</a></div>
-                <div class="user" id="user-start-tests"><i class="fa fa-tasks" aria-hidden="true"></i><a href="./adIItestpage.html">Start Tests</a></div>
-                <div class="user" id="user-check-tests"><i class="fa fa-tasks" aria-hidden="true"></i><a href="./adIIresultspage.html">check tests results</a></div>
-                <div class="user"><i class="fa fa-sign-out" aria-hidden="true"></i><p>Logout</p></div>
+              <div class="user"><i class="fa fa-user-circle" aria-hidden="true"></i><p>Hello <?php echo htmlspecialchars($_SESSION["username"])?></p>
+              </div>
+              <div class="user" id="user-home"><i class="fa fa-building" aria-hidden="true"></i><a href="./pshome.php">Home</a></div>
+              <div class="user" id="user-start-tests"><i class="fa fa-tasks" aria-hidden="true"></i><a href="./pspagetest.php">Start Tests</a></div>
+              <div class="user" id="user-check-tests"><i class="fa fa-tasks" aria-hidden="true"></i><a href="./psresultspage.php">check tests results</a></div>
+              <div class="user"><i class="fa fa-sign-out" aria-hidden="true"></i><p>Logout</p></div>
             </div>
           </header>
           <main>
@@ -49,52 +58,39 @@
                             <div class="col-12 col-md-3 col-6">
                                 <div class="single-how-works">
                                     <div class="single-how-works-icon">
-                                        <img src="../Asset/images/testimonial/testimonial5.jpeg" alt="ADII Test 1" class="img-fluid w-100 mb-3">
+                                        <img src="../Asset/images/testimonial/testimonial5.jpeg" alt="Principal Superintendent Test 1" class="img-fluid w-100 mb-3">
                                     </div>
                                     <h3>TEST 1</h3>
                                     <div class="totalQuestionsContainer">
                                         <p>Total questions: <span>75</span></p>
                                     </div>
-                                    <button class="primary-button" onclick="window.location.href='../quizhtml/ADII/ADIItest1.html'">start now</button>
-                                </div><a href=""></a>
+                                    <button class="primary-button" onclick="window.location.href='../quizhtml/psquizhtml/pstest1.html'">start now</button>
+                                </div>
                             </div>
                             <div class="col-12 col-md-3 col-6">
                                 <div class="single-how-works">
                                     <div class="single-how-works-icon">
-                                        <img src="../Asset/images/testimonial/testimonial5.jpeg" alt="ADII Test 2" class="img-fluid w-100 mb-3">
+                                        <img src="../Asset/images/testimonial/testimonial5.jpeg" alt="Principal Superintendent Test 2" class="img-fluid w-100 mb-3">
                                     </div>
                                     <h3>TEST 2</h3>
                                     <div class="totalQuestionsContainer">
                                         <p>Total questions: <span>75</span></p>
                                     </div>
                                     
-                                    <button class="primary-button" onclick="window.location.href='../quizhtml/ADII/ADIItest2.html'">start now</button>
+                                    <button class="primary-button" onclick="window.location.href='../quizhtml/psquizhtml/pstest2.html'">start now</button>
                                 </div>
                             </div>
                             <div class="col-12 col-md-3 col-6">
                                 <div class="single-how-works">
                                     <div class="single-how-works-icon">
-                                        <img src="../Asset/images/testimonial/testimonial5.jpeg" alt="ADII Test 3" class="img-fluid w-100 mb-3">
+                                        <img src="../Asset/images/testimonial/testimonial5.jpeg" alt="Principal Superintendent Test 3" class="img-fluid w-100 mb-3">
                                     </div>
                                     <h3>TEST 3</h3>
                                     <div class="totalQuestionsContainer">
                                         <p>Total questions: <span>75</span></p>
                                     </div>
                                     
-                                    <button class="primary-button" onclick="window.location.href='../quizhtml/ADII/ADIItest3.html'">start now</button>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-3 col-6">
-                                <div class="single-how-works">
-                                    <div class="single-how-works-icon">
-                                        <img src="../Asset/images/testimonial/testimonial5.jpeg" alt="ADII Test 3" class="img-fluid w-100 mb-3">
-                                    </div>
-                                    <h3>TEST 4</h3>
-                                    <div class="totalQuestionsContainer">
-                                        <p>Total questions: <span>75</span></p>
-                                    </div>
-                                    
-                                    <button class="primary-button" onclick="window.location.href='../quizhtml/ADII/ADIItest4.html'">start now</button>
+                                    <button class="primary-button" onclick="window.location.href='../quizhtml/psquizhtml/pstest3.html'">start now</button>
                                 </div>
                             </div>
                         </div>
@@ -113,10 +109,9 @@
 
         <!--Link to javascripts used-->
         <!--LINK TO QUESTIONS-->
-        <script src="../js/tests/DD/DDtest1.js"></script>
-        <script src="../js/tests/DD/DDtest2.js"></script>
+        <script src="./js/tests/pstests/pstest1.js"></script>
+        <script src="./js/tests/pstests/pstest2.js"></script>
 
-        <!--Link to javascripts used-->
         <!--Date update-->
         <script src="../js/date.js"></script>
 

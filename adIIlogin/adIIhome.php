@@ -1,3 +1,12 @@
+<?php
+
+    session_start();
+    if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+        header("Location: ../login.php");
+        exit;
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
@@ -5,7 +14,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
         <meta name="author" content="Abradu Frimpong Kwame">
         <meta name="description" content="An interactive platform where students can practice objective questions to enhance their exam preparation and improve their chances of success.">
-        <title>PS Home - PassOneTouch</title>
+        <title>ADII Home - PassOneTouch</title>
         <!--FONT AWESOME-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
@@ -25,17 +34,18 @@
         <header class="loggedheader" id="loggedheader">
             <div class="header-container">
               <div class="header-container-sub">
-                <div id="menu-toggle-icon" class="fas fa-bars"></div> 
-                <div class="logo"><a href="./pshome.html">passonetouch</a></div>
+                <div id="menu-toggle-icon" class="fas fa-bars"></div> <!-- Menu Toggle Icon -->
+                <div class="logo"><a href="./adIIhome.html">passonetouch</a></div>
               </div>
             </div>
             <div class="menu-items">
-              <div class="user"><i class="fa fa-user-circle" aria-hidden="true"></i><p>Welcome Maxi</p></div>
-              <div class="user" id="user-home"><i class="fa fa-building" aria-hidden="true"></i><a href="./pshome.html">Home</a></div>
-              <div class="user" id="user-start-tests"><i class="fa fa-tasks" aria-hidden="true"></i><a href="./pspagetest.html">Start Tests</a></div>
-              <div class="user" id="user-check-tests"><i class="fa fa-tasks" aria-hidden="true"></i><a href="./psresultspage.html">check tests results</a></div>
-              <div class="user"><i class="fa fa-sign-out" aria-hidden="true"></i><p>Logout</p></div>
-            </div>
+                <div class="user"><i class="fa fa-user-circle" aria-hidden="true"></i><p>Hello <?php echo htmlspecialchars($_SESSION["username"])?></p>
+                </div>
+                <div class="user" id="user-home"><i class="fa fa-building" aria-hidden="true"></i><a href="./adIIhome.php">Home</a></div>
+                <div class="user" id="user-start-tests"><i class="fa fa-tasks" aria-hidden="true"></i><a href="./adIItestpage.php">Start Tests</a></div>
+                <div class="user" id="user-check-tests"><i class="fa fa-tasks" aria-hidden="true"></i><a href="./adIIresultspage.php">check tests results</a></div>
+                <div class="user"><i class="fa fa-sign-out" aria-hidden="true"></i><a href="../logout.php">Logout</a></div>
+              </div>
           </header>
           <main>
             <h1 class="visually-hidden">start tests</h1>
@@ -70,6 +80,11 @@
                                     <p class="testscore3"><span> - </span></p>
                                     <p class="testscore3percent"><span> - </span></p>
                                 </div>
+                                <div class="tests">
+                                    <p class="test#4">test4:</p>
+                                    <p class="testscore4"><span> - </span></p>
+                                    <p class="testscore4percent"><span> - </span></p>
+                                </div>
                             </div>
                                 
                         </div>
@@ -86,6 +101,7 @@
         </footer>
         <!--footer ends-->
 
+        <!--Link to javascripts used-->
         <script>
             // Function to safely extract and display results
             const averageMarks = document.querySelector(".averageMarks");
@@ -110,9 +126,10 @@
                 }
             };
         
-            displayResult('quizResults1', '.testscore1', '.testscore1percent');
-            displayResult('quizResults2', '.testscore2', '.testscore2percent');
-            displayResult('quizResults3', '.testscore3','.testscore3percent');
+            displayResult('ADIIQuizResults1', '.testscore1', '.testscore1percent');
+            displayResult('ADIIQuizResults2', '.testscore2', '.testscore2percent');
+            displayResult('ADIIQuizResults3', '.testscore3','.testscore3percent');
+            displayResult('ADIIQuizResults4', '.testscore4','.testscore4percent');
             const sumMarks = averageMarksArray.reduce((acc, cum) => acc + cum, 0);
             const sumMarksPercent = averageMarksPercentArray.reduce((acc, cum)=> acc + cum, 0);
 
@@ -120,25 +137,16 @@
                 averageMarks.textContent += "-";
                 averageMarksPercent.textContent += "-";
             }else{
-                const aveMarks = `${sumMarks / averageMarksArray.length}`
-                
-
-                const aveMarksPercent = `${sumMarksPercent / averageMarksPercentArray.length}`;
-                averageMarksPercent.textContent += `aveMarksPercent%`;
-
-                if(aveMarks < 35){
-                    averageMarks.style.color = "red";
-                    
-                }else{
-                    averageMarks.style.color = "green";
-                }
+                averageMarks.textContent += `${sumMarks / averageMarksArray.length}`;
+                averageMarksPercent.textContent += `${(sumMarksPercent / averageMarksPercentArray.length).toFixed(2)}%`;
             }
+            
+             
         </script>
-        
         <!--Date update-->
         <script src="../js/date.js"></script>
 
-        <!--Toggle menu-->
+
         <script src="../js/loggedinmenu.js"></script>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>

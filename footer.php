@@ -16,10 +16,10 @@
 <!--footer ends-->
 
 <!--Date update-->
-<script src="js/date.js"></script>
+<script src="./js/date.js"></script>
 
 <!--Toggle menu-->
-<script src="js/menutoggle.js"></script>
+<script src="./js/menutoggle.js"></script>
 
 
 

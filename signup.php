@@ -11,21 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } elseif (!preg_match('/^[a-zA-Z0-9_]{3,}$/', trim($_POST['username']))) {
         $username_err = 'Username should be at least 3 characters and only contain letters, numbers, and underscores.';
     } else {
-        $sql = "SELECT id FROM users WHERE username = :username";
-        if ($stmt = $pdo->prepare($sql)) {
-            $stmt->bindParam(":username", $param_username, PDO::PARAM_STR);
-            $param_username = trim($_POST["username"]);
-            if ($stmt->execute()) {
-                if ($stmt->rowCount() == 1) {
-                    $username_err = "This username is already taken.";
-                } else {
-                    $username = trim($_POST["username"]);
-                }
-            } else {
-                echo "Oops! Something went wrong. Please try again later.";
-            }
-            unset($stmt);
-        }
+        $username = trim($_POST['username']);
     }
 
     // Validate email
@@ -35,6 +21,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $email_err = 'Email must be a valid email address.';
     } else {
         $email = trim($_POST['email']);
+        
+        // Check if email already exists
+        $sql = "SELECT id FROM users WHERE email = :email";
+        if ($stmt = $conn->prepare($sql)) {
+            $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+            if ($stmt->execute()) {
+                if ($stmt->rowCount() > 0) {
+                    $email_err = "This email is already registered.";
+                }
+            } else {
+                echo "Error checking email.";
+            }
+            unset($stmt);
+        }
     }
 
     // Validate password
@@ -44,13 +44,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $password_err = 'Password must be at least 8 characters, including an uppercase letter, a lowercase letter, and a number.';
     } else {
         $password = trim($_POST['password']);
-    }
-
-    // Validate confirm password
-    if (empty(trim($_POST['confirmPassword']))) {
-        $confirmPassword_err = 'Please confirm your password';
-    } elseif ($password !== trim($_POST['confirmPassword'])) {
-        $confirmPassword_err = 'Passwords do not match';
     }
 
     // Validate exam type
@@ -76,11 +69,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Check for errors and insert into database
     if (empty($username_err) && empty($email_err) && empty($examtype_err) && 
-        empty($password_err) && empty($confirmPassword_err) && empty($momoNumber_err)) {
+        empty($password_err) && empty($momoNumber_err)) {
         
-        $sql = "INSERT INTO users (username, email, examstype, password, momoNumber) VALUES (:username, :email, :examtype, :password, :momoNumber)";
+        $sql = "INSERT INTO users (username, email, examtype, password, momoNumber) VALUES (:username, :email, :examtype, :password, :momoNumber)";
         
-        if ($stmt = $pdo->prepare($sql)) {
+        if ($stmt = $conn->prepare($sql)) {
             // Bind parameters
             $stmt->bindParam(':username', $username, PDO::PARAM_STR);
             $stmt->bindParam(':email', $email, PDO::PARAM_STR);
@@ -100,9 +93,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             unset($stmt);
         }
     }
-    unset($pdo);
+    unset($conn);
 }
 ?>
+
 
 
 <!DOCTYPE html>
@@ -238,7 +232,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                         
                                         <div class="form-field">
                                             <span class="form-field-container">
-                                                <button type="submit" class="your-momo-pay">Pay Momo</button>
+                                                <button type="submit" class="your-momo-pay" title="Click To Pay MOMO">Pay Momo</button>
                                                 
                                             </span>
                                             
@@ -263,5 +257,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <!-- footer start -->
         <?php require 'footer.php' ?>
         <!--footer ends-->
+
+        <script src="./js/signupvalidator.js"></script>
     </body>
 </html>

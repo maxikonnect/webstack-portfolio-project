@@ -1,3 +1,11 @@
+<?php
+
+    session_start();
+    if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+        header("Location: ../login.php");
+        exit;
+    }
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
@@ -5,7 +13,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
         <meta name="author" content="Abradu Frimpong Kwame">
         <meta name="description" content="An interactive platform where students can practice objective questions to enhance their exam preparation and improve their chances of success.">
-        <title>ADI Check Results - PassOneTouch</title>
+        <title>ADII Check Results - PassOneTouch</title>
         <!--FONT AWESOME-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
@@ -30,11 +38,12 @@
               </div>
             </div>
             <div class="menu-items">
-              <div class="user"><i class="fa fa-user-circle" aria-hidden="true"></i><p>Hello Maxi</p></div>
-              <div class="user" id="user-home"><i class="fa fa-building" aria-hidden="true"></i><a href="./adIhome.html">Home</a></div>
-              <div class="user" id="user-start-tests"><i class="fa fa-tasks" aria-hidden="true"></i><a href="./adItestpage.html">Start Tests</a></div>
-              <div class="user" id="user-check-tests"><i class="fa fa-tasks" aria-hidden="true"></i><a href="./adIresultspage.html">check tests results</a></div>
-              <div class="user"><i class="fa fa-sign-out" aria-hidden="true"></i><p>Logout</p></div>
+              <div class="user"><i class="fa fa-user-circle" aria-hidden="true"></i><p>Hello <?php echo htmlspecialchars($_SESSION["username"])?></p>
+              </div>
+              <div class="user" id="user-home"><i class="fa fa-building" aria-hidden="true"></i><a href="./adIIhome.php">Home</a></div>
+              <div class="user" id="user-start-tests"><i class="fa fa-tasks" aria-hidden="true"></i><a href="./adIItestpage.php">Start Tests</a></div>
+              <div class="user" id="user-check-tests"><i class="fa fa-tasks" aria-hidden="true"></i><a href="./adIIresultspage.php">check tests results</a></div>
+              <div class="user"><i class="fa fa-sign-out" aria-hidden="true"></i><a href="../logout.php">Logout</a></div>
             </div>
           </header>
           <main>
@@ -42,10 +51,10 @@
             <section class="scores">
                 <div class="containerscores">
                     <div class="rowscores">
-                        <a class="resultslink" href="../quizhtml/ADI/ad1result1.html">test 1 results</a>
-                        <a class="resultslink" href="../quizhtml/ADI/ad1result2.html">test 2 results</a>
-                        <a class="resultslink" href="../quizhtml/ADI/ad1result3.html">test 3 results</a>
-                        <a class="resultslink" href="../quizhtml/ADI/ad1result4.html">test 4 results</a>
+                        <a class="resultslink" href="../quizhtml/ADII/ad2result1.html">test 1 results</a>
+                        <a class="resultslink" href="../quizhtml/ADII/ad2result2.html">test 2 results</a>
+                        <a class="resultslink" href="../quizhtml/ADII/ad2result3.html">test 3 results</a>
+                        <a class="resultslink" href="../quizhtml/ADII/ad2result4.html">test 4 results</a>
                     </div>
                 </div>
             </section>

@@ -1,3 +1,11 @@
+<?php
+
+    session_start();
+    if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+        header("Location: ../login.php");
+        exit;
+    }
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
@@ -30,10 +38,11 @@
               </div>
             </div>
             <div class="menu-items">
-              <div class="user"><i class="fa fa-user-circle" aria-hidden="true"></i><p>Hello Maxi</p></div>
-              <div class="user" id="user-home"><i class="fa fa-building" aria-hidden="true"></i><a href="./ddhome.html">Home</a></div>
-              <div class="user" id="user-start-tests"><i class="fa fa-tasks" aria-hidden="true"></i><a href="./ddtestpage.html">Start Tests</a></div>
-              <div class="user" id="user-check-tests"><i class="fa fa-tasks" aria-hidden="true"></i><a href="./ddresultspage.html">check tests results</a></div>
+              <div class="user"><i class="fa fa-user-circle" aria-hidden="true"></i><p>Hello <?php echo htmlspecialchars($_SESSION["username"])?></p>
+                </div>
+              <div class="user" id="user-home"><i class="fa fa-building" aria-hidden="true"></i><a href="./ddhome.php">Home</a></div>
+              <div class="user" id="user-start-tests"><i class="fa fa-tasks" aria-hidden="true"></i><a href="./ddtestpage.php">Start Tests</a></div>
+              <div class="user" id="user-check-tests"><i class="fa fa-tasks" aria-hidden="true"></i><a href="./ddresultspage.php">check tests results</a></div>
               <div class="user"><i class="fa fa-sign-out" aria-hidden="true"></i><p>Logout</p></div>
             </div>
           </header>
