@@ -302,7 +302,7 @@ header {
         .try-for-free{
           display: inline-block;
           position: relative;
-          margin-right: 2rem;
+          margin-right: 1.4rem;
           
           a{
             font-weight: var(--font-weight-bold);
@@ -314,7 +314,6 @@ header {
             color: var(--color-white);
             background-color: var(--color-blue);
             transition: transform 0.3s ease;
-            margin-right: 2rem;
           }
           @keyframes design {
             10%{
@@ -960,6 +959,9 @@ button:disabled{
       padding-bottom: 1.5rem;
       transition: .3s linear !important;
 
+      p{
+        font-size: var(--font-size-small);
+      }
       h3{
         color: var(--color-black);
         font-size: var(--font-size-large);

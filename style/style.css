@@ -398,7 +398,7 @@ header .header-container .super-sub-container .sub-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem 0 2rem 0;
+  padding: 2rem 2rem 2rem 0;
   z-index: 1000;
   /*TRY FOR FREE CSS DESIGN */
   /* LOGO DESIGN */
@@ -407,6 +407,7 @@ header .header-container .super-sub-container .sub-container {
 header .header-container .super-sub-container .sub-container .try-for-free {
   display: inline-block;
   position: relative;
+  margin-right: 1.4rem;
 }
 header .header-container .super-sub-container .sub-container .try-for-free a {
   font-weight: var(--font-weight-bold);
@@ -771,7 +772,7 @@ button:disabled {
   text-decoration: underline;
 }
 .signup .form-container .form-row .header-text .para {
-  font-size: var(--font-size-medium);
+  font-size: 1.2rem;
 }
 .signup .form-container .form-row .header-text .para a {
   color: var(--color-blue);
@@ -789,6 +790,10 @@ button:disabled {
 }
 .signup .form-container .form-row .form-group-container .form-group {
   margin-bottom: 1.2rem;
+  color: var(--color-white);
+}
+.signup .form-container .form-row .form-group-container .form-group .para {
+  text-align: center;
   color: var(--color-white);
 }
 .signup .form-container .form-row .form-group-container .form-group .momo-amount {
@@ -950,6 +955,9 @@ button:disabled {
   margin-bottom: 2rem;
   padding-bottom: 1.5rem;
   transition: 0.3s linear !important;
+}
+.works .works-content .single-how-works p {
+  font-size: var(--font-size-small);
 }
 .works .works-content .single-how-works h3 {
   color: var(--color-black);

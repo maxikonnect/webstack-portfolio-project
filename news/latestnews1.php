@@ -7,11 +7,11 @@
             <section class="latestnews">
                 <header class="header">
                     <div class="latest-header-one">
-                        <p>latest news of 6th January, 2025.</p>
+                        <p>latest news of 21st January, 2025.</p>
                         <p>source: <a href="../index.php">www.passonetouch.com</a></p>
                     </div>
                     <div class="latest-header-title">
-                        <p>Three(3) Teacher Unions Make Demands On Govt</p>
+                        <p>We’ll improve condition of teachers – Haruna Iddrisu</p>
                     </div>
                     <div class="latest-header-two">
                         <div class="nextprev">

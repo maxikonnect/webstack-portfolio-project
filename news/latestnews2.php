@@ -28,7 +28,7 @@
                 </header>
                 <div class="text-container">
                     <div class="text-row">
-                        <img src="../Assets/images/testimonial/testimonial6.jpeg" width="200" height="150" alt="latestnews">
+                        <img src="../Assets/images/news/news2.jpg" width="200" height="150" alt="latestnews">
                         <h4>WAEC Cancels Results of 4,591 Candidates</h4>
                         <p>Due to various forms of malpractice, the West African Examinations Council (WAEC) has cancelled the results of 4,591 candidates who sat for the 2024 West African Senior School Certificate Examination (WASSCE).</p>
 

@@ -47,14 +47,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!--SEARCH FORM-->
-                <div class="search-container">
-                    <form class="search-form" action="" method="">
-                        <input type="text" placeholder="search..." name="search">
-                        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-                    </form>
-                </div>
                 <div class="signupLogin">
                     <a href="../login.php" class="login">log in</a>
                     <a href="../signup.php" class="signup btn">sign up</a>
