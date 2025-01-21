@@ -68,6 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <?php 
 $pageTitle = "Contact Us - PassOneTouch";
+$styleCSS = './style/style.css';
 include './includes/header.php';
 ?>
     <?php require_once './includes/subnav.php' ?>
@@ -144,7 +145,7 @@ include './includes/header.php';
             </section>              
         </main>
         <!-- footer start -->
-        <?php require './includes/footer.php' ?>
+        <?php require_once './includes/footer.php' ?>
         <!--footer ends-->
         
     </body>
