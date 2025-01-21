@@ -67,9 +67,9 @@ include './includes/header.php';
                     <article class="col-md-4 col-sm-6">
                         <div class="single-how-works">
                             <div class="single-how-works-icon">
-                                <img src="Assets/images/testimonial/testimonial5.jpeg" alt="Latest news" class="img-fluid w-100 mb-3" loading="lazy">
+                                <img src="Assets/images/news/news3.jpeg" alt="Latest news" class="img-fluid w-100 mb-3" loading="lazy">
                             </div>
-                            <p>Three pre-tertiary education labour unions have given the government up to the end of September </p>
+                            <p>We’ll improve condition of teachers – Haruna Iddrisu</p>
                             <button class="primary-button" data-href="news/latestnews1.php">Read More</button>
                         </div>
                     </article>
@@ -89,9 +89,9 @@ include './includes/header.php';
                     <article class="col-md-4 col-sm-6">
                         <div class="single-how-works">
                             <div class="single-how-works-icon">
-                                <img src="Assets/images/news/news1.png" alt="Latest news" class="img-fluid w-100 mb-3" loading="lazy">
+                                <img src="Assets/images/news/news1.png" alt="Latest news"  class="img-fluid w-100 mb-3" loading="lazy">
                             </div>
-                            <p>Three pre-tertiary education labour unions have given the government up to the end of September this </p>
+                            <p>Three(3) Teacher Unions Make Demands On Govt </p>
                             <button class="primary-button" data-href="news/latestnews3.php">Read More</button>
                         </div>
                     </article>
