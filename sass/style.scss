@@ -294,7 +294,7 @@ header {
         align-items: center;
         justify-content: space-between;
         
-        padding: 2rem 0 2rem 0;
+        padding: 2rem 2rem 2rem 0;
         
         z-index: 1000;
 
@@ -302,6 +302,7 @@ header {
         .try-for-free{
           display: inline-block;
           position: relative;
+          margin-right: 2rem;
           
           a{
             font-weight: var(--font-weight-bold);
@@ -313,6 +314,7 @@ header {
             color: var(--color-white);
             background-color: var(--color-blue);
             transition: transform 0.3s ease;
+            margin-right: 2rem;
           }
           @keyframes design {
             10%{
@@ -726,6 +728,9 @@ button:disabled{
       .header-text{
         font-variant: small-caps;
         text-align: center;
+        h2{
+          color: var(--color-white);
+        };
         p{
           font-size: var(--font-size-small);
           a{
@@ -736,7 +741,7 @@ button:disabled{
           }
         }
         .para{
-          font-size: var(--font-size-medium);
+          font-size: 1.2rem;
           a{
             color: var(--color-blue);
           }
@@ -759,6 +764,10 @@ button:disabled{
         .form-group{
           margin-bottom: 1.2rem;
           color: var(--color-white);
+          .para{
+            text-align: center;
+            color: var(--color-white);
+          }
           .momo-amount{
             color: var(--color-white);
             font-size: var(--font-size-small);

@@ -1,34 +1,12 @@
 <?php
 
-    session_start();
-    if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-        header("Location: ../login.php");
-        exit;
-    }
+    require '../includes/testdashboard.php';
 ?>
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-        <meta name="author" content="Abradu Frimpong Kwame">
-        <meta name="description" content="An interactive platform where students can practice objective questions to enhance their exam preparation and improve their chances of success.">
-        <title>DD Home - PassOneTouch</title>
-        <!--FONT AWESOME-->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-        <!--Google Fonts-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
-        
-        <!--Bootstrap-->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-        <!--LINK TO STYLESHEET-->
-        <link rel="stylesheet" href="../style/style.css">
-        <link rel="stylesheet" href="../style/mediaquery.css">
-    </head>
+<?php 
+$pageTitle = "DD Home - PassOneTouch";
+$styleCSS = '../style/style.css';
+include '../includes/header.php';
+?>
     <body>
         <header class="loggedheader" id="loggedheader">
             <div class="header-container">
@@ -43,7 +21,7 @@
               <div class="user" id="user-home"><i class="fa fa-building" aria-hidden="true"></i><a href="./ddhome.php">Home</a></div>
               <div class="user" id="user-start-tests"><i class="fa fa-tasks" aria-hidden="true"></i><a href="./ddtestpage.php">Start Tests</a></div>
               <div class="user" id="user-check-tests"><i class="fa fa-tasks" aria-hidden="true"></i><a href="./ddresultspage.php">check tests results</a></div>
-              <div class="user"><i class="fa fa-sign-out" aria-hidden="true"></i><p>Logout</p></div>
+              <div class="user"><i class="fa fa-sign-out" aria-hidden="true"></i><a href="../logout.php">Logout</a></div>
             </div>
           </header>
           <main>

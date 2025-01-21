@@ -27,7 +27,7 @@
                 </header>
                 <div class="text-container">
                     <div class="text-row">
-                        <img src="../Asset/images/testimonial/testimonial6.jpeg" width="200" height="150" alt="latestnews">
+                        <img src="../Assets/images/testimonial/testimonial6.jpeg" width="200" height="150" alt="latestnews">
                         <p>Three pre-tertiary education labour unions have given the government up to the end of September this year to address a number of issues affecting their members as well as teaching and learning in schools.
                             They said anything short of that would cause them to advise themselves.
                         </p>

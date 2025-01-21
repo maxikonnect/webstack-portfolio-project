@@ -1,28 +1,8 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Abradu Frimpong Kwame">
-        <meta name="description" content="An interactive platform where students can practice objective questions to enhance their exam preparation and improve their chances of success.">
-        <title>Home - PassOneTouch</title>
-        <!-- FONT AWESOME -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-        <!-- Google Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
-        
-        <!-- Bootstrap -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-
-        <!-- LINK TO STYLESHEET -->
-        <link rel="stylesheet" href="./style/style.css">
-        <link rel="stylesheet" href="./style/mediaquery.css">
-    </head>
-        <?php require 'headerlogsign.php' ?>
+<?php 
+$pageTitle = "Teachers Exams - PassOneTouch";
+include './includes/header.php';
+?>
+    <?php require './includes/subnav.php' ?>
         <main>
             <h1 class="visually-hidden">tests</h1>
             
@@ -36,41 +16,41 @@
                             <div class="col-12 col-sm-6 ">
                                 <div class="single-how-works">
                                     <div class="single-how-works-icon">
-                                        <img src="Asset/images/testimonial/testimonial5.jpeg" alt="Principal Superintendent Test" class="img-fluid w-100 mb-3">
+                                        <img src="Assets/images/testimonial/testimonial5.jpeg" alt="Principal Superintendent Test" class="img-fluid w-100 mb-3">
                                     </div>
                                     <h2><a href="#">PS</a></h2>
                                     <h3>PRINCIPAL SUPERINTENDENT</h3>
-                                    <button class="primary-button" onclick="window.location.href='#'">start now</button>
+                                    <button class="primary-button" onclick="window.location.href='./login.php'">start now</button>
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="single-how-works">
                                     <div class="single-how-works-icon">
-                                        <img src="Asset/images/testimonial/testimonial5.jpeg" alt="Assistant Director II Test" class="img-fluid w-100 mb-3">
+                                        <img src="Assets/images/testimonial/testimonial5.jpeg" alt="Assistant Director II Test" class="img-fluid w-100 mb-3">
                                     </div>
                                     <h2><a href="#">ADII</a></h2>
                                     <h3>ASSISTANT DIRECTOR II</h3>
-                                    <button class="primary-button" onclick="window.location.href='#'">start now</button>
+                                    <button class="primary-button" onclick="window.location.href='./login.php'">start now</button>
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="single-how-works">
                                     <div class="single-how-works-icon">
-                                        <img src="Asset/images/testimonial/testimonial5.jpeg" alt="Assistant Director I Test" class="img-fluid w-100 mb-3">
+                                        <img src="Assets/images/testimonial/testimonial5.jpeg" alt="Assistant Director I Test" class="img-fluid w-100 mb-3">
                                     </div>
                                     <h2><a href="#">ADI</a></h2>
                                     <h3>ASSISTANT DIRECTOR I</h3>
-                                    <button class="primary-button" onclick="window.location.href='#'">start now</button>
+                                    <button class="primary-button" onclick="window.location.href='./login.php'">start now</button>
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="single-how-works">
                                     <div class="single-how-works-icon">
-                                        <img src="Asset/images/testimonial/testimonial5.jpeg" alt="Assistant Director I Test" class="img-fluid w-100 mb-3">
+                                        <img src="Assets/images/testimonial/testimonial5.jpeg" alt="Assistant Director I Test" class="img-fluid w-100 mb-3">
                                     </div>
                                     <h2><a href="#">DD</a></h2>
                                     <h3>DEPUTY DIRECTOR</h3>
-                                    <button class="primary-button" onclick="window.location.href='#'">start now</button>
+                                    <button class="primary-button" onclick="window.location.href='./login.php'">start now</button>
                                 </div>
                             </div>
                         </div>
@@ -79,6 +59,6 @@
             </section>
         </main>
         <!--footer starts -->
-        <?php require 'footer.php' ?>
+        <?php require './includes/footer.php' ?>
     </body>
 </html>

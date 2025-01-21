@@ -1,63 +1,103 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-        <meta name="author" content="Abradu Frimpong Kwame">
-        <meta name="description" content="An interactive platform where students can practice objective questions to enhance their exam preparation and improve their chances of success.">
-        <title>forgotPassword - PassOneTouch</title>
-        <!--FONT AWESOME-->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<?php
+$pageTitle = "ForgotPassword - PassOneTouch";
+include './includes/header.php';
 
-        <!--Google Fonts-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
-        
-        <!--Bootstrap-->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-        <!--LINK TO STYLESHEET-->
-        <link rel="stylesheet" href="./style/style.css">
-        <link rel="stylesheet" href="./style/mediaquery.css">
-    </head>
-    <body>
-       <section class="signup" id="signup">
-            <div class="form-container">
-                <div class="form-row">
-                    <div class="header-text">
-                        <h1>Forgot Your Password?</h1>
-                        <p class="para">To reset your password, please enter your email address.</p>
-                        <p class="para">passonetouch.com will send the password reset instructions to the email address for this account.</p>
-                        <p class="para">If you don't know the email address or is no longer valid, please <a href="./contact.php">contact us</a> for further assistance.</p>
-                    </div>
-                    <div class="form-group-container">
-                        <form action="" method="">
-                            <fieldset>
-                                <legend class="visually-hidden">forgot your password?</legend>
-                                <div class="form-group">
-                                    <label for="your-email">email:</label>
-                                    <div class="form-field">
-                                        <span class="form-field-container">
-                                            <input type="email" id="your-email" name="your-email" placeholder="example@example.com" pattern="[a-z0-9%+_.\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"  maxlength="55" autocomplete="on" accesskey="e" required>
-                                            
-                                        </span>
-                                        <p class="form-help-email" aria-live="polite"></p>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <input type="submit" value="submit" class="primary-button">
-                                </div>
-                            </fieldset>
-                        </form>
-                    </div>
+// Include the PHPMailer autoloader
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+require 'vendor/autoload.php';
+require './config.php';
+$forgotPassword_message = '';
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $email = $_POST['email'];
+
+    // Check if email exists in the database
+    $stmt = $conn->prepare("SELECT * FROM users WHERE email = ?");
+    $stmt->execute([$email]);
+
+    if ($stmt->rowCount() > 0) {
+        // User exists, generate a unique token for password reset
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+        $token = bin2hex(random_bytes(50));  // Generate a unique token
+
+        // Save the token in the database (along with expiration time)
+        $expiry = time() + 3600;  // Token expires in 1 hour
+        $updateStmt = $conn->prepare("UPDATE users SET reset_token = ?, reset_expiry = ? WHERE email = ?");
+        $updateStmt->execute([$token, $expiry, $email]);
+
+        // Send reset email with the token
+        $reset_link = "http://localhost:3000/resetpassword.php?token=" . $token;
+
+        // Setup PHPMailer
+        $mail = new PHPMailer(true);
+
+        try {
+            //Server settings
+            $mail->isSMTP();
+            $mail->Host = 'in-v3.mailjet.com';  // Mailjet SMTP server
+            $mail->SMTPAuth = true;
+            $mail->Username = 'ea429b5e5083e66930acd66c339b98ae';  // Your Mailjet API key
+            $mail->Password = '6345e078b405511ba3b7bd3b7cef32e7';  // Your Mailjet Secret key
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+            $mail->Port = 587;
+
+            //Recipients
+            $mail->setFrom('tribillio@gmail.com', 'No Reply');
+            $mail->addAddress($email);  // Add the recipient email
+
+            // Content
+            $mail->isHTML(true);
+            $mail->Subject = 'Password Reset Request';
+            $mail->Body    = 'To reset your password, click the following link: <a href="' . $reset_link . '">Reset Password</a>';
+
+            // Send the email
+            $mail->send();
+            $forgotPassword_message = "Check your email for a password reset link.";
+        } catch (Exception $e) {
+            $forgotPassword_message = "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+        }
+    } else {
+        $forgotPassword_message = "No account found with that email address.";
+    }
+}
+?>
+
+<body>
+   <section class="signup" id="signup">
+        <div class="form-container">
+            <div class="form-row">
+                <div class="header-text">
+                    <h1>Forgot Your Password?</h1>
+                    <p class="para">To reset your password, please enter your email address.</p>
+                    <p class="para">passonetouch.com will send the password reset instructions to the email address for this account.</p>
+                    <p class="para">If you don't know the email address or it is no longer valid, please <a href="./contact.php">contact us</a> for further assistance.</p>
                 </div>
-
-
+                <div class="form-group-container">
+                    <form action="" method="POST">
+                        <fieldset>
+                            <legend class="visually-hidden">Forgot your password?</legend>
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <div class="form-field">
+                                    <span class="form-field-container">
+                                        <input type="email" id="email" name="email" placeholder="example@example.com" pattern="[a-z0-9%+_.\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" maxlength="55" autocomplete="on" accesskey="e" required>
+                                    </span>
+                                    <p class="form-help-email" aria-live="polite"></p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Submit" class="primary-button">
+                                <div class="form-field">
+                                    <p class="para"><?php echo htmlspecialchars($forgotPassword_message)?></p>
+                            
+                                </div>
+                        </fieldset>
+                    </form>
+                </div>
             </div>
-       </section>
-       <script src="js/loginValidator.js"></script> 
-       <script src="js/signupvalidator.js"></script>
-       <script src=""></script>
-    </body>
+        </div>
+   </section>
+   <script src="js/loginValidator.js"></script> 
+   <script src="js/signupvalidator.js"></script>
+</body>
 </html>
