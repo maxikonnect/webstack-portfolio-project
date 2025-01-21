@@ -13,7 +13,7 @@ include '../includes/header.php';
             <div class="header-container">
               <div class="header-container-sub">
                 <div id="menu-toggle-icon" class="fas fa-bars"></div> 
-                <div class="logo"><a href="./pshome.html">passonetouch</a></div>
+                <div class="logo"><a href="./adIIhome.php">passonetouch</a></div>
               </div>
             </div>
             <div class="menu-items">

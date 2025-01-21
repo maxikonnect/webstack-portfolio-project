@@ -1,5 +1,5 @@
 <?php
-require './config.php';
+require_once './config.php';
 
 $firstName = $lastName = $email = $message = $logging = '';
 $firstName_err = $lastName_err = $email_err = $message_err = '';
@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 $pageTitle = "Contact Us - PassOneTouch";
 include './includes/header.php';
 ?>
-    <?php require './includes/subnav.php' ?>
+    <?php require_once './includes/subnav.php' ?>
         <main>
             <h1 class="visually-hidden">Homepage</h1>
             <section class="signup" id="signup">

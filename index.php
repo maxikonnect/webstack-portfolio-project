@@ -2,7 +2,7 @@
 $pageTitle = "Home - PassOneTouch";
 include './includes/header.php';
 ?>
-    <?php require './includes/nav.php' ?>
+    <?php require_once './includes/nav.php' ?>
         <main>
             <h1 class="visually-hidden">Homepage</h1>
             <!--about section start-->
@@ -113,6 +113,6 @@ include './includes/header.php';
         </main>
 
         <!--footer start -->
-        <?php require './includes/footer.php' ?>
+        <?php require_once './includes/footer.php' ?>
     </body>
 </html>

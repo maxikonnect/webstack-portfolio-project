@@ -14,7 +14,7 @@ include '../includes/header.php';
             <div class="header-container">
               <div class="header-container-sub">
                 <div id="menu-toggle-icon" class="fas fa-bars"></div> 
-                <div class="logo"><a href="./pshome.html">passonetouch</a></div>
+                <div class="logo"><a href="./pshome.php">passonetouch</a></div>
               </div>
             </div>
             <div class="menu-items">
@@ -33,8 +33,8 @@ include '../includes/header.php';
                     <div class="rowscores">
                         <div class="column">
                             <div class="column-score-header">
-                                <div>average marks: <span class="averageMarks"></span></div>
-                                <div> average score(Percent):<span class="averageMarksPercent"></span> </div>
+                                <div title="Above 35 passed, Below 35 failed">average marks: <span class="averageMarks"></span></div>
+                                <div title="Above 50% passed, Below 50% failed"> average score(Percent):<span class="averageMarksPercent"></span> </div>
                             </div> 
                         </div>
                         <div class="column">
@@ -74,55 +74,65 @@ include '../includes/header.php';
             </div>
         </footer>
         <!--footer ends-->
-
         <script>
-            // Function to safely extract and display results
-            const averageMarks = document.querySelector(".averageMarks");
-            const averageMarksPercent = document.querySelector(".averageMarksPercent");
-            const averageMarksArray = [];
-            const averageMarksPercentArray = [];
-            
-            const displayResult = (key, selector, percentValue) => {
-                const result = JSON.parse(localStorage.getItem(key)) || null;
-                const testScoreElement = document.querySelector(selector);
-                const converttestScoreToPercent = document.querySelector(percentValue);
-                
-                if (result && result.totalScore !== undefined && Array.isArray(result.details)) {
-                    testScoreElement.textContent = `${result.totalScore} out of ${result.details.length}`;
-                    const percentMark = `${((result.totalScore / result.details.length) * 100).toFixed(2)}`;
-                    converttestScoreToPercent.textContent = `${percentMark}%`;
-                    averageMarksPercentArray.push(Number(percentMark));
-                    averageMarksArray.push(Number(result.totalScore));
+
+                // Function to fetch results safely
+                const getResultFromStorage = (key) => {
+                    try {
+                        return JSON.parse(localStorage.getItem(key)) || null;
+                    } catch (error) {
+                        console.error(`Error parsing localStorage for key "${key}":`, error);
+                        return null;
+                    }
+                };
+
+                // Function to display test results
+                const displayResult = (key, selector, percentValue) => {
+                    const result = getResultFromStorage(key);
+                    const testScoreElement = document.querySelector(selector);
+                    const converttestScoreToPercent = document.querySelector(percentValue);
+
+                    if (result && result.totalScore !== undefined && Array.isArray(result.details)) {
+                        testScoreElement.textContent = `${result.totalScore} out of ${result.details.length}`;
+                        const percentMark = ((result.totalScore / result.details.length) * 100).toFixed(2);
+                        converttestScoreToPercent.textContent = `${percentMark}%`;
+                        averageMarksPercentArray.push(Number(percentMark));
+                        averageMarksArray.push(Number(result.totalScore));
+                    } else {
+                        testScoreElement.textContent = "Not Done";
+                        converttestScoreToPercent.textContent = "Not Done";
+                    }
+                };
+
+                // Calculate and display results
+                const averageMarks = document.querySelector(".averageMarks");
+                const averageMarksPercent = document.querySelector(".averageMarksPercent");
+                const averageMarksArray = [];
+                const averageMarksPercentArray = [];
+
+                displayResult("quizResults1", ".testscore1", ".testscore1percent");
+                displayResult("quizResults2", ".testscore2", ".testscore2percent");
+                displayResult("quizResults3", ".testscore3", ".testscore3percent");
+
+                const sumMarks = averageMarksArray.reduce((acc, cum) => acc + cum, 0);
+                const sumMarksPercent = averageMarksPercentArray.reduce((acc, cum) => acc + cum, 0);
+
+                if (averageMarksArray.length === 0 || averageMarksPercentArray.length === 0) {
+                    averageMarks.textContent = "-";
+                    averageMarksPercent.textContent = "-";
                 } else {
-                    testScoreElement.textContent = "Not Done";
-                    converttestScoreToPercent.textContent = "Not Done";
+                    const avgMarks = sumMarks / averageMarksArray.length;
+                    const avgPercent = sumMarksPercent / averageMarksPercentArray.length;
+
+                    averageMarks.textContent = avgMarks.toFixed(2);
+                    averageMarksPercent.textContent = ` ${avgPercent.toFixed(2)}%`;
+
+                    averageMarks.style.color = avgMarks < 35 ? "red" : "green";
+                    averageMarksPercent.style.color = avgPercent < 50 ? "red" : "green";
                 }
-            };
-        
-            displayResult('quizResults1', '.testscore1', '.testscore1percent');
-            displayResult('quizResults2', '.testscore2', '.testscore2percent');
-            displayResult('quizResults3', '.testscore3','.testscore3percent');
-            const sumMarks = averageMarksArray.reduce((acc, cum) => acc + cum, 0);
-            const sumMarksPercent = averageMarksPercentArray.reduce((acc, cum)=> acc + cum, 0);
 
-            if(averageMarksArray.length == 0 && averageMarksPercentArray.length == 0){
-                averageMarks.textContent += "-";
-                averageMarksPercent.textContent += "-";
-            }else{
-                const aveMarks = `${sumMarks / averageMarksArray.length}`
-                
-
-                const aveMarksPercent = `${sumMarksPercent / averageMarksPercentArray.length}`;
-                averageMarksPercent.textContent += `aveMarksPercent%`;
-
-                if(aveMarks < 35){
-                    averageMarks.style.color = "red";
-                    
-                }else{
-                    averageMarks.style.color = "green";
-                }
-            }
         </script>
+        
         
         <!--Date update-->
         <script src="../js/date.js"></script>
@@ -139,3 +149,4 @@ include '../includes/header.php';
         </script>   
     </body>
 </html>
+

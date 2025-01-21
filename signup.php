@@ -1,5 +1,5 @@
 <?php
-require 'config.php';
+require_once 'config.php';
 
 $username = $email = $examtype = $password = $momoNumber = '';
 $username_err = $email_err = $examtype_err = $password_err = $confirmPassword_err = $momoNumber_err = '';

@@ -1,6 +1,6 @@
 <?php
 session_start();
-require 'config.php';
+require_once 'config.php';
 
 $email = $password = '';
 $email_err = $password_err = $login_err = '';

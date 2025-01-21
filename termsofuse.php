@@ -1,7 +1,7 @@
 <?php
 $pageTitle = "Terms Of Use - PassOneTouch";
 
-require './includes/header.php';
+require_once './includes/header.php';
 ?>
     <?php require './includes/subnav.php' ?>
         <main>
