@@ -1085,7 +1085,6 @@ function validateAndShowScore() {
 }
 
 // Show the score and store results in localStorage
-/*
 function showScore() {
     const totalScore = quiz.JS.reduce((total, question) => total + question.score, 0);
     const correctAnswers = quiz.JS.filter(q => q.score === 1).length;
@@ -1107,48 +1106,6 @@ function showScore() {
     window.location.href = './ad2result1.html'; // Navigate to the results page
 }
 
-*/
-function showScore() {
-    const totalScore = quiz.JS.reduce((total, question) => total + question.score, 0);
-    const correctAnswers = quiz.JS.filter(q => q.score === 1).length;
-    const wrongAnswers = quiz.JS.filter(q => q.score === 0).length;
-
-    const results = {
-        totalScore: totalScore,
-        correctAnswers: correctAnswers,
-        wrongAnswers: wrongAnswers,
-        details: quiz.JS.map(q => ({
-            question: q.question,
-            selectedOption: q.selectedOption,
-            correctAnswer: q.answer,
-            isCorrect: q.score === 1
-        }))
-    };
-
-    // Send the results to the server
-    sendResultsToServer(results);
-}
-
-function sendResultsToServer(results) {
-    const xhr = new XMLHttpRequest();
-    xhr.open("POST", "submit_results.php", true);
-    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-
-    // Convert the results object to a JSON string
-    const resultsData = JSON.stringify(results);
-
-    // Send the results data
-    xhr.send("results=" + encodeURIComponent(resultsData));
-
-    xhr.onload = function () {
-        if (xhr.status === 200) {
-            alert("Results submitted successfully.");
-            window.location.href = './ad2result1.html'; // Navigate to the results page
-        } else {
-            alert("Failed to submit results.");
-        }
-    };
-}
 
 
 // Initialize the quiz

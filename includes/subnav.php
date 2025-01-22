@@ -12,7 +12,7 @@
         <div class="super-sub-container">
             <div class="sub-container">
                 <div class="logo-container">
-                    <a href="index.php" class="logo">passOneTouch</a>
+                    <a href="./index.php" class="logo">passOneTouch</a>
                 </div>
                 <div class="try-for-free">
                     <a  href="./quizhtml/try/trytest1.html">try for free</a>

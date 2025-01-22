@@ -207,6 +207,7 @@ include './includes/header.php';
                                         <p class="momo-amount">amount:</p>
                                         
                                     </div>
+                                    <!--
                                     <div class="form-group">
                                         
                                         <div class="form-field">
@@ -217,6 +218,7 @@ include './includes/header.php';
                                             
                                         </div>
                                     </div>
+                                    -->
                                     <div class="form-group">
                                         <input type="submit" value="submit" class="primary-button">
                                     </div>

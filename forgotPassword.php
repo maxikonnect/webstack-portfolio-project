@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $mail->send();
             $forgotPassword_message = "Check your email for a password reset link.";
         } catch (Exception $e) {
-            $forgotPassword_message = "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+            $forgotPassword_message = "Message could not be sent. Check network";
         }
     } else {
         $forgotPassword_message = "No account found with that email address.";

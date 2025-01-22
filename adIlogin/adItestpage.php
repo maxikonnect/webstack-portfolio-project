@@ -20,10 +20,10 @@ include '../includes/header.php';
             <div class="menu-items">
                 <div class="user"><i class="fa fa-user-circle" aria-hidden="true"></i><p>Hello <?php echo htmlspecialchars($_SESSION["username"])?></p>
                 </div>
-                <div class="user" id="user-home"><i class="fa fa-building" aria-hidden="true"></i><a href="./adIhome.html">Home</a></div>
-                <div class="user" id="user-start-tests"><i class="fa fa-tasks" aria-hidden="true"></i><a href="./adItestpage.html">Start Tests</a></div>
-                <div class="user" id="user-check-tests"><i class="fa fa-tasks" aria-hidden="true"></i><a href="./adIresultspage.html">check tests results</a></div>
-                <div class="user"><i class="fa fa-sign-out" aria-hidden="true"></i><p>Logout</p></div>
+                <div class="user" id="user-home"><i class="fa fa-building" aria-hidden="true"></i><a href="./adIhome.php">Home</a></div>
+                <div class="user" id="user-start-tests"><i class="fa fa-tasks" aria-hidden="true"></i><a href="./adItestpage.php">Start Tests</a></div>
+                <div class="user" id="user-check-tests"><i class="fa fa-tasks" aria-hidden="true"></i><a href="./adIresultspage.php">check tests results</a></div>
+                <div class="user"><i class="fa fa-sign-out" aria-hidden="true"></i><a href="../logout.php">Logout</a></div>
             </div>
           </header>
           <main>

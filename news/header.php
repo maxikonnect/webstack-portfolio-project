@@ -9,6 +9,7 @@
         <!--FONT AWESOME-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
+        <link rel="icon" type="image/png" href="../Assets/images/favicon/newfavicon.png">
         <!--Google Fonts-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
