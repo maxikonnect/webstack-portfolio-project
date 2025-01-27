@@ -25,7 +25,18 @@
             <div class="text-container">
                 <div class="text-row">
                     <img src="../Assets/images/news/news3.jpeg" width="200" height="150" alt="latestnews">
+                    <h1>Minister-designate for Education Assures Teachers of Improved Conditions</h1>
+                    <p>Minister-designate for Education, Haruna Iddrisu, has assured all teachers that their condition will be improved by the Mahama administration. However, he said, this will be dependent on how much the economy would allow them to do.</p>
                     
+                    <h4>Priotizing Access, Quality, and Relevance</h4>
+                    <p>Answering questions during his vetting by the Appointments Committee of Parliament on Monday, January 20, he said, “We will improve the conditions of teachers to the extent that the economy can do.”</p>
+                    <p>Mr. Iddrisu further said that the Mahama administration will prioritize access, quality, and relevance in tertiary education. To improve access, he said, the government will focus on expanding infrastructure. “Access, quality, and relevance will be our focus in tertiary education,” he said.</p>
+                    
+                    <h4>Free Senior High School Programme</h4>
+                    <p>On the free senior high school, he assured that President John Dramani Mahama would not cancel the programme. “He will rather review it,” he said.</p>
+                    
+                    <h4>Commitment to universal education</h4>
+                    <p>Mr. Iddrisu also stated that “we will give true meaning to free, compulsory, and universal education.”</p>
                     <p><mark>source: 3news.com</mark></p>
                 </div>
             </div>

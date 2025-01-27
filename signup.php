@@ -1,8 +1,8 @@
 <?php
 require_once 'config.php';
 
-$username = $email = $examtype = $password = $momoNumber = '';
-$username_err = $email_err = $examtype_err = $password_err = $confirmPassword_err = $momoNumber_err = '';
+$username = $email = $examtype = $password = '';
+$username_err = $email_err = $examtype_err = $password_err = $confirmPassword_err = '';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Validate username
@@ -58,20 +58,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     }
 
-    // Validate MoMo number
-    if (empty(trim($_POST['momoNumber']))) {
-        $momoNumber_err = 'MoMo number is required';
-    } elseif (!preg_match('/^[0-9]{10}$/', trim($_POST['momoNumber']))) {
-        $momoNumber_err = 'MoMo number must be a valid 10-digit number';
-    } else {
-        $momoNumber = trim($_POST['momoNumber']);
-    }
-
     // Check for errors and insert into database
-    if (empty($username_err) && empty($email_err) && empty($examtype_err) && 
-        empty($password_err) && empty($momoNumber_err)) {
+    if (empty($username_err) && empty($email_err) && empty($examtype_err) && empty($password_err)) {
         
-        $sql = "INSERT INTO users (username, email, examtype, password, momoNumber) VALUES (:username, :email, :examtype, :password, :momoNumber)";
+        $sql = "INSERT INTO users (username, email, examtype, password) VALUES (:username, :email, :examtype, :password)";
         
         if ($stmt = $conn->prepare($sql)) {
             // Bind parameters
@@ -79,7 +69,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $stmt->bindParam(':email', $email, PDO::PARAM_STR);
             $stmt->bindParam(':examtype', $examtype, PDO::PARAM_STR);
             $stmt->bindParam(':password', $param_password, PDO::PARAM_STR);
-            $stmt->bindParam(':momoNumber', $momoNumber, PDO::PARAM_STR);
 
             // Hash the password
             $param_password = password_hash($password, PASSWORD_DEFAULT);
@@ -188,6 +177,7 @@ include './includes/header.php';
                                             <p class="red-text"><?php echo htmlspecialchars($confirmPassword_err); ?></p>
                                         </div>
                                     </div>
+                                    <!--
                                     <div class="form-group">
                                         <hr>
                                         <h1>PAYMENT INFORMATION</h1>
@@ -207,7 +197,7 @@ include './includes/header.php';
                                         <p class="momo-amount">amount:</p>
                                         
                                     </div>
-                                    <!--
+                            
                                     <div class="form-group">
                                         
                                         <div class="form-field">
@@ -225,7 +215,7 @@ include './includes/header.php';
                                 </fieldset>
                                 <fieldset>
                                     <div class="form-group-login">
-                                        <p>already have an account?<a href="login.html"> login</a></p>
+                                        <p>already have an account?<a href="login.php"> login</a></p>
                                     </div>
                                 </fieldset>
                             </form>

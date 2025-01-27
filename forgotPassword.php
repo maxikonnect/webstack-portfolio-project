@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $updateStmt->execute([$token, $expiry, $email]);
 
         // Send reset email with the token
-        $reset_link = "http://localhost:3000/resetpassword.php?token=" . $token;
+        $reset_link = "http://localhost:3000/webstack-portfolio-project/resetpassword.php?token=" . $token;
 
         // Setup PHPMailer
         $mail = new PHPMailer(true);
